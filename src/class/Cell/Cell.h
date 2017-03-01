@@ -1,26 +1,31 @@
+#ifndef CELL_H
+#define CELL_H
+
 #include <iostream>
 
 using namespace std;
 
-/** @class Cage
-  * Cage merupakan ...
+/** @class Cell
+  * Cell merupakan ...
 */
-class Cage {
+class Cell {
     public:
         /** @brief Constructor.
         * Melakukan inisialisasi kelas
         */    
-        Cage();
+        Cell();
         /** @brief Copy Constructor.
         * Melakukan inisialisasi kelas dengan memasukkan kelas lain sebagai parameternya
         */ 
-        Cage(const Cage&);
+        Cell(const Cell&);
         /** @brief Destructor.
         * Dipanggil saat penghancuran objek
         */ 
-        ~Cage();
+        ~Cell();
         /** @brief Operator =
         * Melakukan inisialisasi kelas dengan operator =
         */ 
-        Cage& operator=(const Cage&);
+        Cell& operator=(const Cell&);
 }
+
+#endif

@@ -1,26 +1,31 @@
+#ifndef MAMALIA_H
+#define MAMALIA_H
+
 #include <iostream>
 
 using namespace std;
 
-/** @class Zoo
-  * Zoo merupakan ...
+/** @class Mamalia
+  * Mamalia merupakan ...
 */
-class Zoo {
+class Mamalia {
     public:
         /** @brief Constructor.
         * Melakukan inisialisasi kelas
         */    
-        Zoo();
+        Mamalia();
         /** @brief Copy Constructor.
         * Melakukan inisialisasi kelas dengan memasukkan kelas lain sebagai parameternya
         */ 
-        Zoo(const Zoo&);
+        Mamalia(const Mamalia&);
         /** @brief Destructor.
         * Dipanggil saat penghancuran objek
         */ 
-        ~Zoo();
+        ~Mamalia();
         /** @brief Operator =
         * Melakukan inisialisasi kelas dengan operator =
         */ 
-        Zoo& operator=(const Zoo&);
+        Mamalia& operator=(const Mamalia&);
 }
+
+#endif
