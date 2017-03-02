@@ -2,13 +2,14 @@
 #define ROAD_H
 
 #include <iostream>
+#include "../Facility.h"
 
 using namespace std;
 
 /** @class Road
   * Road merupakan ...
 */
-class Cage {
+class Cage : public Facility {
     public:
         /** @brief Constructor.
         * Melakukan inisialisasi kelas

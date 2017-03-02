@@ -1,32 +1,32 @@
-#ifndef RESTAURANT_H
-#define RESTAURANT_H
+#ifndef FACILITY_H
+#define FACILITY_H
 
 #include <iostream>
-#include "../Facility.h"
+#include "../Cell.h"
 
 using namespace std;
 
-/** @class Restaurant
-  * Restaurant merupakan ...
+/** @class Facility
+  * Facility merupakan ...
 */
-class Cage : public Facility {
+class Facility : public Cell {
     public:
         /** @brief Constructor.
         * Melakukan inisialisasi kelas
         */    
-        Restaurant();
+        Facility();
         /** @brief Copy Constructor.
         * Melakukan inisialisasi kelas dengan memasukkan kelas lain sebagai parameternya
         */ 
-        Restaurant(const Restaurant&);
+        Facility(const Facility&);
         /** @brief Destructor.
         * Dipanggil saat penghancuran objek
         */ 
-        ~Restaurant();
+        ~Facility();
         /** @brief Operator =
         * Melakukan inisialisasi kelas dengan operator =
         */ 
-        Restaurant& operator=(const Restaurant&);
+        Facility& operator=(const Facility&);
 }
 
 #endif

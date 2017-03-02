@@ -2,13 +2,14 @@
 #define PARK_H
 
 #include <iostream>
+#include "../Facility.h"
 
 using namespace std;
 
 /** @class Park
   * Park merupakan ...
 */
-class Cage {
+class Cage : public Facility {
     public:
         /** @brief Constructor.
         * Melakukan inisialisasi kelas

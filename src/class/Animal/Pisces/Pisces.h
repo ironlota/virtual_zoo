@@ -2,13 +2,14 @@
 #define PISCES_H
 
 #include <iostream>
+#include "../Animal.h"
 
 using namespace std;
 
 /** @class Pisces
   * Pisces merupakan ...
 */
-class Pisces {
+class Pisces : public Animal {
     public:
         /** @brief Constructor.
         * Melakukan inisialisasi kelas
@@ -26,6 +27,14 @@ class Pisces {
         * Melakukan inisialisasi kelas dengan operator =
         */ 
         Pisces& operator=(const Pisces&);
+    protected:
+        /** @brief Swim
+        * Prosedure swim yang pure virtual untuk direalisasikan di turunannya
+        */ 
+        void swim();
+        /** @brief Interact
+        * Prosedure interact yang virtual untuk direalisasikan di turunannya
+        */ 
+        void interact();
 }
-
 #endif
