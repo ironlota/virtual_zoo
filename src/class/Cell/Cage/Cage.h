@@ -26,6 +26,10 @@ class Cage {
         * Melakukan inisialisasi kelas dengan operator =
         */ 
         Cage& operator=(const Cage&);
+<<<<<<< HEAD:src/class/Cell/Cage/Cage.h
 }
+=======
+};
+>>>>>>> v1:src/class/Cell/Cage/Cage.h
 
 #endif

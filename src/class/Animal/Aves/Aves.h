@@ -26,6 +26,6 @@ class Aves {
         * Melakukan inisialisasi kelas dengan operator =
         */ 
         Aves& operator=(const Aves&);
-}
+};
 
 #endif

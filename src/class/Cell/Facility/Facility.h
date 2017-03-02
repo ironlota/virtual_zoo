@@ -1,41 +1,32 @@
-#ifndef ZOO_H
-#define ZOO_H
+#ifndef FACILITY_H
+#define FACILITY_H
 
 #include <iostream>
-#include <vector>
-#include "./Cell/Cell.h"
-#include "./Animal/Animal.h"
+#include "../Cell.h"
 
 using namespace std;
 
-/** @class Zoo
-  * Zoo merupakan ...
+/** @class Facility
+  * Facility merupakan ...
 */
-class Zoo {
+class Facility : public Cell {
     public:
         /** @brief Constructor.
         * Melakukan inisialisasi kelas
-        */
-        Zoo();    
-        Zoo(string filePath);
+        */    
+        Facility();
         /** @brief Copy Constructor.
         * Melakukan inisialisasi kelas dengan memasukkan kelas lain sebagai parameternya
         */ 
-        Zoo(const Zoo&);
+        Facility(const Facility&);
         /** @brief Destructor.
         * Dipanggil saat penghancuran objek
         */ 
-        ~Zoo();
+        ~Facility();
         /** @brief Operator =
         * Melakukan inisialisasi kelas dengan operator =
         */ 
-        Zoo& operator=(const Zoo&);
-    
-    private:
-        vector<vector<Cell>> cell_;
-        vector<Animal> animal_;
-        const int maxCell;
-        const int maxAnimal;
-};
+        Facility& operator=(const Facility&);
+}
 
 #endif
