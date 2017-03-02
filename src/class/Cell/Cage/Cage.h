@@ -26,6 +26,6 @@ class Cage {
         * Melakukan inisialisasi kelas dengan operator =
         */ 
         Cage& operator=(const Cage&);
-}
+};
 
 #endif

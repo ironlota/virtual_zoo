@@ -36,5 +36,6 @@ class Pisces : public Animal {
         * Prosedure interact yang virtual untuk direalisasikan di turunannya
         */ 
         void interact();
-}
+};
+
 #endif

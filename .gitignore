@@ -33,3 +33,6 @@
 
 # Docs PDF
 *.pdf
+*.xml
+*.png
+*.docx

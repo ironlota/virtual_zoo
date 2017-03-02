@@ -26,6 +26,6 @@ class Cell {
         * Melakukan inisialisasi kelas dengan operator =
         */ 
         Cell& operator=(const Cell&);
-}
+};
 
 #endif

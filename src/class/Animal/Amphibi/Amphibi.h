@@ -26,6 +26,6 @@ class Amphibi {
         * Melakukan inisialisasi kelas dengan operator =
         */ 
         Amphibi& operator=(const Amphibi&);
-}
+};
 
 #endif

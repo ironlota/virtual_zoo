@@ -15,7 +15,8 @@ class Zoo {
     public:
         /** @brief Constructor.
         * Melakukan inisialisasi kelas
-        */    
+        */
+        Zoo();    
         Zoo(string filePath);
         /** @brief Copy Constructor.
         * Melakukan inisialisasi kelas dengan memasukkan kelas lain sebagai parameternya
@@ -35,6 +36,6 @@ class Zoo {
         vector<Animal> animal_;
         const int maxCell;
         const int maxAnimal;
-}
+};
 
 #endif

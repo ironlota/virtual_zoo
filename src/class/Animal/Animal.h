@@ -52,6 +52,6 @@ class Animal {
         */ 
         void move();
         float weight;
-}
+};
 
 #endif
