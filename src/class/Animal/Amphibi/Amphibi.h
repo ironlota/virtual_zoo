@@ -26,10 +26,6 @@ class Amphibi {
         * Melakukan inisialisasi kelas dengan operator =
         */ 
         Amphibi& operator=(const Amphibi&);
-<<<<<<< HEAD
-}
-=======
 };
->>>>>>> v1
 
 #endif

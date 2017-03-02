@@ -2,20 +2,20 @@ CC=g++
 CFLAGS=-c -Wall -g --std=c++11
 LDFLAGS=-g -lm
 
-SOURCES=$(wildcard ./src/*.cpp)
-OBJECTS=$(SOURCES:.c=.o)
+SOURCES=$(wildcard ./src/*.cpp) $(wildcard ./src/*/*.cpp) $(wildcard ./src/Class/*/*.cpp) $(wildcard ./src/Class/Animal/*/*.cpp) $(wildcard ./src/Class/Cell/*/*.cpp) 
+OBJECTS=$(SOURCES:.cpp=.o)
 MAIN=./src/main.cpp
-TESTMAIN=./test/main.cpp
+TESTMAIN=./test/test.cpp
 EXECUTABLE=./bin/virtual_zoo
 
 TESTS=$(wildcard ./test/*.cpp)
-TESTOBJECTS=$(filter-out $(MAIN:.c=.o), $(OBJECTS)) $(TESTS:.c=.o)
+TESTOBJECTS=$(filter-out $(MAIN:.cpp=.o), $(OBJECTS)) $(TESTS:.cpp=.o)
 TESTEXECUTABLE=./bin/test
 
 .PHONY: all bin test clean
 .PHONY:; @echo Finished!
 
-all: bin test
+all: bin test clean
 all:; @echo Finished!
 
 bin: $(EXECUTABLE)
@@ -31,6 +31,12 @@ $(TESTEXECUTABLE): $(TESTOBJECTS)
 %.o: %.c
 	$(CC) $(CFLAGS) $< -o $@
 
-clean:
+ifeq ($(OS),Windows_NT)
+   clean:
+	del /Q /f /s *.o
+else
+   clean:
 	-rm $(OBJECTS)
 	-rm $(TESTOBJECTS)
+endif
+

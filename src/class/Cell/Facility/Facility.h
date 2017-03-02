@@ -27,6 +27,6 @@ class Facility : public Cell {
         * Melakukan inisialisasi kelas dengan operator =
         */ 
         Facility& operator=(const Facility&);
-}
+};
 
 #endif

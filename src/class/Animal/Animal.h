@@ -14,34 +14,18 @@ class Animal {
         * Melakukan inisialisasi kelas
         */    
         Animal();
-<<<<<<< HEAD
-=======
-        
->>>>>>> v1
         /** @brief Copy Constructor.
         * Melakukan inisialisasi kelas dengan memasukkan kelas lain sebagai parameternya
         */ 
         Animal(const Animal&);
-<<<<<<< HEAD
-=======
-        
->>>>>>> v1
         /** @brief Destructor.
         * Dipanggil saat penghancuran objek
         */ 
         ~Animal();
-<<<<<<< HEAD
-=======
-        
->>>>>>> v1
         /** @brief Operator =
         * Melakukan inisialisasi kelas dengan operator =
         */ 
         Animal& operator=(const Animal&);
-<<<<<<< HEAD
-}
-=======
-        
         /** @brief Eat
         * Prosedur eat yang pure virtual untuk direalisasikan di turunannya
         */ 
@@ -65,6 +49,4 @@ class Animal {
         void move();
         float weight;
 };
->>>>>>> v1
-
 #endif

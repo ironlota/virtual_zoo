@@ -26,10 +26,6 @@ class Mamalia {
         * Melakukan inisialisasi kelas dengan operator =
         */ 
         Mamalia& operator=(const Mamalia&);
-<<<<<<< HEAD
-}
-=======
 };
->>>>>>> v1
 
 #endif
