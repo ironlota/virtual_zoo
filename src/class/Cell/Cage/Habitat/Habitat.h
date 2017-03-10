@@ -1,32 +1,31 @@
-#ifndef CELL_H
-#define CELL_H
+#ifndef HABITAT_H
+#define HABITAT_H
 
 #include <iostream>
+#include "../Cage.h"
 using namespace std;
 
-/** @class Cell
-  * Cell merupakan ...
+/** @class Habitat
+  * Habitat merupakan ...
 */
-class Cell {
+class Habitat : public Cage {
     public:
         /** @brief Constructor.
         * Melakukan inisialisasi kelas
         */    
-        Cell();
+        Habitat();
         /** @brief Copy Constructor.
         * Melakukan inisialisasi kelas dengan memasukkan kelas lain sebagai parameternya
         */ 
-        Cell(const Cell&);
+        Habitat(const Habitat&);
         /** @brief Destructor.
         * Dipanggil saat penghancuran objek
         */ 
-        ~Cell();
+        ~Habitat();
         /** @brief Operator =
         * Melakukan inisialisasi kelas dengan operator =
         */ 
-        Cell& operator=(const Cell&);
-     
+        Habitat& operator=(const Habitat&);
 };
-
 
 #endif

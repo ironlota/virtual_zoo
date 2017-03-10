@@ -1,5 +1,7 @@
 #include "Animal.h"
+#include <iostream>
 
+using namespace std;
   
 Animal::Animal() {
 
@@ -17,6 +19,7 @@ Animal& Animal::operator=(const Animal&) {
 
 }
 
-void Animal::move() {
-
+moveList Animal::move() {
+    moveList mov = static_cast<moveList>(rand() % NUM_MOVE);
+    return mov;
 }

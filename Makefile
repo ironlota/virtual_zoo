@@ -2,7 +2,7 @@ CC=g++
 CFLAGS=-c -Wall -g --std=c++11
 LDFLAGS=-g -lm
 
-SOURCES=$(wildcard ./src/*.cpp) $(wildcard ./src/*/*.cpp) $(wildcard ./src/Class/*/*.cpp) $(wildcard ./src/Class/Animal/*/*.cpp) $(wildcard ./src/Class/Cell/*/*.cpp) 
+SOURCES=$(wildcard ./src/*.cpp) $(wildcard ./src/*/*.cpp) $(wildcard ./src/Class/*/*.cpp) $(wildcard ./src/Class/Animal/*/*.cpp) $(wildcard ./src/Class/Cell/*/*.cpp) $(wildcard ./src/Class/Cell/Cage/*/*.cpp) 
 OBJECTS=$(SOURCES:.cpp=.o)
 MAIN=./src/main.cpp
 TESTMAIN=./test/test.cpp

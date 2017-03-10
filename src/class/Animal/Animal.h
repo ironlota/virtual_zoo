@@ -5,6 +5,14 @@
 
 using namespace std;
 
+enum moveList {        
+    UP, 
+    DOWN, 
+    RIGHT, 
+    LEFT,
+    NUM_MOVE
+}; 
+
 /** @class Animal
   * Animal merupakan ...
 */
@@ -41,12 +49,14 @@ class Animal {
         */ 
         virtual void interact() = 0;
 
-     protected:
         /** @brief Move
         * Prosedur move yang dapat dipanggil di turunannya
         * Prosedur 
-        */ 
-        void move();
+        */
+        moveList move();
+        
+     protected:
         float weight;
+        
 };
 #endif
