@@ -12,20 +12,38 @@ class Cell {
         /** @brief Constructor.
         * Melakukan inisialisasi kelas
         */    
-        Cell();
+        Cell(int = 0, int = 0);
         /** @brief Copy Constructor.
         * Melakukan inisialisasi kelas dengan memasukkan kelas lain sebagai parameternya
         */ 
         Cell(const Cell&);
-        /** @brief Destructor.
+        /** @brief Virtual Destructor.
         * Dipanggil saat penghancuran objek
         */ 
-        ~Cell();
+        virtual ~Cell();
         /** @brief Operator =
         * Melakukan inisialisasi kelas dengan operator =
         */ 
         Cell& operator=(const Cell&);
-     
+        /** @brief GetLocX
+        * Mengembalikan lokasi X bertipe integer
+        */ 
+        int GetLocX() {
+          return LocX;
+        }
+        /** @brief GetLocY
+        * Mengembalikan lokasi Y bertipe integer
+        */
+        int GetLocY() {
+          return LocY;
+        }
+        /** @brief Operator <<
+        * Output cell dengan menggunakan operator<<
+        */
+        friend ostream& operator<<(ostream& os, const Cell& C);
+    protected:
+        int LocX;
+        int LocY;
 };
 
 

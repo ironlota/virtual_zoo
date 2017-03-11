@@ -1,14 +1,10 @@
 #include "Zoo.h"
 
-Zoo::Zoo() : maxAnimal(100), maxCell(100) {
+Zoo::Zoo(int n, string filePath) : maxCell(n) {
     
 }
- 
-Zoo::Zoo(string filePath) : maxAnimal(100), maxCell(100) {
 
-}
-
-Zoo::Zoo(const Zoo& Z) : maxAnimal(100), maxCell(100) {
+Zoo::Zoo(const Zoo& Z) : maxCell(Z.maxCell) {
 
 }
 
@@ -16,6 +12,10 @@ Zoo::~Zoo() {
     
 }
 
-Zoo& Zoo::operator=(const Zoo&) {
+Zoo& Zoo::operator=(const Zoo& Z) {
+
+}
+
+ostream& operator<<(ostream& os, const Zoo& Z) {
 
 }

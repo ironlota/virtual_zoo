@@ -1,17 +1,17 @@
 #include "Park.h"
 
-Park::Park() {
-
+Park::Park(string s) {
+    name = s;
 }
 
-Park::Park(const Park&) {
-
+Park::Park(const Park& P) {
+    name = P.name;
 }
 
 Park::~Park() {
-
+    // DO NOTHING
 }
 
-Park& Park::operator=(const Park&) {
-
+Park& Park::operator=(const Park& P) {
+    name = P.name;
 }

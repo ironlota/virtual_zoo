@@ -1,17 +1,17 @@
 #include "Road.h"
 
-Road::Road() {
-
+Road::Road(string s) {
+    name = s;
 }
 
-Road::Road(const Road&) {
-
+Road::Road(const Road& R) {
+    name = R.name;
 }
 
 Road::~Road() {
-
+    // do nothing
 }
 
-Road& Road::operator=(const Road&) {
-
+Road& Road::operator=(const Road& R) {
+    name = R.name;
 }

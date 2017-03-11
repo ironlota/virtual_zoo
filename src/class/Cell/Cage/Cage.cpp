@@ -4,7 +4,7 @@ Cage::Cage() {
     animal_ = nullptr;
 }
 
-Cage::Cage(const Cage& C) {
+Cage::Cage(const Cage& C) : Cell(C) {
     //animal_ = C.animal_;
 }
 
@@ -23,7 +23,5 @@ Animal* Cage::getAnimal() {
 }
 
 moveList Cage::getAnimalMove() {
-    if(animal_ != nullptr) {
-        return animal_->move();
-    }
+
 }

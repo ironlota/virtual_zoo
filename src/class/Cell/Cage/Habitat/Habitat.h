@@ -8,7 +8,7 @@ using namespace std;
 /** @class Habitat
   * Habitat merupakan ...
 */
-class Habitat : public Cage {
+class Habitat : public Cell {
     public:
         /** @brief Constructor.
         * Melakukan inisialisasi kelas
@@ -26,6 +26,9 @@ class Habitat : public Cage {
         * Melakukan inisialisasi kelas dengan operator =
         */ 
         Habitat& operator=(const Habitat&);
+        
+      private:
+        Animal* animal_;
 };
 
 #endif

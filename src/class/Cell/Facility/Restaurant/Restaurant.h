@@ -14,7 +14,7 @@ class Cage : public Facility {
         /** @brief Constructor.
         * Melakukan inisialisasi kelas
         */    
-        Restaurant();
+        Restaurant(string = "");
         /** @brief Copy Constructor.
         * Melakukan inisialisasi kelas dengan memasukkan kelas lain sebagai parameternya
         */ 

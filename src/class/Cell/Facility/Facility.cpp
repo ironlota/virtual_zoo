@@ -12,6 +12,10 @@ Facility::~Facility() {
 
 }
 
-Facility& Facility::operator=(const Facility&) {
+Facility& Facility::operator=(const Facility& F) {
+
+}
+
+ostream& operator<<(ostream& os, const Facility& F) {
 
 }

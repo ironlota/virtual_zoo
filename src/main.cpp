@@ -8,6 +8,6 @@
 using namespace std;
 
 int main() {
-    Zoo zoo_;
+    Zoo zoo_();
     return 0;
 }

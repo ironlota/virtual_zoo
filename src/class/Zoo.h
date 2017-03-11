@@ -16,8 +16,7 @@ class Zoo {
         /** @brief Constructor.
         * Melakukan inisialisasi kelas
         */
-        Zoo();    
-        Zoo(string filePath);
+        Zoo(int = 0, string = "");
         /** @brief Copy Constructor.
         * Melakukan inisialisasi kelas dengan memasukkan kelas lain sebagai parameternya
         */ 
@@ -30,12 +29,13 @@ class Zoo {
         * Melakukan inisialisasi kelas dengan operator =
         */ 
         Zoo& operator=(const Zoo&);
-    
+        /** @brief Operator <<
+        * Output matrix cell dan isinya dengan menggunakan operator =
+        */
+        friend ostream& operator<<(ostream&, const Zoo&);
     private:
-        vector<vector<Cell>> cell_;
-        vector<Animal> animal_;
+        vector<vector<Cell*>> cell_;
         const int maxCell;
-        const int maxAnimal;
 };
 
 #endif

@@ -27,6 +27,12 @@ class Facility : public Cell {
         * Melakukan inisialisasi kelas dengan operator =
         */ 
         Facility& operator=(const Facility&);
+        /** @brief Operator <<
+        * Output facility menggunakan operator<<
+        */
+        friend ostream& operator<<(ostream& os, const Cell& C);
+      protected:
+        string name;
 };
 
 #endif
