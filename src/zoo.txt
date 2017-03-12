@@ -18,13 +18,13 @@ P  R                  RR  ~~~~~   xxxxxx
 P                     RR  ~~~~~~   xxxxx
 PPPPP ~~~~~~xxxxxxx   RR  ~~~~~~   xxxxx
 PPPPP ~~~~~~xxxxxxxx  RR  PPPPP    PPPPP
-PPPPP ~~~~~~xxxxxxxx  RR  OOOOOOOO    PP
+PPPPP ~~~~~~xxxxxxxx  RR  OOOOOOOO    RP
 P                     RR  OOOOOOOO    RP
 OOxxxxxxxxxxOOOOOOOO   RR  OOOOOOO   RPP
 OOxxxxxxxxxxOOOOOOOO   RR  OOOOOOO   RPP
 OOxxxxxxxxxxOOOOOOOO   RR  OOOOOOO   RPP
-OOxxxxxxxxxx           RR  OOOOOO   PPPP
-OOxxxxxxxxxx           RR  OOOOOO   PPPP
+OOxxxxxxxxxx           RR  OOOOOO   RPPP
+OOxxxxxxxxxx           RR  OOOOOO   RPPP
 OOxxxxxxxxxx                       ~~~~~
 P                                  ~~~~~
 OOOOOOOOOOO     PPPPPPPPPPPP       ~~~~~
