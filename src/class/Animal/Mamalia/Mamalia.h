@@ -14,7 +14,7 @@ class Mamalia : public Animal {
         /** @brief Constructor.
         * Melakukan inisialisasi kelas
         */    
-        Mamalia();
+        Mamalia(int x_ = 0, int y_ = 0, string name_ = "", bool tamed_ = 0, float weight_ = 0.5, string foodtype_ = "", string habitat = "");
         /** @brief Copy Constructor.
         * Melakukan inisialisasi kelas dengan memasukkan kelas lain sebagai parameternya
         */ 
@@ -35,7 +35,7 @@ class Mamalia : public Animal {
         /** @brief Interact method
         * Binatang bisa bersuara
         */
-        void interact();
+        virtual void interact();
 };
 
 #endif

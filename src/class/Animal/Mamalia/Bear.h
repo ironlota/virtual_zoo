@@ -8,7 +8,7 @@ class Bear : public Mamalia{
     	/** @brief Constructor.
         * Melakukan inisialisasi kelas
         */
-        Bear();
+        Bear(int x_ = 0, int y_ = 0, bool tamed_ = 0, float weight_ = 0.5, string foodtype_ = "", string habitat = "");
         
         /** @brief Copy Constructor.
         * Melakukan inisialisasi kelas dengan memasukkan kelas lain sebagai parameternya
@@ -24,5 +24,9 @@ class Bear : public Mamalia{
         * Melakukan inisialisasi kelas dengan operator =
         */
         Bear& operator=(const Bear&);
+
+        /** @brief Interaksi 
+        */
+        void interact();
 
 };

@@ -1,8 +1,7 @@
 #include "Deer.h"
 
-Deer::Deer()
-{
-	name = "Deer";
+Deer::Deer(int x_, int y_, bool tamed_, float weight_, string foodtype_, string habitat) : 
+			Mamalia(x_, y_, "Deer", tamed_, weight_,foodtype_,habitat) {
 }
 
 Deer::Deer(const Deer& H) : Mamalia(H)
@@ -18,4 +17,9 @@ Deer::~Deer()
 Deer& Deer::operator= (const Deer& H)
 {
 	Mamalia::operator=(H);
+}
+
+void Deer::interact()
+{
+	std::cout << "Ngiiikkk" << endl;
 }

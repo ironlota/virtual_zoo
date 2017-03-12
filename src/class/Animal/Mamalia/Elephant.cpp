@@ -1,8 +1,7 @@
 #include "Elephant.h"
 
-Elephant::Elephant()
-{
-	name = "Elephant";
+Elephant::Elephant(int x_, int y_, bool tamed_, float weight_, string foodtype_, string habitat) : 
+			Mamalia(x_, y_, "Elephant", tamed_, weight_,foodtype_,habitat) {
 }
 
 Elephant::Elephant(const Elephant& H) : Mamalia(H)
@@ -18,4 +17,9 @@ Elephant::~Elephant()
 Elephant& Elephant::operator= (const Elephant& H)
 {
 	Mamalia::operator=(H);
+}
+
+void Elephant::interact()
+{
+	std::cout << "Trooooottt" << endl;
 }
