@@ -7,7 +7,7 @@ class Starfish : public Pisces{
 	/** @brief Constructor.
         * Melakukan inisialisasi kelas
         */ 
-	Starfish();
+	Starfish(int x_ = 0, int y_ = 0, bool tamed_ = false, float weight_ = 0, string foodtype_ = "", string habitat = "");
 
 	/** @brief Copy Constructor.
         * Melakukan inisialisasi kelas dengan memasukkan kelas lain sebagai parameternya
@@ -23,4 +23,8 @@ class Starfish : public Pisces{
         * Melakukan inisialisasi kelas dengan operator =
         */
 	Starfish& operator= (const Starfish&);
+
+    /** @brief interaksi
+    */
+    void interact();
 };

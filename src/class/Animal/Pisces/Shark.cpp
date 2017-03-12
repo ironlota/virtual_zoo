@@ -1,8 +1,9 @@
 #include "Shark.h"
 
-Shark::Shark()
+Shark::Shark(int x_, int y_, bool tamed_, float weight_, string foodtype_, string habitat) :
+		Pisces(x_,y_, "Shark", tamed_, weight_, foodtype_, habitat)
 {
-	name = "Shark";
+
 }
 
 Shark::Shark(const Shark& H) : Pisces(H)
@@ -18,4 +19,9 @@ Shark::~Shark()
 Shark& Shark::operator= (const Shark& H)
 {
 	Pisces::operator=(H);
+}
+
+void Shark::interact()
+{
+	std::cout << "blublublub" << std::endl;
 }

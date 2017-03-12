@@ -14,7 +14,7 @@ class Pisces : public Animal {
         /** @brief Constructor.
         * Melakukan inisialisasi kelas
         */    
-        Pisces();
+        Pisces(int x_ = 0, int y_ = 0, string name_ = "", bool tamed_ = false, float weight_ = 0, string foodtype_ = "", string habitat = "");
         /** @brief Copy Constructor.
         * Melakukan inisialisasi kelas dengan memasukkan kelas lain sebagai parameternya
         */ 
@@ -27,15 +27,9 @@ class Pisces : public Animal {
         * Melakukan inisialisasi kelas dengan operator =
         */ 
         Pisces& operator=(const Pisces&);
-    protected:
-        /** @brief Swim
-        * Prosedure swim yang virtual untuk direalisasikan di turunannya
-        */ 
-        void swim();
-        /** @brief Interact
-        * Prosedure interact yang virtual untuk direalisasikan di turunannya
-        */ 
-        void interact();
+        /** @brief Interaksi
+        */
+        virtual void interact();
 };
 
 #endif
