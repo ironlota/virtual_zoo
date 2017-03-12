@@ -1,17 +1,18 @@
 #include "LandHabitat.h"
 
 LandHabitat::LandHabitat() {
-    name = "Land";
+    name = "LandHabitat";
 }
 
 LandHabitat::LandHabitat(const LandHabitat& L) {
-    name = "";
+    name = L.name;
 }
 
 LandHabitat::~LandHabitat() {
-
+    // do nothing
 }
 
-LandHabitat& LandHabitat::operator=(const LandHabitat&) {
-
+LandHabitat& LandHabitat::operator=(const LandHabitat& L) {
+    name = L.name;
+    return *this;
 }

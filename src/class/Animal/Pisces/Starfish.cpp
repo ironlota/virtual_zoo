@@ -1,9 +1,18 @@
-#include "/Pisces.h"
+#include "Starfish.h"
 #include "../../Cell/Habitat/WaterHabitat.h"
 
-class Starfish : public Pisces, public WaterHabitat {
-	Starfish();
-	Starfish(const Starfish& H);
-	~Starfish();
-	Starfish& operator= (const Starfish& H);
-};
+Starfish::Starfish() {
+
+}
+	
+Starfish::Starfish(const Starfish& S) {
+
+}
+
+Starfish::~Starfish() {
+
+}
+	
+Starfish& Starfish::operator= (const Starfish& S) {
+
+}

@@ -1,4 +1,4 @@
-#include "/Pisces.h"
+#include "Pisces.h"
 #include "../../Cell/Habitat/WaterHabitat.h"
 
 /** @class Starfish
@@ -13,7 +13,7 @@ class Starfish : public Pisces, public WaterHabitat {
 	/** @brief Copy Constructor.
         * Melakukan inisialisasi kelas dengan memasukkan kelas lain sebagai parameternya
         */ 
-	Starfish(const Starfish& H);
+	Starfish(const Starfish&);
 
 	/** @brief Destructor.
         * Dipanggil saat penghancuran objek
@@ -23,5 +23,5 @@ class Starfish : public Pisces, public WaterHabitat {
 	/** @brief Operator =
         * Melakukan inisialisasi kelas dengan operator =
         */
-	Starfish& operator= (const Starfish& H);
+	Starfish& operator= (const Starfish&);
 };
