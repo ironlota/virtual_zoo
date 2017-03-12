@@ -3,12 +3,14 @@
 
 using namespace std;
   
-Animal::Animal(int x_, int y_, string name_, bool tamed_, float weight_) {
+Animal::Animal(int x_, int y_, string name_, bool tamed_, float weight_, string	foodtype_, string habitat) {
 	x = x_;
 	y = y_;
 	name = name_;
 	tamed = tamed_;
 	weight = weight_;
+	foodtype = foodtype_;
+	livingHabitat = habitat;
 }
 
 Animal::Animal(const Animal& A) {
@@ -17,6 +19,8 @@ Animal::Animal(const Animal& A) {
 	name = A.name;
 	tamed = A.tamed;
 	weight = A.weight;
+	foodtype = A.foodtype;
+	livingHabitat = A.livingHabitat;
 }
 
 Animal::~Animal() {
@@ -31,6 +35,8 @@ Animal& Animal::operator=(const Animal& A) {
 		name = A.name;
 		tamed = A.tamed;
 		weight = A.weight;
+		foodtype = A.foodtype;
+		livingHabitat = A.livingHabitat;
 	}
 	return *this;	
 }

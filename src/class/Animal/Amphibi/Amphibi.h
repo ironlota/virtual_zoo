@@ -14,7 +14,7 @@ class Amphibi : public Animal {
         /** @brief Constructor.
         * Melakukan inisialisasi kelas
         */    
-        Amphibi();
+        Amphibi(int x_ = 0, int y_ = 0, string name_ = "", bool tamed_ = 0, float weight_ = 0.5, string foodype_ = "", string habitat = "");
         /** @brief Copy Constructor.
         * Melakukan inisialisasi kelas dengan memasukkan kelas lain sebagai parameternya
         */ 
@@ -27,6 +27,9 @@ class Amphibi : public Animal {
         * Melakukan inisialisasi kelas dengan operator =
         */ 
         Amphibi& operator=(const Amphibi&);
+        /** @brief Interaksi 
+        */
+        virtual void interact();
 };
 
 #endif

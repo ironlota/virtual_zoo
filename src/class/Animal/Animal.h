@@ -21,7 +21,7 @@ class Animal {
         /** @brief Constructor.
         * Melakukan inisialisasi kelas
         */    
-        Animal(int x_ = 0, int y_ = 0, string name_ = "", bool tamed_ = 0, float weight_ = 0.5);
+        Animal(int x_ = 0, int y_ = 0, string name_ = "", bool tamed_ = 0, float weight_ = 0.5, string foodype_ = "", string habitat = "");
         /** @brief Copy Constructor.
         * Melakukan inisialisasi kelas dengan memasukkan kelas lain sebagai parameternya
         */ 
@@ -66,12 +66,18 @@ class Animal {
         int getLocY() { return y; }
         /** @brief Fungsi untuk mengembalikan boolean tamed ato tidak*/
         bool getTamed() { return tamed; }
-        
+        /** @brief Fungsi untuk mengembalikan boolean tamed ato tidak*/
+        string getFoodtype() { return foodtype; }
+        /** @brief Fungsi untuk mengembalikan boolean tamed ato tidak*/
+        string getHabitat() { return livingHabitat; }
+
      protected:
         float weight;
         string name;
         int x;
         int y;
         bool tamed;
+        string foodtype;
+        string livingHabitat;
 };
 #endif
