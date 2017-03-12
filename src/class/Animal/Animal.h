@@ -37,13 +37,7 @@ class Animal {
         /** @brief Eat
         * Prosedur eat yang pure virtual untuk direalisasikan di turunannya
         */ 
-        virtual void eat() = 0;
-        
-        /** @brief Reproduction
-        * Prosedur reproduction yang pure virtual untuk direalisasikan di turunannya
-        */ 
-        virtual void reproduction() = 0;
-        
+        float eat() { return 0.1*weight; }
         /** @brief Interact
         * Prosedur Interact yang pure virtual untuk direalisasikan di turunannya
         */ 

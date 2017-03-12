@@ -16,3 +16,8 @@ Mamalia::~Mamalia() {
 Mamalia& Mamalia::operator=(const Mamalia&) {
 
 }
+
+void Mamalia::interact()
+{
+	
+}
