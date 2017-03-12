@@ -6,7 +6,7 @@
 using namespace std;
 
 /** @class Aves
-  * Aves merupakan ...
+  * Aves merupakan salah satu kelas binatang yang habitatnya di udara.
 */
 class Aves {
     public:
@@ -26,6 +26,16 @@ class Aves {
         * Melakukan inisialisasi kelas dengan operator =
         */ 
         Aves& operator=(const Aves&);
+
+    protected:
+        /** @brief Fly
+        * Prosedure swim yang virtual untuk direalisasikan di turunannya
+        */ 
+        void fly();
+        /** @brief Interact
+        * Prosedure interact yang virtual untuk direalisasikan di turunannya
+        */ 
+        void interact();
 };
 
 #endif
