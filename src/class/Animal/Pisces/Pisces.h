@@ -7,7 +7,7 @@
 using namespace std;
 
 /** @class Pisces
-  * Pisces merupakan ...
+  * Pisces merupakan salah satu kelas binatang yang habitatnya di air.
 */
 class Pisces : public Animal {
     public:
@@ -29,7 +29,7 @@ class Pisces : public Animal {
         Pisces& operator=(const Pisces&);
     protected:
         /** @brief Swim
-        * Prosedure swim yang pure virtual untuk direalisasikan di turunannya
+        * Prosedure swim yang virtual untuk direalisasikan di turunannya
         */ 
         void swim();
         /** @brief Interact
