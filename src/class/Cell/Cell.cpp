@@ -39,3 +39,7 @@ void Cell::setLocX(int x) {
 void Cell::setLocY(int y) {
 	LocY = y;
 }
+
+void Cell::setType(string s){
+    type = s;
+}

@@ -31,8 +31,6 @@ class Facility : public Cell {
         * Output facility menggunakan operator<<
         */
         friend ostream& operator<<(ostream& os, const Cell& C);
-      protected:
-        string name;
 };
 
 #endif

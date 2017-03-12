@@ -44,7 +44,7 @@ class Cell {
         /** @brief setName
         * Menginisialisasi name bertipe string
         */
-        void setName(string);
+        void setType(string);
         /** @brief Operator <<
         * Output cell dengan menggunakan operator<<
         */
@@ -53,6 +53,6 @@ class Cell {
     protected:
         int LocX;
         int LocY;
-        string name;
+        string type;
 };
 #endif

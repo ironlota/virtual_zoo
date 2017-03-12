@@ -2,10 +2,12 @@
 
 Restaurant::Restaurant(string s) {
     name = s;
+    type = "restaurant";
 }
 
 Restaurant::Restaurant(const Restaurant& R) {
     name = R.name;
+    type = R.type;
 }
 
 Restaurant::~Restaurant() {
@@ -14,4 +16,6 @@ Restaurant::~Restaurant() {
 
 Restaurant& Restaurant::operator=(const Restaurant& R) {
     name = R.name;
+    type = R.type;
+    return *this;
 }
