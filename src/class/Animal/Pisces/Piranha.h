@@ -1,4 +1,4 @@
-#include "/Pisces.h"
+#include "Pisces.h"
 
 /** @class Piranha
   * Piranha merupakan hewan yang berkelas Pisces dan habitatnya di air.

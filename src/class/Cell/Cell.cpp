@@ -1,9 +1,9 @@
 #include "Cell.h"
 
-Cell::Cell(int x, int y, string name_) {
+Cell::Cell(int x, int y, string type_) {
     LocX = x;
     LocY = y;
-    name = name_;
+    type = type_;
 }
 
 Cell::Cell(const Cell& C) {

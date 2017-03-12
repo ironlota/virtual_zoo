@@ -32,7 +32,7 @@ Animal& Animal::operator=(const Animal& A) {
 		tamed = A.tamed;
 		weight = A.weight;
 	}
-	retrun *this;	
+	return *this;	
 }
 
 moveList Animal::move() {

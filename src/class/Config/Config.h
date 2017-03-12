@@ -4,55 +4,43 @@
 #include <iostream>
 using namespace std;
 
-/** @class Cell
-  * Cell merupakan ...
+/** @class Config
+* Config merupakan kelas loader and parser untuk melakukan pengambilan konfigurasi dari file eksternal
 */
 class Config {
     public:
-        /** @brief Constructor.
-        * Melakukan inisialisasi kelas
-        */    
-        Cell(int = 0, int = 0, string ="");
-        /** @brief Copy Constructor.
-        * Melakukan inisialisasi kelas dengan memasukkan kelas lain sebagai parameternya
-        */ 
-        Cell(const Cell&);
-        /** @brief Virtual Destructor.
-        * Dipanggil saat penghancuran objek
-        */ 
-        virtual ~Cell();
-        /** @brief Operator =
-        * Melakukan inisialisasi kelas dengan operator =
-        */ 
-        Cell& operator=(const Cell&);
-        /** @brief getLocX
-        * Mengembalikan lokasi X bertipe integer
-        */ 
-        int getLocX();
-        /** @brief getLocY
-        * Mengembalikan lokasi Y bertipe integer
-        */
-        int getLocY();
-        /** @brief setLocX
-        * Menginisialisasi lokasi Y bertipe integer
-        */
-        void setLocX(int);
-        /** @brief setLocY
-        * Menginisialisasi lokasi Y bertipe integer
-        */
-        void setLocY(int);
-        /** @brief setName
-        * Menginisialisasi name bertipe string
-        */
-        void setName(string);
-        /** @brief Operator <<
-        * Output cell dengan menggunakan operator<<
-        */
-        friend ostream& operator<<(ostream& os, const Cell& C);
+    /** @brief get
+    * Mengembalikan configuration class
+    */
+    static Config& get()
+    {
+        static Config instance;
+        return instance;
+    }
+    /** @brief parseFile
+    * Load dan parsing file konfigurasi eksternal
+    */
+    void parseFile(std::ifstream& inStream);
 
-    protected:
-        int LocX;
-        int LocY;
-        string name;
+    /** @brief getValue
+    * Mengembalikan value dari key yang diinput
+    */
+    template<typename _T>
+    _T getValue(std::string key);
+
+    private:
+    /** @brief Constructor.
+    * Melakukan inisialisasi kelas
+    */
+    ConfigStore(){};
+    /** @brief Copy Constructor.
+    * Melakukan inisialisasi kelas dengan memasukkan kelas lain sebagai parameternya
+    */ 
+    ConfigStore(const ConfigStore&);
+    /** @brief Operator =
+    * Melakukan inisialisasi kelas dengan operator =
+    */ 
+    ConfigStore& operator=(const ConfigStore&);
+    std::map<std::string,std::string> storedConfig;
 };
 #endif

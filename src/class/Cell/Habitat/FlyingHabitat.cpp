@@ -1,11 +1,11 @@
 #include "FlyingHabitat.h"
 
 FlyingHabitat::FlyingHabitat() {
-    name = "FlyingHabitat";
+    type = "FlyingHabitat";
 }
 
 FlyingHabitat::FlyingHabitat(const FlyingHabitat& F) {
-    name = F.name;
+    type = F.type;
 }
 
 FlyingHabitat::~FlyingHabitat() {
@@ -13,6 +13,6 @@ FlyingHabitat::~FlyingHabitat() {
 }
 
 FlyingHabitat& FlyingHabitat::operator=(const FlyingHabitat& F) {
-    name = F.name;
+    type = F.type;
     return *this;
 }

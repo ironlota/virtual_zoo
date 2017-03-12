@@ -1,0 +1,10 @@
+Virtual Zoo, 2017, Ensure.
+
+[Cage]
+{(1,1),(1,2)},1
+
+[Animal]
+1,1,Exolotl,50,True,{Land,Water},Omnivore
+
+[Facility]
+5,5,Restaurant,Padang

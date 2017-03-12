@@ -1,4 +1,4 @@
-#include "/Aves.h"
+#include "Aves.h"
 
 /** @class Peacock
   * Peacock merupakan hewan yang berkelas Aves dan habitatnya di udara.

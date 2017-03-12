@@ -1,4 +1,4 @@
-#include "/Aves.h"
+#include "Aves.h"
 
 /** @class Eagle
   * Eagle merupakan hewan yang berkelas Aves dan habitatnya di udara.

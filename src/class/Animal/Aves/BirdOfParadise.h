@@ -1,4 +1,4 @@
-#include "/Aves.h"
+#include "Aves.h"
 
 /** @class BirdOfParadise
   * BirdOfParadise merupakan hewan yang berkelas Aves dan habitatnya di udara.

@@ -21,7 +21,7 @@ class Animal {
         /** @brief Constructor.
         * Melakukan inisialisasi kelas
         */    
-        Animal(int x_, int y_, string name_, bool tamed_, float weight_);
+        Animal(int x_ = 0, int y_ = 0, string name_ = "", bool tamed_ = 0, float weight_ = 0.5);
         /** @brief Copy Constructor.
         * Melakukan inisialisasi kelas dengan memasukkan kelas lain sebagai parameternya
         */ 

@@ -1,11 +1,11 @@
 #include "WaterHabitat.h"
 
 WaterHabitat::WaterHabitat() {
-    name = "WaterHabitat";
+    type = "WaterHabitat";
 }
 
 WaterHabitat::WaterHabitat(const WaterHabitat& W) {
-    name = W.name;
+    type = W.type;
 }
 
 WaterHabitat::~WaterHabitat() {
@@ -13,6 +13,6 @@ WaterHabitat::~WaterHabitat() {
 }
 
 WaterHabitat& WaterHabitat::operator=(const WaterHabitat& W) {
-    name = W.name;
+    type = W.type;
     return *this;
 }

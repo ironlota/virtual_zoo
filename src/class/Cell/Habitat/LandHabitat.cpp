@@ -1,11 +1,11 @@
 #include "LandHabitat.h"
 
 LandHabitat::LandHabitat() {
-    name = "LandHabitat";
+    type = "LandHabitat";
 }
 
 LandHabitat::LandHabitat(const LandHabitat& L) {
-    name = L.name;
+    type = L.type;
 }
 
 LandHabitat::~LandHabitat() {
@@ -13,6 +13,6 @@ LandHabitat::~LandHabitat() {
 }
 
 LandHabitat& LandHabitat::operator=(const LandHabitat& L) {
-    name = L.name;
+    type = L.type;
     return *this;
 }
