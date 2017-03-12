@@ -25,14 +25,22 @@ class Cell {
         * Melakukan inisialisasi kelas dengan operator =
         */ 
         Cell& operator=(const Cell&);
-        /** @brief GetLocX
+        /** @brief getLocX
         * Mengembalikan lokasi X bertipe integer
         */ 
         int getLocX();
-        /** @brief GetLocY
+        /** @brief getLocY
         * Mengembalikan lokasi Y bertipe integer
         */
         int getLocY();
+        /** @brief setLocX
+        * Menginisialisasi lokasi Y bertipe integer
+        */
+        int setLocX();
+        /** @brief setLocY
+        * Menginisialisasi lokasi Y bertipe integer
+        */
+        int setLocY();
         /** @brief Operator <<
         * Output cell dengan menggunakan operator<<
         */

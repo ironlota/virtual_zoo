@@ -14,8 +14,9 @@ Cell::~Cell() {
  // do nothing
 }
 
-Cell& Cell::operator=(const Cell&) {
-    //do nothing
+Cell& Cell::operator=(const Cell& C) {
+    LocX = C.LocX;
+    LocY = C.LocY;
 }
 
 ostream& operator<<(ostream& os, const Cell& C) {

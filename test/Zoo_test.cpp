@@ -8,6 +8,9 @@ class ZooTest : public ::testing::Test {
 
 TEST(ZooTest, getCell) {
   Zoo zoo_(50);
-  ASSERT_EQ(60, zoo_.getMaxCell());
+  Zoo zoos(50);
+  zoos = zoo_;
+  EXPECT_EQ(50, zoo_.getMaxCell());
+  EXPECT_EQ(zoo_.getCell(0,0), zoos.getCell(0,0));
   //ASSERT_EQ("Hello World", hello.GetText());
 }

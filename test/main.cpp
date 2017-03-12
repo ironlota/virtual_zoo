@@ -1,5 +1,6 @@
 #include <iostream>
 #include "../src/class/Zoo.h"
+#include <gtest/gtest.h>
 /**
 *   Class included :
 *   - Zoo
@@ -7,7 +8,7 @@
 */
 using namespace std;
 
-int main() {
-    Zoo zoo_;
-    return 0;
+int main(int argc, char **argv) {
+  ::testing::InitGoogleTest(&argc, argv);
+  return RUN_ALL_TESTS();
 }

@@ -13,8 +13,7 @@ Zoo::Zoo(const Zoo& Z) : maxCell(Z.maxCell) {
 	cell_ = vector<vector<Cell*>>(maxCell,vector<Cell*>(maxCell));
  	for(int i = 0; i<maxCell; i++) {
 		for(int j = 0; j<maxCell; j++) {
-			Cell temp = *Z.cell_[i][j];
-			*cell_[i][j] = temp;			
+			*cell_[i][j] = *Z.cell_[i][j];				
 		}	
 	 }	
 }
@@ -31,11 +30,10 @@ Zoo& Zoo::operator=(const Zoo& Z) {
 		cell_[i].clear();
 	}
 	cell_.clear();
-	
+
  	for(int i = 0; i<maxCell; i++) {
 		for(int j = 0; j<maxCell; j++) {
-			Cell temp = *Z.cell_[i][j];
-			*cell_[i][j] = temp;			
+			*cell_[i][j] = *Z.cell_[i][j];		
 		}	
 	 }	
 }
