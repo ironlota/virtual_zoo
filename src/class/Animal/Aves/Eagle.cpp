@@ -1,8 +1,9 @@
 #include "Eagle.h"
 
-Eagle::Eagle()
+Eagle::Eagle(int x_, int y_, bool tamed_, float weight_, string foodtype_, string habitat) :
+		Aves(x_,y_,"Eagle",tamed_,weight_,foodtype_,habitat)
 {
-	name = "Eagle";
+
 }
 
 Eagle::Eagle(const Eagle& H) : Aves(H)
@@ -18,4 +19,9 @@ Eagle::~Eagle()
 Eagle& Eagle::operator= (const Eagle& H)
 {
 	Aves::operator=(H);
+}
+
+void Eagle::interact()
+{
+	std::cout << "Hieeeekkkk" << std::endl;
 }

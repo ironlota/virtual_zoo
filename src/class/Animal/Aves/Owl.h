@@ -7,7 +7,7 @@ class Owl : public Aves{
 	/** @brief Constructor.
         * Melakukan inisialisasi kelas
         */ 
-	Owl();
+	Owl(int x_ = 0, int y_ = 0, bool tamed_ = false, float weight_ = 0, string foodtype_ = "", string habitat = "");
 
 	/** @brief Copy Constructor.
         * Melakukan inisialisasi kelas dengan memasukkan kelas lain sebagai parameternya
@@ -23,4 +23,8 @@ class Owl : public Aves{
         * Melakukan inisialisasi kelas dengan operator =
         */
 	Owl& operator= (const Owl& H);
+
+    /** @brief Inteaksi
+    */
+    void interact();
 };
