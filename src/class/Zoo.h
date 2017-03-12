@@ -5,6 +5,8 @@
 #include <vector>
 #include "Cell/Cell.h"
 #include "Animal/Animal.h"
+#include "Cell/Facility/Facility.h"
+#include "Cell/Habitat/Habitat.h"
 
 using namespace std;
 
@@ -37,6 +39,14 @@ class Zoo {
         * Mengembalikan pointer cell di dalam vektor cell_
         */
         Cell* getCell(int, int);
+        /** @brief setCell Animal
+        * Menginisialisasi animal dan turunannya pada suatu cell
+        */
+        void setCell(int,int,const Animal&);
+        /** @brief setCell Cell
+        * Menginisialisasi cell dan turunannya pada suatu cell
+        */
+        void setCell(int,int,const Cell&);
         /** @brief getAllCell
         * Mengembalikan pointer semua cell di dalam vektor of vektor cell_
         */
@@ -45,8 +55,10 @@ class Zoo {
         * Mengembalikan max cell
         */
         int getMaxCell() const;
+        
     private:
-        vector< vector<Cell*> > cell_;
+        vector<vector<Cell*>> cell_;
+        vector<Animal*> animal_;
         const int maxCell;
 };
 

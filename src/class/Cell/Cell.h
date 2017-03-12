@@ -12,7 +12,7 @@ class Cell {
         /** @brief Constructor.
         * Melakukan inisialisasi kelas
         */    
-        Cell(int = 0, int = 0);
+        Cell(int = 0, int = 0, string ="");
         /** @brief Copy Constructor.
         * Melakukan inisialisasi kelas dengan memasukkan kelas lain sebagai parameternya
         */ 
@@ -36,18 +36,23 @@ class Cell {
         /** @brief setLocX
         * Menginisialisasi lokasi Y bertipe integer
         */
-        int setLocX();
+        void setLocX(int);
         /** @brief setLocY
         * Menginisialisasi lokasi Y bertipe integer
         */
-        int setLocY();
+        void setLocY(int);
+        /** @brief setName
+        * Menginisialisasi name bertipe string
+        */
+        void setName(string);
         /** @brief Operator <<
         * Output cell dengan menggunakan operator<<
         */
         friend ostream& operator<<(ostream& os, const Cell& C);
 
-    private:
+    protected:
         int LocX;
         int LocY;
+        string name;
 };
 #endif

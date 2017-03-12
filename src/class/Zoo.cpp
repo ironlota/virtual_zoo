@@ -4,7 +4,7 @@ Zoo::Zoo(int n, string filePath) : maxCell(n) {
 	cell_ = vector<vector<Cell*>>(maxCell,vector<Cell*>(maxCell));
  	for(int i = 0; i<maxCell; i++) {
 		for(int j = 0; j<maxCell; j++) {
-			cell_[i][j] = new Cell(i,j);			
+			cell_[i][j] = new Cell(i,j,"");			
 		}	
 	 }	
 }
@@ -59,4 +59,12 @@ vector< vector<Cell*>>& Zoo::getAllCell() {
 
 int Zoo::getMaxCell() const {
 	return maxCell;
+}
+
+void setCell(int i,int j,const Animal& A) {
+	//cell_[i][j] = new Habitat();
+}
+
+void setCell(int i,int j,const Cell& C) {
+
 }

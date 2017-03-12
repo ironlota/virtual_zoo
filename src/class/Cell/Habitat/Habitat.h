@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "../Cell.h"
+#include "../../Animal/Animal.h"
 using namespace std;
 
 /** @class Habitat
@@ -32,8 +33,10 @@ class Habitat : public Cell {
         int getIdCage() {
             return idCage;
         }
-    private:
+
+    protected:
         int idCage;
+        Animal* animal;
 };
 
 #endif
