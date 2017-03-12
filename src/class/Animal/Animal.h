@@ -57,6 +57,6 @@ class Animal {
         
      protected:
         float weight;
-        
+        string name;
 };
 #endif
