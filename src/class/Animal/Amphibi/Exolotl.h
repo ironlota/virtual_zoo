@@ -8,7 +8,7 @@ class Exolotl : public Amphibi {
     	/** @brief Constructor.
         * Melakukan inisialisasi kelas
         */
-        Exolotl();
+        Exolotl(int x_ = 0, int y_ = 0, bool tamed_ = false, float weight_ = 0, string foodtype_ = "", string habitat = "");
         
         /** @brief Copy Constructor.
         * Melakukan inisialisasi kelas dengan memasukkan kelas lain sebagai parameternya
@@ -24,5 +24,8 @@ class Exolotl : public Amphibi {
         * Melakukan inisialisasi kelas dengan operator =
         */
         Exolotl& operator=(const Exolotl&);
+        /** @brief Interaksi
+        */
+        void interact();
 
 };

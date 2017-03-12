@@ -1,8 +1,9 @@
 #include "Exolotl.h"
 
-Exolotl::Exolotl()
+Exolotl::Exolotl(int x_, int y_, bool tamed_, float weight_, string foodtype_, string habitat) :
+			Amphibi(x_,y_,"Exolotl", tamed_, weight_, foodtype_, habitat)
 {
-	name = "Exolotl";
+
 }
 
 Exolotl::Exolotl(const Exolotl& H) : Amphibi(H)
@@ -18,4 +19,8 @@ Exolotl::~Exolotl()
 Exolotl& Exolotl::operator= (const Exolotl& H)
 {
 	Amphibi::operator=(H);
+}
+
+void Exolotl::interact(){
+	std::cout << "Exolotl" << std::endl;
 }

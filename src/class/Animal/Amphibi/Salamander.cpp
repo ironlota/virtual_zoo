@@ -1,8 +1,9 @@
 #include "Salamander.h"
 
-Salamander::Salamander()
+Salamander::Salamander(int x_, int y_, bool tamed_, float weight_, string foodtype_, string habitat) :
+				Amphibi(x_,y_,"Salamander",tamed_,weight_,foodtype_,habitat)
 {
-	name = "Salamander";
+
 }
 
 Salamander::Salamander(const Salamander& H) : Amphibi(H)
@@ -18,4 +19,9 @@ Salamander::~Salamander()
 Salamander& Salamander::operator= (const Salamander& H)
 {
 	Amphibi::operator=(H);
+}
+
+void Salamander::interact()
+{
+	std::cout << "Salamanderrr" << std::endl;
 }

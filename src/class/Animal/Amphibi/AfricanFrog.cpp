@@ -1,7 +1,7 @@
 #include "AfricanFrog.h"
 
-AfricanFrog::AfricanFrog(int x_, int y_, bool tamed_, float weight_, string foodype_, string habitat) : 
-				  Amphibi(x_, y_, "AfricanFrog", tamed_, weight_, foodype_, habitat)
+AfricanFrog::AfricanFrog(int x_, int y_, bool tamed_, float weight_, string foodtype_, string habitat) : 
+				  Amphibi(x_, y_, "AfricanFrog", tamed_, weight_, foodtype_, habitat)
 {
 
 }
