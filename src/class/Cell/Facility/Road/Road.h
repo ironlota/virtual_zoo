@@ -9,7 +9,7 @@ using namespace std;
 /** @class Road
   * Road merupakan ...
 */
-class Cage : public Facility {
+class Road : public Facility {
     public:
         /** @brief Constructor.
         * Melakukan inisialisasi kelas

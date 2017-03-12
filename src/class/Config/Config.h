@@ -7,7 +7,7 @@ using namespace std;
 /** @class Config
 * Config merupakan kelas loader and parser untuk melakukan pengambilan konfigurasi dari file eksternal
 */
-class Config {
+class ConfigStore {
     public:
     /** @brief get
     * Mengembalikan configuration class

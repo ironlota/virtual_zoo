@@ -23,14 +23,17 @@ CFLAGS      :=  -Wall -ggdb -g -O0
 LDFLAGS     :=  -pthread
 GTESTFLAGS  :=  -lgtest_main -lgtest
 
-.PHONY: all main test clean
+.PHONY: all main test docs clean
 .PHONY:; @echo Finished!
 
-all: main test
+all: main test docs
 all:; @echo Finished!
 
 main: $(MAIN)
 test: $(TEST)
+
+docs:
+	doxygen ./Doxyfile
 
 $(MAIN): $(MAIN_OBJ) $(ZOO_OBJ) $(ANIMAL_OBJ) $(CELL_OBJ) | $(BIN)
 	$(CC) $(CPPFLAGS) $(CFLAGS) $^ $(LDLIBS) -o $@

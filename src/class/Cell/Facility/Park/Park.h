@@ -9,7 +9,7 @@ using namespace std;
 /** @class Park
   * Park merupakan ...
 */
-class Cage : public Facility {
+class Park : public Facility {
     public:
         /** @brief Constructor.
         * Melakukan inisialisasi kelas
