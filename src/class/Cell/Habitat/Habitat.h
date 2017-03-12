@@ -2,7 +2,7 @@
 #define HABITAT_H
 
 #include <iostream>
-#include "../Cage.h"
+#include "../Cell.h"
 using namespace std;
 
 /** @class Habitat
@@ -26,9 +26,14 @@ class Habitat : public Cell {
         * Melakukan inisialisasi kelas dengan operator =
         */ 
         Habitat& operator=(const Habitat&);
-        
-      private:
-        Animal* animal_;
+        /** @brief getIdCage
+        * Mengembalikan int idCage
+        */
+        int getIdCage() {
+            return idCage;
+        }
+    private:
+        int idCage;
 };
 
 #endif

@@ -28,23 +28,18 @@ class Cell {
         /** @brief GetLocX
         * Mengembalikan lokasi X bertipe integer
         */ 
-        int GetLocX() {
-          return LocX;
-        }
+        int getLocX();
         /** @brief GetLocY
         * Mengembalikan lokasi Y bertipe integer
         */
-        int GetLocY() {
-          return LocY;
-        }
+        int getLocY();
         /** @brief Operator <<
         * Output cell dengan menggunakan operator<<
         */
         friend ostream& operator<<(ostream& os, const Cell& C);
-    protected:
+
+    private:
         int LocX;
         int LocY;
 };
-
-
 #endif

@@ -1,5 +1,5 @@
 #include <iostream>
-#include "./Class/Zoo.h"
+#include "./class/Zoo.h"
 /**
 *   Class included :
 *   - Zoo
@@ -8,6 +8,10 @@
 using namespace std;
 
 int main() {
-    Zoo zoo_();
+    Zoo zoo_(50);
+    Zoo zoos(50);
+    cout << zoo_.getCell(1,1)->getLocX() << endl;
+    zoos = zoo_;
+    cout << zoos.getCell(1,1)->getLocX() << endl;
     return 0;
 }

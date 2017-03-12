@@ -21,3 +21,11 @@ Cell& Cell::operator=(const Cell&) {
 ostream& operator<<(ostream& os, const Cell& C) {
 
 }
+
+int Cell::getLocX() {
+	return LocX;
+}
+
+int Cell::getLocY() {
+	return LocY;
+}

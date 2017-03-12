@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../src/Class/Zoo.h"
+#include "../src/class/Zoo.h"
 /**
 *   Class included :
 *   - Zoo
