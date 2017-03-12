@@ -53,6 +53,6 @@ class Cell {
     protected:
         int LocX;
         int LocY;
-        string type;
+        string type; //Road, Restaurant, Park, Land, Water, Flying
 };
 #endif
