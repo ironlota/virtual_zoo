@@ -31,8 +31,9 @@
 *.out
 *.app
 
-# Docs PDF
+# Docs PDF and other things
 *.pdf
 *.xml
 *.png
 *.docx
+*.zip
