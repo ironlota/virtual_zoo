@@ -1,18 +1,21 @@
 #include "Starfish.h"
-#include "../../Cell/Habitat/WaterHabitat.h"
 
-Starfish::Starfish() {
-
+Starfish::Starfish()
+{
+	name = "Starfish";
 }
+
+Starfish::Starfish(const Starfish& H) : Pisces(H)
+{
 	
-Starfish::Starfish(const Starfish& S) {
-
 }
 
-Starfish::~Starfish() {
-
+Starfish::~Starfish()
+{
+	//do nothing
 }
-	
-Starfish& Starfish::operator= (const Starfish& S) {
 
+Starfish& Starfish::operator= (const Starfish& H)
+{
+	Pisces::operator=(H);
 }
