@@ -1,10 +1,9 @@
 #include "/Aves.h"
-#include "../../Cell/Habitat/FlyingHabitat.h"
 
 /** @class Peacock
   * Peacock merupakan hewan yang berkelas Aves dan habitatnya di udara.
 */
-class Peacock : public Aves, public FlyingHabitat {
+class Peacock : public Aves{
 	/** @brief Constructor.
         * Melakukan inisialisasi kelas
         */ 

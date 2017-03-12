@@ -1,10 +1,9 @@
 #include "Amphibi.h"
-#include "../../Cell/Habitat/Amphibi.h"
 
 /** @class Exolotl
   * Hawk merupakan hewan yang berkelas Mamalia dan habitatnya di darat.
 */
-class Exolotl : public Mamalia, public LandHabitat, public WaterHabitat {
+class Exolotl : public Amphibi {
     public:
     	/** @brief Constructor.
         * Melakukan inisialisasi kelas

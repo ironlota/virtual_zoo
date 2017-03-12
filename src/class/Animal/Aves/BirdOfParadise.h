@@ -1,10 +1,9 @@
 #include "/Aves.h"
-#include "../../Cell/Habitat/FlyingHabitat.h"
 
 /** @class BirdOfParadise
   * BirdOfParadise merupakan hewan yang berkelas Aves dan habitatnya di udara.
 */
-class BirdOfParadise : public Aves, public FlyingHabitat {
+class BirdOfParadise : public Aves{
 	/** @brief Constructor.
         * Melakukan inisialisasi kelas
         */ 

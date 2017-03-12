@@ -1,10 +1,9 @@
 #include "/Pisces.h"
-#include "../../Cell/Habitat/WaterHabitat.h"
 
 /** @class Piranha
   * Piranha merupakan hewan yang berkelas Pisces dan habitatnya di air.
 */
-class Piranha : public Pisces, public WaterHabitat {
+class Piranha : public Pisces{
 	/** @brief Constructor.
         * Melakukan inisialisasi kelas
         */ 

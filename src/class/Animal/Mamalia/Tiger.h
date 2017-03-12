@@ -1,10 +1,9 @@
 #include "Mamalia.h"
-#include "../../Cell/Habitat/LandHabitat.h"
 
 /** @class Tiger
   * Hawk merupakan hewan yang berkelas Mamalia dan habitatnya di darat.
 */
-class Tiger : public Mamalia, public LandHabitat{
+class Tiger : public Mamalia{
     public:
     	/** @brief Constructor.
         * Melakukan inisialisasi kelas

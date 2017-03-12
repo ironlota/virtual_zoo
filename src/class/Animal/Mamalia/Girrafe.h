@@ -1,10 +1,9 @@
 #include "Mamalia.h"
-#include "../../Cell/Habitat/LandHabitat.h"
 
 /** @class Girrafe
   * Hawk merupakan hewan yang berkelas Mamalia dan habitatnya di darat.
 */
-class Girrafe : public Mamalia, public LandHabitat{
+class Girrafe : public Mamalia{
     public:
     	/** @brief Constructor.
         * Melakukan inisialisasi kelas

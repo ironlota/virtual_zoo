@@ -1,10 +1,9 @@
 #include "/Aves.h"
-#include "../../Cell/Habitat/FlyingHabitat.h"
 
 /** @class Eagle
   * Eagle merupakan hewan yang berkelas Aves dan habitatnya di udara.
 */
-class Eagle : public Aves, public FlyingHabitat {
+class Eagle : public Aves{
 	/** @brief Constructor.
         * Melakukan inisialisasi kelas
         */ 

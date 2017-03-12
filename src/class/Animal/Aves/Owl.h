@@ -1,10 +1,9 @@
 #include "/Aves.h"
-#include "../../Cell/Habitat/FlyingHabitat.h"
 
 /** @class Owl
   * Owl merupakan hewan yang berkelas Aves dan habitatnya di udara.
 */
-class Owl : public Aves, public FlyingHabitat {
+class Owl : public Aves{
 	/** @brief Constructor.
         * Melakukan inisialisasi kelas
         */ 

@@ -1,10 +1,9 @@
 #include "Pisces.h"
-#include "../../Cell/Habitat/WaterHabitat.h"
 
 /** @class Starfish
   * Starfish merupakan hewan yang berkelas Pisces dan habitatnya di air.
 */
-class Starfish : public Pisces, public WaterHabitat {
+class Starfish : public Pisces{
 	/** @brief Constructor.
         * Melakukan inisialisasi kelas
         */ 

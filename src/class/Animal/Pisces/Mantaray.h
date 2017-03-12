@@ -1,10 +1,9 @@
 #include "/Pisces.h"
-#include "../../Cell/Habitat/WaterHabitat.h"
 
 /** @class Mantaray
   * Mantaray merupakan hewan yang berkelas Pisces dan habitatnya di air.
 */
-class Mantaray : public Pisces, public WaterHabitat {
+class Mantaray : public Pisces{
 	/** @brief Constructor.
         * Melakukan inisialisasi kelas
         */ 

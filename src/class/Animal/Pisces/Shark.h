@@ -1,10 +1,9 @@
 #include "/Pisces.h"
-#include "../../Cell/Habitat/WaterHabitat.h"
 
 /** @class Shark
   * Shark merupakan hewan yang berkelas Pisces dan habitatnya di air.
 */
-class Shark : public Pisces, public WaterHabitat {
+class Shark : public Pisces{
 	/** @brief Constructor.
         * Melakukan inisialisasi kelas
         */ 

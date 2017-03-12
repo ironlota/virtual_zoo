@@ -1,10 +1,9 @@
 #include "/Pisces.h"
-#include "../../Cell/Habitat/WaterHabitat.h"
 
 /** @class Seahorse
   * Seahorse merupakan hewan yang berkelas Pisces dan habitatnya di air.
 */
-class Seahorse : public Pisces, public WaterHabitat {
+class Seahorse : public Pisces{
 	/** @brief Constructor.
         * Melakukan inisialisasi kelas
         */ 
