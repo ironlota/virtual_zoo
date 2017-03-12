@@ -3,20 +3,36 @@
 
 using namespace std;
   
-Animal::Animal() {
-
+Animal::Animal(int x_, int y_, string name_, bool tamed_, float weight_) {
+	x = x_;
+	y = y_;
+	name = name_;
+	tamed = tamed_;
+	weight = weight_;
 }
 
-Animal::Animal(const Animal&) {
-
+Animal::Animal(const Animal& A) {
+	x = A.x;
+	y = A.y;
+	name = A.name;
+	tamed = A.tamed;
+	weight = A.weight;
 }
 
 Animal::~Animal() {
-
+	//do nothing
 }
 
-Animal& Animal::operator=(const Animal&) {
-
+Animal& Animal::operator=(const Animal& A) {
+	if(this != &A)
+	{
+		x = A.x;
+		y = A.y;
+		name = A.name;
+		tamed = A.tamed;
+		weight = A.weight;
+	}
+	retrun *this;	
 }
 
 moveList Animal::move() {

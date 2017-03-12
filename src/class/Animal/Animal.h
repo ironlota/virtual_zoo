@@ -21,7 +21,7 @@ class Animal {
         /** @brief Constructor.
         * Melakukan inisialisasi kelas
         */    
-        Animal();
+        Animal(int x_, int y_, string name_, bool tamed_, float weight_);
         /** @brief Copy Constructor.
         * Melakukan inisialisasi kelas dengan memasukkan kelas lain sebagai parameternya
         */ 
@@ -54,6 +54,18 @@ class Animal {
         * Prosedur 
         */
         moveList move();
+
+        /* ***** Getter and Setter ***** */
+        /** @brief Fungsi untuk mengembalikan berat */
+        float getWeight() { return weight; }
+        /** @brief Fungsi untuk mengembalikan nama */
+        string getName() { return name; }
+        /** @brief Fungsi untuk mengembalikan lokasi x */
+        int getLocX() { return x; }
+        /** @brief Fungsi untuk mengembalikan lokasi y */
+        int getLocY() { return y; }
+        /** @brief Fungsi untuk mengembalikan boolean tamed ato tidak*/
+        bool getTamed() { return tamed; }
         
      protected:
         float weight;
