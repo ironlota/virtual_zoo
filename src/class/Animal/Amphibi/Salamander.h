@@ -8,6 +8,6 @@ class Salamander : public Amphibi {
         
         ~Salamander();
         
-        operator=(const Salamander&);
+        Salamander& operator=(const Salamander&);
 
 };

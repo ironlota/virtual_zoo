@@ -1,28 +1,28 @@
 #include "Amphibi.h"
 
-/** @class Exolotl
+/** @class Caecilia
   * Hawk merupakan hewan yang berkelas Mamalia dan habitatnya di darat.
 */
-class Exolotl : public Amphibi {
+class Caecilia : public Amphibi {
     public:
     	/** @brief Constructor.
         * Melakukan inisialisasi kelas
         */
-        Exolotl();
+        Caecilia();
         
         /** @brief Copy Constructor.
         * Melakukan inisialisasi kelas dengan memasukkan kelas lain sebagai parameternya
         */ 
-        Exolotl(const Exolotl&);
+        Caecilia(const Caecilia&);
         
         /** @brief Destructor.
         * Dipanggil saat penghancuran objek
         */ 
-        ~Exolotl();
+        ~Caecilia();
         
         /** @brief Operator =
         * Melakukan inisialisasi kelas dengan operator =
         */
-        Exolotl& operator=(const Exolotl&);
+        Caecilia& operator=(const Caecilia&);
 
 };

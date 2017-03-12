@@ -8,6 +8,6 @@ class AfricanFrog : public Amphibi {
         
         ~AfricanFrog();
         
-        operator=(const AfricanFrog&);
+        AfricanFrog& operator=(const AfricanFrog&);
 
 };
