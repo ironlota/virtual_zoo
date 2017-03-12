@@ -6,7 +6,7 @@ MAIN_SRC    :=  $(wildcard src/*.cpp)
 MAIN_OBJ    :=  $(MAIN_SRC:.cpp=.o)
 
 TEST_SRC    :=  $(wildcard test/*.cpp)
-TEST_OBJ    :=  $(TEST_SRC:.cpp=.o)
+TEST_OBJ    :=  $(filter-out $(MAIN_OBJ:.cpp=.o), $(OBJECTS)) $(TEST_SRC:.cpp=.o)
 
 ZOO_SRC  	:=  $(wildcard src/class/*.cpp)
 ZOO_OBJ  	:=  $(ZOO_SRC:.cpp=.o)
@@ -39,7 +39,7 @@ $(MAIN): $(MAIN_OBJ) $(ZOO_OBJ) $(ANIMAL_OBJ) $(CELL_OBJ) | $(BIN)
 	$(CC) $(CPPFLAGS) $(CFLAGS) $^ $(LDLIBS) -o $@
 
 $(TEST): $(TEST_OBJ) $(ZOO_OBJ) $(ANIMAL_OBJ) $(CELL_OBJ) | $(BIN)
-	$(CC) $(LDFLAGS) $(CPPFLAGS) $(GTESTFLAGS) $^ $(LDLIBS) -o $@
+	$(CC) $(LDFLAGS) $(CPPFLAGS) $(CFLAGS) $(GTESTFLAGS) $^ $(LDLIBS) -o $@
 
 $(BIN):
 	mkdir $@
