@@ -7,7 +7,7 @@
 using namespace std;
 
 /** @class Mamalia
-  * Mamalia merupakan ...
+  * Mamalia merupakan class yang binatang yang menyusui
 */
 class Mamalia : public Animal {
     public:

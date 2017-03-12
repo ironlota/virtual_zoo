@@ -7,7 +7,7 @@
 using namespace std;
 
 /** @class Habitat
-  * Habitat merupakan ...
+  * Habitat merupakan cell yang merepresentasikan tempat tinggal dari suatu hewan
 */
 class Habitat : public Cell {
     public:

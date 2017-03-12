@@ -7,7 +7,7 @@
 using namespace std;
 
 /** @class Pisces
-  * Pisces merupakan salah satu kelas binatang yang habitatnya di air.
+  * Pisces merupakan class binatang yang habitatnya di air
 */
 class Pisces : public Animal {
     public:

@@ -7,7 +7,7 @@
 using namespace std;
 
 /** @class Road
-  * Road merupakan ...
+  * Road merupakan facility yang merepresentasikan sebuah jalan di dalam kebun binatang
 */
 class Road : public Facility {
     public:

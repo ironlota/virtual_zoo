@@ -11,7 +11,7 @@
 using namespace std;
 
 /** @class Zoo
-  * Zoo merupakan ...
+  * Zoo merupakan class yang merepresentasikan sebuah kebun binatang
 */
 class Zoo {
     public:
