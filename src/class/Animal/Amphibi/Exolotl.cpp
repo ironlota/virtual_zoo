@@ -22,5 +22,5 @@ Exolotl& Exolotl::operator= (const Exolotl& H)
 }
 
 void Exolotl::interact(){
-	std::cout << "Exolotl" << std::endl;
+	std::cout << "shhhhhhhh" << std::endl;
 }

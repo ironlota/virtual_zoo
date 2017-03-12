@@ -14,7 +14,7 @@ class Aves : public Animal {
         /** @brief Constructor.
         * Melakukan inisialisasi kelas
         */    
-        Aves();
+        Aves(int x_ = 0, int y_ = 0, string name_ = "", bool tamed_ = false, float weight_ = 0, string foodtype_ = 0, string habitat = 0);
         /** @brief Copy Constructor.
         * Melakukan inisialisasi kelas dengan memasukkan kelas lain sebagai parameternya
         */ 
@@ -27,16 +27,10 @@ class Aves : public Animal {
         * Melakukan inisialisasi kelas dengan operator =
         */ 
         Aves& operator=(const Aves&);
-
-    protected:
-        /** @brief Fly
-        * Prosedure swim yang virtual untuk direalisasikan di turunannya
-        */ 
-        void fly();
         /** @brief Interact
         * Prosedure interact yang virtual untuk direalisasikan di turunannya
         */ 
-        void interact();
+        virtual void interact();
 };
 
 #endif

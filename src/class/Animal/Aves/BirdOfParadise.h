@@ -7,7 +7,7 @@ class BirdOfParadise : public Aves{
 	/** @brief Constructor.
         * Melakukan inisialisasi kelas
         */ 
-	BirdOfParadise();
+	BirdOfParadise(int x_ = 0, int y_ = 0, bool tamed_ = false, float weight_ = 0, string foodtype_ = "", string habitat = "");
 
 	/** @brief Copy Constructor.
         * Melakukan inisialisasi kelas dengan memasukkan kelas lain sebagai parameternya
@@ -23,4 +23,8 @@ class BirdOfParadise : public Aves{
         * Melakukan inisialisasi kelas dengan operator =
         */
 	BirdOfParadise& operator= (const BirdOfParadise& H);
+
+    /** @brief Interaksi
+    */
+    void interact();
 };

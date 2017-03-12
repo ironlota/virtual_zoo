@@ -23,5 +23,5 @@ Salamander& Salamander::operator= (const Salamander& H)
 
 void Salamander::interact()
 {
-	std::cout << "Salamanderrr" << std::endl;
+	std::cout << "brrrrr" << std::endl;
 }
