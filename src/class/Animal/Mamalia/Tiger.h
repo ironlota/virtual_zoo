@@ -1,14 +1,29 @@
 #include "Mamalia.h"
 #include "../../Cell/Habitat/LandHabitat.h"
 
+/** @class Tiger
+  * Hawk merupakan hewan yang berkelas Mamalia dan habitatnya di darat.
+*/
 class Tiger : public Mamalia, public LandHabitat{
     public:
+    	/** @brief Constructor.
+        * Melakukan inisialisasi kelas
+        */
         Tiger();
         
-        Tiger(const Harimau&);
+        /** @brief Copy Constructor.
+        * Melakukan inisialisasi kelas dengan memasukkan kelas lain sebagai parameternya
+        */ 
+        Tiger(const Tiger&);
         
-        Tiger();
+        /** @brief Destructor.
+        * Dipanggil saat penghancuran objek
+        */ 
+        ~Tiger();
         
-        operator=(const Tiger&);
+        /** @brief Operator =
+        * Melakukan inisialisasi kelas dengan operator =
+        */
+        Tiger& operator=(const Tiger&);
 
 };

@@ -1,14 +1,29 @@
 #include "Mamalia.h"
 #include "../../Cell/Habitat/LandHabitat.h"
 
-class Giraffe : public Mamalia, public LandHabitat{
+/** @class Girrafe
+  * Hawk merupakan hewan yang berkelas Mamalia dan habitatnya di darat.
+*/
+class Girrafe : public Mamalia, public LandHabitat{
     public:
-        Giraffe();
+    	/** @brief Constructor.
+        * Melakukan inisialisasi kelas
+        */
+        Girrafe();
         
-        Giraffe(const Giraffe&);
+        /** @brief Copy Constructor.
+        * Melakukan inisialisasi kelas dengan memasukkan kelas lain sebagai parameternya
+        */ 
+        Girrafe(const Girrafe&);
         
-        ~Giraffe();
+        /** @brief Destructor.
+        * Dipanggil saat penghancuran objek
+        */ 
+        ~Girrafe();
         
-        operator=(const Giraffe&);
+        /** @brief Operator =
+        * Melakukan inisialisasi kelas dengan operator =
+        */
+        Girrafe& operator=(const Girrafe&);
 
 };
