@@ -2,13 +2,14 @@
 #define AMPHIBI_H
 
 #include <iostream>
+#include "../Animal.h"
 
 using namespace std;
 
 /** @class Amphibi
   * Amphibi merupakan ...
 */
-class Amphibi {
+class Amphibi : public Animal {
     public:
         /** @brief Constructor.
         * Melakukan inisialisasi kelas

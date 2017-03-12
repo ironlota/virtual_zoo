@@ -2,13 +2,14 @@
 #define AVES_H
 
 #include <iostream>
+#include "../Animal.h"
 
 using namespace std;
 
 /** @class Aves
   * Aves merupakan salah satu kelas binatang yang habitatnya di udara.
 */
-class Aves {
+class Aves : public Animal {
     public:
         /** @brief Constructor.
         * Melakukan inisialisasi kelas

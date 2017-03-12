@@ -50,14 +50,14 @@ class Zoo {
         /** @brief getAllCell
         * Mengembalikan pointer semua cell di dalam vektor of vektor cell_
         */
-        vector< vector<Cell*>>& getAllCell();
+        vector< vector< Cell* > >& getAllCell();
         /** @brief getMaxCell
         * Mengembalikan max cell
         */
         int getMaxCell() const;
         
     private:
-        vector<vector<Cell*>> cell_;
+        vector< vector< Cell* > >  cell_;
         vector<Animal*> animal_;
         const int maxCell;
 };

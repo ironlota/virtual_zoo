@@ -1,7 +1,7 @@
 #include "Zoo.h"
 
 Zoo::Zoo(int n, string filePath) : maxCell(n) {
-	cell_ = vector<vector<Cell*>>(maxCell,vector<Cell*>(maxCell));
+	cell_ = vector< vector<Cell*> >(maxCell,vector<Cell*>(maxCell));
  	for(int i = 0; i<maxCell; i++) {
 		for(int j = 0; j<maxCell; j++) {
 			cell_[i][j] = new Cell(i,j,"");			
@@ -10,7 +10,7 @@ Zoo::Zoo(int n, string filePath) : maxCell(n) {
 }
 
 Zoo::Zoo(const Zoo& Z) : maxCell(Z.maxCell) {
-	cell_ = vector<vector<Cell*>>(maxCell,vector<Cell*>(maxCell));
+	cell_ = vector< vector<Cell*> >(maxCell,vector<Cell*>(maxCell));
  	for(int i = 0; i<maxCell; i++) {
 		for(int j = 0; j<maxCell; j++) {
 			*cell_[i][j] = *Z.cell_[i][j];				
@@ -53,7 +53,7 @@ Cell* Zoo::getCell(int i, int j) {
 	return cell_[i][j];
 }
 
-vector< vector<Cell*>>& Zoo::getAllCell() {
+vector<  vector<Cell*> >& Zoo::getAllCell() {
 	return cell_;
 }
 

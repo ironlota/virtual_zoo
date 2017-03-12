@@ -2,13 +2,14 @@
 #define MAMALIA_H
 
 #include <iostream>
+#include "../Animal.h"
 
 using namespace std;
 
 /** @class Mamalia
   * Mamalia merupakan ...
 */
-class Mamalia {
+class Mamalia : public Animal {
     public:
         /** @brief Constructor.
         * Melakukan inisialisasi kelas
