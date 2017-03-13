@@ -1,6 +1,6 @@
 #include "WaterHabitat.h"
 
-WaterHabitat::WaterHabitat() {
+WaterHabitat::WaterHabitat(int x, int y, string name, Animal* animalPtr, int id) : Habitat(x,y,name,animalPtr,id) {
     type = "WaterHabitat";
 }
 

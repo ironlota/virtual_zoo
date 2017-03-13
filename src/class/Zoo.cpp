@@ -1,6 +1,6 @@
 #include "Zoo.h"
 
-Zoo::Zoo(int n, string filePath) : maxCell(n) {
+Zoo::Zoo(int n) : maxCell(n) {
 	cell_ = vector< vector<Cell*> >(maxCell,vector<Cell*>(maxCell));
  	for(int i = 0; i<maxCell; i++) {
 		for(int j = 0; j<maxCell; j++) {

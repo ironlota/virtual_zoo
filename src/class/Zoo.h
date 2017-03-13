@@ -18,7 +18,7 @@ class Zoo {
         /** @brief Constructor.
         * Melakukan inisialisasi kelas
         */
-        Zoo(int = 50, string = "");
+        Zoo(int = 50);
         /** @brief Copy Constructor.
         * Melakukan inisialisasi kelas dengan memasukkan kelas lain sebagai parameternya
         */ 
@@ -57,12 +57,19 @@ class Zoo {
         * @param Animal memberikan value animal yang ingin dimasukan
         */
         void SetAnimal(Animal&);
-
-
         /* METODE LAIN */
         /** @brief update
         * Metode untuk update status posisi dari tiap animal */
         void update();
+
+        /** @brief get
+        * Mengembalikan configuration class
+        */
+        static Zoo& Get(int n)
+        {
+            static Zoo zoo(n);
+            return zoo;
+        }
         
     private:
         vector< vector< Cell* > >  cell_;

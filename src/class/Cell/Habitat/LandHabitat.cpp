@@ -1,6 +1,6 @@
 #include "LandHabitat.h"
 
-LandHabitat::LandHabitat() {
+LandHabitat::LandHabitat(int x, int y, string name, Animal* animalPtr, int id) : Habitat(x,y,name,animalPtr,id) {
     type = "LandHabitat";
 }
 

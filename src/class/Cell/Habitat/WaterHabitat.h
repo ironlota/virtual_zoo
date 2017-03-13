@@ -13,7 +13,7 @@ class WaterHabitat : public Habitat {
         /** @brief Constructor.
         * Melakukan inisialisasi kelas
         */    
-        WaterHabitat();
+        WaterHabitat(int = 0, int = 0, string = "", Animal* = nullptr, int = -1);
         /** @brief Copy Constructor.
         * Melakukan inisialisasi kelas dengan memasukkan kelas lain sebagai parameternya
         */ 

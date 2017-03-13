@@ -1,6 +1,6 @@
 #include "ConfigStore.h"
 
-int ConfigStore::ParseFile(std::ifstream& inStream) {
+int ConfigStore::ParseFile(std::ifstream& inStream, int n) {
     // Always check after opening to make sure the
     // file existed and was opened successfully.
     //
@@ -64,19 +64,39 @@ int ConfigStore::ParseFile(std::ifstream& inStream) {
         cageVec.push_back(*temp);
     }
 
+    for(int i=0; i<cageVec.size(); i++) {
+            Habitat * habitat;
+            if(cageVec[i].habitat.compare("LandHabitat") == 0) {
+                habitat = new LandHabitat(cageVec[i].x,cageVec[i].y,cageVec[i].habitat,nullptr,cageVec[i].id);
+            } else if(cageVec[i].habitat.compare("WaterHabitat") == 0) {
+                habitat = new WaterHabitat(cageVec[i].x,cageVec[i].y,cageVec[i].habitat,nullptr,cageVec[i].id);
+            } else if(cageVec[i].habitat.compare("FlyingHabitat") == 0) {
+                habitat = new FlyingHabitat(cageVec[i].x,cageVec[i].y,cageVec[i].habitat,nullptr,cageVec[i].id);
+            }
+             Zoo::Get(n).setCell(cageVec[i].x,cageVec[i].y,*habitat);
+    }
+
     //cout << animal_str.size() << endl;
     for(int i = 0; i< animal_str.size(); i++) {
         //cout << animal_str[i] << endl;
         //cout << "HI INI CAGE" << endl;
         vector<string> x = splits_(animal_str[i],',');
-        bool b = false;
-        if(x[4].compare("True") == 0) {
-            b = true;
-        }
-        animal_temp * temp = new animal_temp(stoi(x[0]), stoi(x[1]), x[2], stof(x[3]), b, x[5], x[6]);
+        animal_temp * temp = new animal_temp(stoi(x[0]), stoi(x[1]), x[2], stof(x[3]), x[4].compare("True") == 0 ? true : false, x[5], x[6]);
         //cout << x[0] << " " << x[1] << " " << x[2] << endl;
         x.clear();
         animalVec.push_back(*temp);
+    }
+
+    for(int i=0; i<cageVec.size(); i++) {
+           Animal * animal;
+            if(cageVec[i].habitat.compare("LandHabitat") == 0) {
+                habitat = new LandHabitat(cageVec[i].x,cageVec[i].y,cageVec[i].habitat,nullptr,cageVec[i].id);
+            } else if(cageVec[i].habitat.compare("WaterHabitat") == 0) {
+                habitat = new WaterHabitat(cageVec[i].x,cageVec[i].y,cageVec[i].habitat,nullptr,cageVec[i].id);
+            } else if(cageVec[i].habitat.compare("FlyingHabitat") == 0) {
+                habitat = new FlyingHabitat(cageVec[i].x,cageVec[i].y,cageVec[i].habitat,nullptr,cageVec[i].id);
+            }
+             Zoo::Get(n).setCell(cageVec[i].x,cageVec[i].y,*habitat);
     }
     
     //cout << facility_str.size() << endl;

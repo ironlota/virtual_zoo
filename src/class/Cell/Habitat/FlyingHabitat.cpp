@@ -1,6 +1,6 @@
 #include "FlyingHabitat.h"
 
-FlyingHabitat::FlyingHabitat() {
+FlyingHabitat::FlyingHabitat(int x, int y, string name, Animal* animalPtr, int id) : Habitat(x,y,name,animalPtr,id) {
     type = "FlyingHabitat";
 }
 

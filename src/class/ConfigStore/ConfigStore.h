@@ -6,8 +6,8 @@
 #include <map>
 #include <vector>
 #include <string>
-#include "Util.h"
-#include "../Zoo.h"
+#include "SysAll.h"
+
 using namespace std;
 
 /** @struct cage_temp
@@ -77,10 +77,17 @@ class ConfigStore {
         static ConfigStore instance;
         return instance;
     }
+    /** @brief save
+    * Mengembalikan configuration class
+    */
+    void Save()
+    {
+        
+    }
     /** @brief parseFile
     * Load dan parsing file konfigurasi eksternal
     */
-    int ParseFile(std::ifstream& inStream);
+    int ParseFile(std::ifstream& inStream, int n);
 
     /** @brief parseFile
     * Load dan parsing file konfigurasi eksternal

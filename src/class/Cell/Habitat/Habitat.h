@@ -14,7 +14,7 @@ class Habitat : public Cell {
         /** @brief Constructor.
         * Melakukan inisialisasi kelas
         */    
-        Habitat();
+        Habitat(int = 0, int = 0, string = "", Animal* = nullptr, int = -1);
         /** @brief Copy Constructor.
         * Melakukan inisialisasi kelas dengan memasukkan kelas lain sebagai parameternya
         */ 

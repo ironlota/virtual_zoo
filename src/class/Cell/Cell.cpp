@@ -18,6 +18,7 @@ Cell::Cell(const Cell& C) {
 
 Cell::~Cell() {
  // do nothing
+ delete animalPtr;
 }
 
 Cell& Cell::operator=(const Cell& C) {
