@@ -633,6 +633,7 @@ Virtual Zoo, 2017, Ensure.
 39,37,15,LandHabitat
 39,38,15,LandHabitat
 39,39,15,LandHabitat
+[END OF Cage]
 
 [Animal]
 9,14,Bear,70,False,Land,Carnivore
@@ -645,8 +646,7 @@ Virtual Zoo, 2017, Ensure.
 15,35,Elephant,5000,True,Land,Herbivore
 16,37,Elephant,5000,True,Land,Herbivore
 18,39,Elephant,5000,True,Land,Herbivore
-
-
+[END OF Animal]
 
 [Facility]
 2,5,Restaurant,Padang
@@ -1064,3 +1064,4 @@ Virtual Zoo, 2017, Ensure.
 30,25,Park,Park
 30,26,Park,Park
 30,27,Park,Park
+[END OF Facility]
