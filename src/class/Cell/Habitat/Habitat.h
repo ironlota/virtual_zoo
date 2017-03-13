@@ -36,7 +36,6 @@ class Habitat : public Cell {
 
     protected:
         int idCage;
-        Animal* animal;
 };
 
 #endif

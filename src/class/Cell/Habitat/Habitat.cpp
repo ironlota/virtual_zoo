@@ -13,6 +13,6 @@ Habitat::~Habitat() {
     delete animal;
 }
 
-Habitat& Habitat::operator=(const Habitat&) {
-    delete animal;
+Habitat& Habitat::operator=(const Habitat& H) {
+    animalPtr = H.animalPtr;
 }
