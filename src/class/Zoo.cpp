@@ -39,14 +39,17 @@ Zoo& Zoo::operator=(const Zoo& Z) {
 }
 
 ostream& operator<<(ostream& os, const Zoo& Z) {
-	for(int i = 0; i < Z.cell_.size(); i++) {
-		for(int j = 0; j < Z.cell_.size(); j++) {
-			if(i==Z.cell_.size() - 1)
-				cout << *Z.cell_[i][j] << endl;
-			else
-				cout << *Z.cell_[i][j];
+	for (int i = 0; i < Z.maxCell; ++i) {
+		for (int j = 0; j < Z.maxCell; ++j) {
+			if (Z.cell_[i][j]->getAnimalPtr() != nullptr) {
+				os << Z.cell_[i][j]->getAnimalPtr(); //print dari * ke os blm tentu bisa
+			} else {
+				os << *Z.cell_[i][j]; 
+			}
 		}
+		os << endl;
 	}
+	return os;
 }
 
 Cell* Zoo::getCell(int i, int j) {

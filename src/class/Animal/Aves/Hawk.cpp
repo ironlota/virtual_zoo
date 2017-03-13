@@ -25,3 +25,8 @@ void Hawk::interact()
 {
 	std::cout << "Awwwkkkkkkk" << std::endl;
 }
+
+ostream& operator<< (ostream& os, const Hawk&){
+	os << 'h';
+	return os;
+}

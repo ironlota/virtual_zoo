@@ -25,3 +25,8 @@ void Peacock::interact()
 {
 	std::cout << "wusshhhhh" << std::endl;
 }
+
+ostream& operator<< (ostream& os, const Peacock&){
+	os << 'p';
+	return os;
+}

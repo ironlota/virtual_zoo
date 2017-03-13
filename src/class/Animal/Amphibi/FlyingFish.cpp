@@ -25,3 +25,8 @@ void FlyingFish::interact()
 {
 	std::cout << "Wushhh" << std::endl;
 }
+
+ostream& operator<< (ostream& os, const FlyingFish& F){
+	os << 'f';
+	return os;
+}

@@ -42,6 +42,6 @@ class Caecilia : public Amphibi {
         * @param ostream tampungan yang ingin di output
         * @param Animal yang ingin dicetak
         */
-        friend ostream& operator<< (ostream& , const Animal&);
+        friend ostream& operator<< (ostream& , const Caecilia&);
 
 };

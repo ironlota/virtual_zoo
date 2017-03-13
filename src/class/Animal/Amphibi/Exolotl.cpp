@@ -24,3 +24,8 @@ Exolotl& Exolotl::operator= (const Exolotl& H)
 void Exolotl::interact(){
 	std::cout << "shhhhhhhh" << std::endl;
 }
+
+ostream& operator<< (ostream& os, const Exolotl& E) {
+	os << 'e';
+	return os;
+}

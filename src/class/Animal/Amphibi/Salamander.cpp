@@ -25,3 +25,8 @@ void Salamander::interact()
 {
 	std::cout << "brrrrr" << std::endl;
 }
+
+ostream& operator<< (ostream& os, const Salamander& S){
+	os << 's';
+	return os;
+}

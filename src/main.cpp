@@ -10,12 +10,13 @@ using namespace std;
 
 int main() {
     int n;
-    Zoo zoo_(50);
+    Zoo zoo_(40);
     ifstream input("./bin/data/base.vze");
     cin >> n;
-    int status = ConfigStore::Get().ParseFile(input,n);
-    if(status != -1) {
-        cout << Zoo::Get(n).getCell(6,2)->GetName() << endl;
-    }
+    //int status = ConfigStore::Get().ParseFile(input,n);
+    //if(status != -1) {
+    	cout << "ada" << endl;
+        cout << zoo_ << endl;
+    //}
     return 0;
 }

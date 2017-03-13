@@ -25,3 +25,8 @@ void Ostrich::interact()
 {
 	std::cout << "Kokokkkkk" << std::endl;
 }
+
+ostream& operator<< (ostream& os, const Ostrich& O) {
+	os << 'o';
+	return os;
+}

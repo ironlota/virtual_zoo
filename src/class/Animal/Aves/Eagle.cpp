@@ -25,3 +25,8 @@ void Eagle::interact()
 {
 	std::cout << "Hieeeekkkk" << std::endl;
 }
+
+ostream& operator<< (ostream& os, const Eagle& E){
+	os << 'e';
+	return os;
+}

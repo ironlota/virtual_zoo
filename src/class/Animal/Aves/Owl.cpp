@@ -25,3 +25,8 @@ void Owl::interact()
 {
 	std::cout << "Huuukkk" << std::endl;
 }
+
+ostream& operator<< (ostream& os, const Owl&){
+	os << 'o';
+	return os;
+}

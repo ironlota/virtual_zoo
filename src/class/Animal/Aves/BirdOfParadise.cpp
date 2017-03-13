@@ -25,3 +25,8 @@ void BirdOfParadise::interact()
 {
 	std::cout << "prrrrrrrrr" << std::endl;
 }
+
+ostream& operator<< (ostream& os, const BirdOfParadise& B){
+	os << 'b';
+	return os;
+}
