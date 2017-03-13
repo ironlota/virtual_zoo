@@ -25,3 +25,8 @@ void AfricanFrog::interact()
 {
 	std::cout << "Krokok" << std::endl;
 }
+
+ostream& operator<< (ostream& os, const AfricanFrog& A) {
+	os << 'a';
+	return os;
+}

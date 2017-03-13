@@ -42,7 +42,7 @@ TEST(CellTest, Cell) {
 
 TEST(FacilityTest, Facility) {
   Cell *C1;
-  Facility *f1 = new Facility();
+  Facility *f1 = new Facility(5,3,"Road1",nullptr,-1,"Jalan Genesha");
   C1 = f1;
   C1->setType("Road1");
   EXPECT_EQ(f1->GetCageId() , -1);
@@ -51,7 +51,7 @@ TEST(FacilityTest, Facility) {
 
 TEST(HabitatTest, Habitat) {
   Cell *c1;
-  Habitat *h1 = new Habitat();
+  Habitat *h1 = new Habitat(4,4,"Habitat1",nullptr,-1);
   c1 = h1;
   c1->setType("Habitat1");
   c1->SetCageId(5);
@@ -61,7 +61,7 @@ TEST(HabitatTest, Habitat) {
 
 TEST(ParkTest, Park) {
   Facility *f_test;
-  Park *p1 = new Park(); //sebetulnya parameter string ga guna
+  Park *p1 = new Park(5,5,"park",nullptr,-1,"Puter park");
   f_test = p1;
   EXPECT_EQ( "park", f_test->getCellType());
   EXPECT_EQ( 0 , f_test->getLocX());
@@ -69,7 +69,7 @@ TEST(ParkTest, Park) {
 
 TEST(LandHabitatTest, LandHabitat) {
   Habitat *h_test;
-  LandHabitat *l1 = new LandHabitat(); //sebetulnya parameter string ga guna
+  LandHabitat *l1 = new LandHabitat(1,1,"LandHabitat",nullptr,5); //sebetulnya parameter string ga guna
   h_test = l1;
   EXPECT_EQ( "LandHabitat", h_test->getCellType());
   EXPECT_EQ( 0 , h_test->getLocX());

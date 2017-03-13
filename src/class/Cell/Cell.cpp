@@ -27,10 +27,26 @@ Cell& Cell::operator=(const Cell& C) {
     type = C.type;
     animalPtr = C.animalPtr;
     cage_id = C.cage_id;
+    return *this;
 }
 
 ostream& operator<<(ostream& os, const Cell& C) {
-
+    if(C.type.compare("Restaurant") == 0) {
+        os << 'R';
+    } else if(C.type.compare("Road") == 0) {
+        os << ' ';
+    } else if(C.type.compare("Park") == 0) {
+        os << 'P';
+    } else if(C.type.compare("LandHabitat") == 0) {
+        os << 'x';
+    } else if(C.type.compare("WaterHabitat") == 0) {
+        os << '~';
+    } else if(C.type.compare("FlyingHabitat") == 0) {
+        os << 'O';
+    } else {
+        os << ' ';
+    }
+    return os;
 }
 
 int Cell::getLocX() {

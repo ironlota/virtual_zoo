@@ -42,8 +42,11 @@ class Animal {
         virtual void interact() = 0;
 
         /** @brief Move
-        * Prosedur move yang dapat dipanggil di turunannya
-        * Prosedur 
+        * @return int yang melambangkan gerakan hewan
+        * @param bool true bila boleh ke atas
+        * @param bool true bila boleh ke bawah
+        * @param bool true bila boleh ke kanan
+        * @param bool true bila bole ke kiri
         */
         int move(bool, bool, bool, bool);
 

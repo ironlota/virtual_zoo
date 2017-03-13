@@ -25,3 +25,8 @@ void Caecilia::interact()
 {
 	std::cout << "Caeciliaaaaa" << std::endl;
 }
+
+ostream& operator<< (ostream& os, const Caecilia& C){
+	os << 'c';
+	return os;
+}

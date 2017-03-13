@@ -5,7 +5,7 @@ class ZooTest : public ::testing::Test {
   protected:
     ZooTest(){}
 };
-
+/*
 TEST(ZooTest, getCell) {
   Zoo zoo_(50);
   Zoo zoos(50);
@@ -14,3 +14,4 @@ TEST(ZooTest, getCell) {
   EXPECT_EQ(zoo_.getCell(0,0), zoos.getCell(0,0));
   //ASSERT_EQ("Hello World", hello.GetText());
 }
+*/
