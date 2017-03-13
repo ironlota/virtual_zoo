@@ -29,6 +29,7 @@ class Eagle : public Aves{
 	/** @brief Operator =
         * Melakukan inisialisasi kelas dengan operator =
         * @param H Eagle lain yang akan dicopy.
+        * @return Reference to Eagle.
         */
 	Eagle& operator= (const Eagle& H);
 

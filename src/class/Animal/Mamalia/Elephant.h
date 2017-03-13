@@ -7,11 +7,18 @@ class Elephant : public Mamalia{
     public:
     	/** @brief Constructor.
         * Melakukan inisialisasi kelas
+        * @param x_ Posisi X.
+        * @param y_ Posisi Y.
+        * @param tamed_ Menyatakan kejinakan Animal tersebut; false = ganas, true = jinak.
+        * @param weight_ Menyatakan berat Animal tersebut.
+        * @param foodtype_ Menyatakan Animal tersebut Herbivore, Carnivore, atau Omnivore.
+        * @param habitat Menyatakan habitat Animal tersebut.
         */
         Elephant(int x_ = 0, int y_ = 0, bool tamed_ = 0, float weight_ = 0.5, string foodtype_ = "", string habitat = "");
         
         /** @brief Copy Constructor.
         * Melakukan inisialisasi kelas dengan memasukkan kelas lain sebagai parameternya
+        * @param H Elephant lain yang akan dicopy.
         */ 
         Elephant(const Elephant&);
         
@@ -22,6 +29,8 @@ class Elephant : public Mamalia{
         
         /** @brief Operator =
         * Melakukan inisialisasi kelas dengan operator =
+        * @param H Elephant lain yang akan dicopy.
+        * @return Reference to Elephant.
         */
         Elephant& operator=(const Elephant&);
 

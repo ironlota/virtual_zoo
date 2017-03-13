@@ -6,7 +6,6 @@
 class Peacock : public Aves{
 	/** @brief Constructor.
         * Melakukan inisialisasi kelas
-        * Melakukan inisialisasi kelas
         * @param x_ Posisi X.
         * @param y_ Posisi Y.
         * @param tamed_ Menyatakan kejinakan Animal tersebut; false = ganas, true = jinak.
@@ -30,6 +29,7 @@ class Peacock : public Aves{
 	/** @brief Operator =
         * Melakukan inisialisasi kelas dengan operator =
         * @param H Peacock lain yang akan dicopy.
+        * @return Reference to Peacock.
         */
 	Peacock& operator= (const Peacock& H);
 
