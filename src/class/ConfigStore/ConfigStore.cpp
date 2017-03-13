@@ -1,6 +1,6 @@
 #include "ConfigStore.h"
 
-int ConfigStore::parseFile(std::ifstream& inStream) {
+int ConfigStore::ParseFile(std::ifstream& inStream) {
     // Always check after opening to make sure the
     // file existed and was opened successfully.
     //
@@ -84,11 +84,6 @@ int ConfigStore::parseFile(std::ifstream& inStream) {
          vector<string> x = splits_(facility_str[i],',');
          facility_temp * temp = new facility_temp(stoi(x[0]), stoi(x[1]), x[2], x[3]);
          x.clear();
-         //cout << temp->x << " " << temp->y << " " << temp->type << " " << temp->name << endl;
          facilityVec.push_back(*temp);
-    }
-
-    for(int i = 0; i < cageVec.size(); i++) {
-        //cout << temp->x << " " << temp->y << " " << temp->name << " " << temp->weight << " " << temp->tamed << " " << temp->habitat << " " << temp->foodtype << endl;
     }
 }

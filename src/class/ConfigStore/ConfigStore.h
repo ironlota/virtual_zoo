@@ -3,11 +3,11 @@
 
 #include <iostream>
 #include <fstream>
-
 #include <map>
 #include <vector>
 #include <string>
 #include "Util.h"
+#include "../Zoo.h"
 using namespace std;
 
 /** @struct cage_temp
@@ -72,7 +72,7 @@ class ConfigStore {
     /** @brief get
     * Mengembalikan configuration class
     */
-    static ConfigStore& get()
+    static ConfigStore& Get()
     {
         static ConfigStore instance;
         return instance;
@@ -80,13 +80,22 @@ class ConfigStore {
     /** @brief parseFile
     * Load dan parsing file konfigurasi eksternal
     */
-    int parseFile(std::ifstream& inStream);
+    int ParseFile(std::ifstream& inStream);
+
+    /** @brief parseFile
+    * Load dan parsing file konfigurasi eksternal
+    */
+    void SaveFile(std::ifstream& inStream);
 
     /** @brief getValue
     * Mengembalikan value dari key yang diinput
     */
     template<typename _T>
-    _T getValue(std::string key);
+    _T GetValue(std::string key);
+
+    vector<cage_temp> cageVec;
+    vector<animal_temp> animalVec;
+    vector<facility_temp> facilityVec;
 
     private:
     /** @brief Constructor.
@@ -101,9 +110,6 @@ class ConfigStore {
     * Melakukan inisialisasi kelas dengan operator =
     */ 
     ConfigStore& operator=(const ConfigStore&) {};
-    vector<cage_temp> cageVec;
-    vector<animal_temp> animalVec;
-    vector<facility_temp> facilityVec;
     std::map<std::string,std::string> storedConfig;
 };
 
