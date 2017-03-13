@@ -55,6 +55,13 @@ class Zoo {
         * Mengembalikan max cell
         */
         int getMaxCell() const;
+        /** @brief SetAnimal
+        * Berfungsi untuk meletakan animal
+        * Asumsi bahwa animal sudah terdefinisi
+        * @param Animal memberikan value animal yang ingin dimasukan
+        */
+        void SetAnimal(Animal&);
+
 
         /* METODE LAIN */
         /** @brief update

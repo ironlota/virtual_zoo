@@ -69,6 +69,13 @@ void Zoo::setCell(int i,int j,const Cell& C) {
 
 }
 
+void Zoo::SetAnimal(Animal& A) {
+	int i = A.getLocX();
+	int j = A.getLocY();
+	cell_[i][j]->setAnimalPtr(&A);
+	animal_.push_back(&A);
+}
+
 void Zoo::update()
 {
 	bool up, down, right, left;
@@ -102,6 +109,7 @@ void Zoo::update()
 		int mov = animal_[i]->move(up,down,right,left);
 		Animal* temp;
 
+		//Swap pointer animal
 		switch(mov){
 			case 0: {
 				temp = cell_[animal_[i]->getLocX()][animal_[i]->getLocY()-1]->getAnimalPtr();
