@@ -1,18 +1,17 @@
 #include "Habitat.h"
 
 Habitat::Habitat() {
-    animal = nullptr;
+    animalPtr = nullptr;
 }
 
 Habitat::Habitat(const Habitat& H) {
-    animal = nullptr;
-    *animal = *H.animal;
+
 }
 
 Habitat::~Habitat() {
-    delete animal;
+    delete animalPtr;
 }
 
 Habitat& Habitat::operator=(const Habitat& H) {
-    animalPtr = H.animalPtr;
+    
 }

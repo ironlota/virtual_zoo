@@ -1,6 +1,6 @@
 #include "Facility.h"
 
-Facility::Facility() {
+Facility::Facility() : Cell() {
     
 }
 

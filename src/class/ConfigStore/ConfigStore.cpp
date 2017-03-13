@@ -58,9 +58,9 @@ int ConfigStore::parseFile(std::ifstream& inStream) {
         string token;
         std::stringstream ss(cage_str[i]);
         while(std::getline(ss,token,',')) {
-            for(j = 0; j < cage_str[i].size(); j++) {
+            /**for(j = 0; j < cage_str[i].size(); j++) {
                 cage c;
-            }
+            }*/
         }
     }
 
