@@ -2,6 +2,7 @@
 #define CELL_H
 
 #include <iostream>
+#include "../Animal/Animal.h"
 using namespace std;
 
 /** @class Cell
@@ -12,7 +13,7 @@ class Cell {
         /** @brief Constructor.
         * Melakukan inisialisasi kelas
         */    
-        Cell(int = 0, int = 0, string ="");
+        Cell(int = 0, int = 0, string ="", Animal* = nullptr);
         /** @brief Copy Constructor.
         * Melakukan inisialisasi kelas dengan memasukkan kelas lain sebagai parameternya
         */ 
@@ -33,6 +34,17 @@ class Cell {
         * Mengembalikan lokasi Y bertipe integer
         */
         int getLocY();
+        /** @brief getCellType
+        * @return string yang merupakan tipe cell : road, restaurant 
+        * park, land, water, flying 
+        */
+        string getCellType();
+        /** @brief getAnimalPtr
+        * @return Pointer to animal 
+        */
+        Animal* getAnimalPtr();
+
+
         /** @brief setLocX
         * Menginisialisasi lokasi Y bertipe integer
         */
@@ -54,5 +66,6 @@ class Cell {
         int LocX;
         int LocY;
         string type; //Road, Restaurant, Park, Land, Water, Flying
+        Animal* animalPtr; //Pointer to Animal if cell is a habitat
 };
 #endif

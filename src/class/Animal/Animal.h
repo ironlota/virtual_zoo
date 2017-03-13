@@ -70,6 +70,6 @@ class Animal {
         int y;
         bool tamed;
         string foodtype;
-        string livingHabitat;
+        string livingHabitat; //Land, Water, Flying
 };
 #endif

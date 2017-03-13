@@ -71,6 +71,39 @@ void Zoo::setCell(int i,int j,const Cell& C) {
 
 void Zoo::update()
 {
+	bool up, down, right, left;
+	for (int i = 0; i < animal_.size(); ++i)
+	{
+		if(cell_[animal_[i]->getLocX()][animal_[i]->getLocY()-1]->getCellType() == animal_[i]->getHabitat()) 
+		{
+			up = true;
+		} else {
+			up = false;
+		}
+		if(cell_[animal_[i]->getLocX()][animal_[i]->getLocY()+1]->getCellType() == animal_[i]->getHabitat()) 
+		{
+			down = true;
+		} else {
+			down = false;
+		}
+		if(cell_[animal_[i]->getLocX()+1][animal_[i]->getLocY()]->getCellType() == animal_[i]->getHabitat()) 
+		{
+			right = true;
+		} else {
+			right = false;
+		}
+		if(cell_[animal_[i]->getLocX()-1][animal_[i]->getLocY()]->getCellType() == animal_[i]->getHabitat()) 
+		{
+			left = true;
+		} else {
+			left = false;
+		}
+		
+		int mov = animal_[i]->move(up,down,right,left);
+		
+	}
+
+
 	//TODO iterasi ke setiap animal
 	//cek apakah habitat di kiri kanan atas bawah bisa
 	//kirim boolean

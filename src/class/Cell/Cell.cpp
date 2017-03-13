@@ -1,14 +1,17 @@
 #include "Cell.h"
 
-Cell::Cell(int x, int y, string type_) {
+Cell::Cell(int x, int y, string type_, Animal* A) {
     LocX = x;
     LocY = y;
     type = type_;
+    animalPtr = A;
 }
 
 Cell::Cell(const Cell& C) {
     LocX = C.LocX;
     LocY = C.LocY;
+    type = C.type;
+    animalPtr = C.animalPtr;
 }
 
 Cell::~Cell() {
@@ -18,6 +21,8 @@ Cell::~Cell() {
 Cell& Cell::operator=(const Cell& C) {
     LocX = C.LocX;
     LocY = C.LocY;
+    type = C.type;
+    animalPtr = C.animalPtr;
 }
 
 ostream& operator<<(ostream& os, const Cell& C) {
@@ -30,6 +35,14 @@ int Cell::getLocX() {
 
 int Cell::getLocY() {
 	return LocY;
+}
+
+string Cell::getCellType(){
+    return type;
+}
+
+Animal* Cell::getAnimalPtr(){
+    return animalPtr;
 }
 
 void Cell::setLocX(int x) {
