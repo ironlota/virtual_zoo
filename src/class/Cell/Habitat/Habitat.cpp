@@ -1,10 +1,10 @@
 #include "Habitat.h"
 
-Habitat::Habitat() {
-    animalPtr = nullptr;
+Habitat::Habitat() : Cell() {
+    
 }
 
-Habitat::Habitat(const Habitat& H) {
+Habitat::Habitat(const Habitat& H) : Cell(H) {
 
 }
 

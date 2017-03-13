@@ -4,7 +4,8 @@ Facility::Facility() : Cell() {
     
 }
 
-Facility::Facility(const Facility& F) {
+Facility::Facility(const Facility& F) : Cell(F) {
+
 }
 
 Facility::~Facility() {
