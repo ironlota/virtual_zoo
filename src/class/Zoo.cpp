@@ -61,10 +61,18 @@ int Zoo::getMaxCell() const {
 	return maxCell;
 }
 
-void setCell(int i,int j,const Animal& A) {
+void Zoo::setCell(int i,int j,const Animal& A) {
 	//cell_[i][j] = new Habitat();
 }
 
-void setCell(int i,int j,const Cell& C) {
+void Zoo::setCell(int i,int j,const Cell& C) {
 
+}
+
+void Zoo::update()
+{
+	//TODO iterasi ke setiap animal
+	//cek apakah habitat di kiri kanan atas bawah bisa
+	//kirim boolean
+	//geser pointer
 }
