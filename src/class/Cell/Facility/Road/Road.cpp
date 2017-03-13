@@ -1,13 +1,11 @@
 #include "Road.h"
 
-Road::Road(string s) {
-    name = s;
+Road::Road(string s) : Facility (){
     type = "road";
     animalPtr = nullptr;
 }
 
 Road::Road(const Road& R) {
-    name = R.name;
     type = R.type;
     animalPtr = nullptr;
 }
@@ -17,7 +15,6 @@ Road::~Road() {
 }
 
 Road& Road::operator=(const Road& R) {
-    name = R.name;
     type = R.type;
     animalPtr = nullptr;
     return *this;

@@ -14,7 +14,8 @@ ZOO_OBJ  	:=  $(ZOO_SRC:.cpp=.o)
 ANIMAL_SRC  :=  $(wildcard src/class/Animal/*.cpp) $(wildcard src/class/Animal/*/*.cpp)
 ANIMAL_OBJ  :=  $(ANIMAL_SRC:.cpp=.o)
 
-CELL_SRC  	:=  $(wildcard src/class/Cell/*.cpp) $(wildcard src/class/Cell/*/*.cpp)
+CELL_SRC  	:=  $(wildcard src/class/Cell/*.cpp) $(wildcard src/class/Cell/*/*.cpp) $(wildcard src/class/Cell/Facility/*/*.cpp)
+
 CELL_OBJ  	:=  $(CELL_SRC:.cpp=.o)
 
 CONF_SRC  	:=  $(wildcard src/class/ConfigStore/*.cpp)

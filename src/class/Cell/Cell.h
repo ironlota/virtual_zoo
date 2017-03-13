@@ -13,7 +13,7 @@ class Cell {
         /** @brief Constructor.
         * Melakukan inisialisasi kelas
         */    
-        Cell(int = 0, int = 0, string ="", Animal* = nullptr);
+        Cell(int = 0, int = 0, string ="", Animal* = nullptr, int id = -1);
         /** @brief Copy Constructor.
         * Melakukan inisialisasi kelas dengan memasukkan kelas lain sebagai parameternya
         */ 
@@ -43,6 +43,10 @@ class Cell {
         * @return Pointer to animal 
         */
         Animal* getAnimalPtr();
+        /** @brief GetCageId
+        * @return int id of cage 
+        */
+        int GetCageId();
 
 
         /** @brief setLocX
@@ -61,6 +65,10 @@ class Cell {
         * Menginisialisasi ptr animal saat alokasi
         */
         void setAnimalPtr(Animal*);
+        /** @brief SetCageId
+        * Menginisiasi cage id
+        */
+        void SetCageId(int);
         /** @brief Operator <<
         * Output cell dengan menggunakan operator<<
         */
@@ -71,5 +79,6 @@ class Cell {
         int LocY;
         string type; //Road, Restaurant, Park, Land, Water, Flying
         Animal* animalPtr; //Pointer to Animal if cell is a habitat
+        int cage_id; // -1 for undefined
 };
 #endif

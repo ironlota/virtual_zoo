@@ -42,11 +42,7 @@ class Zoo {
         /** @brief setCell Animal
         * Menginisialisasi animal dan turunannya pada suatu cell
         */
-        void setCell(int,int,const Animal&);
-        /** @brief setCell Cell
-        * Menginisialisasi cell dan turunannya pada suatu cell
-        */
-        void setCell(int,int,const Cell&);
+        void setCell(int,int, Cell&);
         /** @brief getAllCell
         * Mengembalikan pointer semua cell di dalam vektor of vektor cell_
         */

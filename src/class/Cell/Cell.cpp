@@ -1,10 +1,11 @@
 #include "Cell.h"
 
-Cell::Cell(int x, int y, string type_, Animal* A) {
+Cell::Cell(int x, int y, string type_, Animal* A, int id) {
     LocX = x;
     LocY = y;
     type = type_;
     animalPtr = A;
+    cage_id = id;
 }
 
 Cell::Cell(const Cell& C) {
@@ -12,6 +13,7 @@ Cell::Cell(const Cell& C) {
     LocY = C.LocY;
     type = C.type;
     animalPtr = C.animalPtr;
+    cage_id = C.cage_id;
 }
 
 Cell::~Cell() {
@@ -23,6 +25,7 @@ Cell& Cell::operator=(const Cell& C) {
     LocY = C.LocY;
     type = C.type;
     animalPtr = C.animalPtr;
+    cage_id = C.cage_id;
 }
 
 ostream& operator<<(ostream& os, const Cell& C) {
@@ -45,6 +48,10 @@ Animal* Cell::getAnimalPtr(){
     return animalPtr;
 }
 
+int Cell::GetCageId () {
+    return cage_id;
+}
+
 void Cell::setLocX(int x) {
 	LocX = x;
 }
@@ -59,4 +66,8 @@ void Cell::setType(string s){
 
 void Cell::setAnimalPtr(Animal* A){
     animalPtr = A;
+}
+
+void Cell::SetCageId (int i) {
+    cage_id = i;
 }

@@ -27,6 +27,6 @@ class Park : public Facility {
         * Melakukan inisialisasi kelas dengan operator =
         */ 
         Park& operator=(const Park&);
-}
+};
 
 #endif

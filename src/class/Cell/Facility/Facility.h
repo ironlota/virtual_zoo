@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include "../Cell.h"
-
+#include "../../Animal/Animal.h"
 using namespace std;
 
 /** @class Facility

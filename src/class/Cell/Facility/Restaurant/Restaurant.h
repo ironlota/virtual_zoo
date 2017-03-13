@@ -27,6 +27,6 @@ class Restaurant : public Facility {
         * Melakukan inisialisasi kelas dengan operator =
         */ 
         Restaurant& operator=(const Restaurant&);
-}
+};
 
 #endif

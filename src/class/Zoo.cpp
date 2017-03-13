@@ -61,12 +61,8 @@ int Zoo::getMaxCell() const {
 	return maxCell;
 }
 
-void Zoo::setCell(int i,int j,const Animal& A) {
-	//cell_[i][j] = new Habitat();
-}
-
-void Zoo::setCell(int i,int j,const Cell& C) {
-
+void Zoo::setCell(int i,int j, Cell& C) {
+	cell_[i][j] = &C;
 }
 
 void Zoo::SetAnimal(Animal& A) {
@@ -81,25 +77,41 @@ void Zoo::update()
 	bool up, down, right, left;
 	for (int i = 0; i < animal_.size(); ++i)
 	{
-		if(cell_[animal_[i]->getLocX()][animal_[i]->getLocY()-1]->getCellType() == animal_[i]->getHabitat()) 
+		if(cell_[animal_[i]->getLocX()][animal_[i]->getLocY()-1]->getCellType() == animal_[i]->getHabitat()
+			&& cell_[animal_[i]->getLocX()][animal_[i]->getLocY()-1]->getAnimalPtr() == nullptr
+			&& cell_[animal_[i]->getLocX()][animal_[i]->getLocY()-1]->GetCageId() == 
+			   cell_[animal_[i]->getLocX()][animal_[i]->getLocY()]->GetCageId()
+			) 
 		{
 			up = true;
 		} else {
 			up = false;
 		}
-		if(cell_[animal_[i]->getLocX()][animal_[i]->getLocY()+1]->getCellType() == animal_[i]->getHabitat()) 
+		if(cell_[animal_[i]->getLocX()][animal_[i]->getLocY()+1]->getCellType() == animal_[i]->getHabitat()
+			&& cell_[animal_[i]->getLocX()][animal_[i]->getLocY()+1]->getAnimalPtr() == nullptr
+			&& cell_[animal_[i]->getLocX()][animal_[i]->getLocY()+1]->GetCageId() == 
+			   cell_[animal_[i]->getLocX()][animal_[i]->getLocY()]->GetCageId()
+			) 
 		{
 			down = true;
 		} else {
 			down = false;
 		}
-		if(cell_[animal_[i]->getLocX()+1][animal_[i]->getLocY()]->getCellType() == animal_[i]->getHabitat()) 
+		if(cell_[animal_[i]->getLocX()+1][animal_[i]->getLocY()]->getCellType() == animal_[i]->getHabitat()
+			&& cell_[animal_[i]->getLocX()+1][animal_[i]->getLocY()]->getAnimalPtr() == nullptr
+			&& cell_[animal_[i]->getLocX()+1][animal_[i]->getLocY()]->GetCageId() == 
+			   cell_[animal_[i]->getLocX()][animal_[i]->getLocY()]->GetCageId()
+			)
 		{
 			right = true;
 		} else {
 			right = false;
 		}
-		if(cell_[animal_[i]->getLocX()-1][animal_[i]->getLocY()]->getCellType() == animal_[i]->getHabitat()) 
+		if(cell_[animal_[i]->getLocX()-1][animal_[i]->getLocY()]->getCellType() == animal_[i]->getHabitat()
+			&& cell_[animal_[i]->getLocX()-1][animal_[i]->getLocY()]->getAnimalPtr() == nullptr
+			&& cell_[animal_[i]->getLocX()-1][animal_[i]->getLocY()]->GetCageId() == 
+			   cell_[animal_[i]->getLocX()][animal_[i]->getLocY()]->GetCageId()
+			)
 		{
 			left = true;
 		} else {
