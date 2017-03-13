@@ -24,3 +24,7 @@ void Tiger::interact()
 	std::cout << "Raaawwwrr" << endl;
 }
 
+ostream& operator<< (ostream& os, const Tiger&){
+	os << 't';
+	return os;
+}

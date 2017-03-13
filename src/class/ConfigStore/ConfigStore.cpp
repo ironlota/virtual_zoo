@@ -78,7 +78,7 @@ int ConfigStore::ParseFile(std::ifstream& inStream, int n) {
 
     for(int i = 0; i< animal_str.size(); i++) {
         vector<string> x = splits_(animal_str[i],',');
-        animal_temp * temp = new animal_temp(stoi(x[1]), stoi(x[0]), x[2], stof(x[3]), x[4].compare("True") == 0 ? true : false, x[5], x[6]);
+        animal_temp * temp = new animal_temp(stoi(x[1]), stoi(x[0]), x[2], stof(x[4]), x[3].compare("True") == 0 ? true : false, x[5], x[6]);
         x.clear();
         animalVec.push_back(*temp);
     }

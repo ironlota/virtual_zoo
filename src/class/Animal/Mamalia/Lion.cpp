@@ -23,3 +23,8 @@ void Lion::interact()
 {
 	std::cout << "Hauummmm" << endl;
 }
+
+ostream& operator<< (ostream& os, const Lion&) {
+	os << 'l';
+	return os;
+}

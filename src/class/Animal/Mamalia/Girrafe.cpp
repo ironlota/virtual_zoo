@@ -23,3 +23,8 @@ void Girrafe::interact()
 {
 	std::cout << "Aaaakkk" << endl;
 }
+
+ostream& operator<< (ostream& os, const Girrafe&){
+	os << 'g';
+	return os;
+}

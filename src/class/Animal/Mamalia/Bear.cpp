@@ -24,3 +24,8 @@ void Bear::interact()
 {
 	std::cout << "Groooowll" << endl;
 }
+
+ostream& operator<< (ostream& os, const Bear& B) {
+	os << 'b';
+	return os;
+}

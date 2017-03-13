@@ -23,3 +23,8 @@ void Elephant::interact()
 {
 	std::cout << "Trooooottt" << endl;
 }
+
+ostream& operator<< (ostream& os, const Elephant& E){
+	os << 'e';
+	return os;
+}

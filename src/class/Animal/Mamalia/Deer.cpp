@@ -23,3 +23,8 @@ void Deer::interact()
 {
 	std::cout << "Ngiiikkk" << endl;
 }
+
+ostream& operator<< (ostream& os, const Deer& D){
+	os << 'd';
+	return os;
+}

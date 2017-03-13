@@ -42,7 +42,9 @@ ostream& operator<<(ostream& os, const Zoo& Z) {
 	for (int i = 0; i < Z.maxCell; ++i) {
 		for (int j = 0; j < Z.maxCell; ++j) {
 			if (Z.cell_[i][j]->getAnimalPtr() != nullptr) {
-				os << Z.cell_[i][j]->getAnimalPtr(); //print dari * ke os blm tentu bisa
+				Animal *A = Z.cell_[i][j]->getAnimalPtr();
+				//os << "ini nama animal" << A->getName();
+				cout << &A; //print dari * ke os blm tentu bisa
 			} else {
 				os << *Z.cell_[i][j]; 
 			}
