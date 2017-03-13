@@ -1,5 +1,6 @@
-#include <iostream>
+#include <fstream>
 #include "./class/Zoo.h"
+#include "./class/ConfigStore/ConfigStore.h"
 /**
 *   Class included :
 *   - Zoo
@@ -9,9 +10,7 @@ using namespace std;
 
 int main() {
     Zoo zoo_(50);
-    Zoo zoos(50);
-    cout << zoo_.getCell(1,1)->getLocX() << endl;
-    zoos = zoo_;
-    cout << zoos.getCell(1,1)->getLocX() << endl;
+    ifstream input("./bin/data/base.vze");
+    ConfigStore::get().parseFile(input);
     return 0;
 }

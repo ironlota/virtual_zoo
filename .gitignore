@@ -37,3 +37,5 @@
 *.png
 *.docx
 *.zip
+bin/
+docs/

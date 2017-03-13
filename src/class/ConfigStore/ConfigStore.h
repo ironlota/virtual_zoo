@@ -2,25 +2,39 @@
 #define CONFIG_H
 
 #include <iostream>
+#include <fstream>
+#include <sstream>
+#include <map>
+#include <vector>
+#include <string>
+#include <cstring>
+#include <algorithm>
 using namespace std;
 
 /** @class Config
 * Config merupakan kelas loader and parser untuk melakukan pengambilan konfigurasi dari file eksternal
 */
+
+struct cage {
+    int x;
+    int y;
+    int id;
+};
+
 class ConfigStore {
     public:
     /** @brief get
     * Mengembalikan configuration class
     */
-    static Config& get()
+    static ConfigStore& get()
     {
-        static Config instance;
+        static ConfigStore instance;
         return instance;
     }
     /** @brief parseFile
     * Load dan parsing file konfigurasi eksternal
     */
-    void parseFile(std::ifstream& inStream);
+    int parseFile(std::ifstream& inStream);
 
     /** @brief getValue
     * Mengembalikan value dari key yang diinput
@@ -41,6 +55,10 @@ class ConfigStore {
     * Melakukan inisialisasi kelas dengan operator =
     */ 
     ConfigStore& operator=(const ConfigStore&);
+    vector<cage> cageVec;
     std::map<std::string,std::string> storedConfig;
 };
+
+void removeCharsFromString( string&, char*);
+
 #endif

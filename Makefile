@@ -17,6 +17,9 @@ ANIMAL_OBJ  :=  $(ANIMAL_SRC:.cpp=.o)
 CELL_SRC  	:=  $(wildcard src/class/Cell/*.cpp) $(wildcard src/class/Cell/*/*.cpp)
 CELL_OBJ  	:=  $(CELL_SRC:.cpp=.o)
 
+CONF_SRC  	:=  $(wildcard src/class/ConfigStore/*.cpp)
+CONF_OBJ  	:=  $(CONF_SRC:.cpp=.o)
+
 CC			:=  g++
 CPPFLAGS    :=  -I. --std=c++11
 CFLAGS      :=  -Wall -ggdb -g -O0
@@ -29,16 +32,22 @@ GTESTFLAGS  :=  -lgtest_main -lgtest
 all: main test docs
 all:; @echo Finished!
 
+program : main test clean
+program:; @echo Finished!
+
+prog : main test
+prog:; @echo Finished!
+
 main: $(MAIN)
 test: $(TEST)
 
 docs:
 	doxygen ./Doxyfile
 
-$(MAIN): $(MAIN_OBJ) $(ZOO_OBJ) $(ANIMAL_OBJ) $(CELL_OBJ) | $(BIN)
+$(MAIN): $(MAIN_OBJ) $(ZOO_OBJ) $(ANIMAL_OBJ) $(CELL_OBJ) $(CONF_OBJ) | $(BIN)
 	$(CC) $(CPPFLAGS) $(CFLAGS) $^ $(LDLIBS) -o $@
 
-$(TEST): $(TEST_OBJ) $(ZOO_OBJ) $(ANIMAL_OBJ) $(CELL_OBJ) | $(BIN)
+$(TEST): $(TEST_OBJ) $(ZOO_OBJ) $(ANIMAL_OBJ) $(CELL_OBJ) $(CONF_OBJ) | $(BIN)
 	$(CC) $(LDFLAGS) $(CPPFLAGS) $(CFLAGS) $(GTESTFLAGS) $^ $(LDLIBS) -o $@
 
 $(BIN):
