@@ -7,7 +7,7 @@
 using namespace std;
 
 /** @class Aves
-  * Aves merupakan salah satu kelas binatang yang habitatnya di udara.
+  * Aves merupakan class binatang yang habitatnya di udara
 */
 class Aves : public Animal {
     public:

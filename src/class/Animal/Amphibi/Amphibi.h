@@ -7,7 +7,7 @@
 using namespace std;
 
 /** @class Amphibi
-  * Amphibi merupakan ...
+  * Amphibi merupakan class binatang yang hidup di dua habitat
 */
 class Amphibi : public Animal {
     public:

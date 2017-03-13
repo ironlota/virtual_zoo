@@ -2,16 +2,14 @@
 #define ANIMAL_H
 
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
-enum moveList {        
-    UP, 
-    DOWN, 
-    RIGHT, 
-    LEFT,
-    NUM_MOVE
-}; 
+const int UP = 0; 
+const int DOWN = 1; 
+const int RIGHT = 2; 
+const int LEFT = 3;
 
 /** @class Animal
   * Animal merupakan ...
@@ -47,7 +45,7 @@ class Animal {
         * Prosedur move yang dapat dipanggil di turunannya
         * Prosedur 
         */
-        moveList move();
+        int move(bool, bool, bool, bool);
 
         /* ***** Getter and Setter ***** */
         /** @brief Fungsi untuk mengembalikan berat */

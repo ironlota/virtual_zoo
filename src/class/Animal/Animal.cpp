@@ -41,7 +41,24 @@ Animal& Animal::operator=(const Animal& A) {
 	return *this;	
 }
 
-moveList Animal::move() {
-    moveList mov = static_cast<moveList>(rand() % NUM_MOVE);
-    return mov;
+int Animal::move(bool Up, bool Down, bool Right, bool Left) {
+    if(Up)
+    {
+    	return UP;
+    }
+    if(Down)
+    {
+    	return DOWN;
+    }
+    if(Right)
+    {
+    	return RIGHT;
+    }
+    if(Left)
+    {
+    	return LEFT;
+    }
+
+    //moveList mov = static_cast<moveList>(rand() % NUM_MOVE);
+    //return UP;
 }

@@ -11,7 +11,7 @@
 using namespace std;
 
 /** @class Zoo
-  * Zoo merupakan ...
+  * Zoo merupakan class yang merepresentasikan sebuah kebun binatang
 */
 class Zoo {
     public:
@@ -55,6 +55,11 @@ class Zoo {
         * Mengembalikan max cell
         */
         int getMaxCell() const;
+
+        /* METODE LAIN */
+        /** @brief update
+        * Metode untuk update status posisi dari tiap animal */
+        void update();
         
     private:
         vector< vector< Cell* > >  cell_;

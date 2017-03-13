@@ -6,7 +6,7 @@
 using namespace std;
 
 /** @class LandHabitat
-  * LandHabitat merupakan ...
+  * LandHabitat merupakan habitat untuk hewan yang tinggal di darat
 */
 class LandHabitat : public Habitat {
     public:

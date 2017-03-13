@@ -7,7 +7,7 @@
 using namespace std;
 
 /** @class Park
-  * Park merupakan ...
+  * Park merupakan facility yang merepresentasikan taman dalam kebun binatang
 */
 class Park : public Facility {
     public:

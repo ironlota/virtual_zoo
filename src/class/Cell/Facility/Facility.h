@@ -7,7 +7,7 @@
 using namespace std;
 
 /** @class Facility
-  * Facility merupakan ...
+  * Facility merupakan cell yang merepresentasikan sebuah facility
 */
 class Facility : public Cell {
     public:
