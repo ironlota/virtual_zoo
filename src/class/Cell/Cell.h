@@ -57,6 +57,10 @@ class Cell {
         * Menginisialisasi name bertipe string
         */
         void setType(string);
+        /** @brief setAnimalPtr
+        * Menginisialisasi ptr animal saat alokasi
+        */
+        void setAnimalPtr(Animal*);
         /** @brief Operator <<
         * Output cell dengan menggunakan operator<<
         */

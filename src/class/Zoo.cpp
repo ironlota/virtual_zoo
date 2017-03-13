@@ -100,6 +100,34 @@ void Zoo::update()
 		}
 		
 		int mov = animal_[i]->move(up,down,right,left);
+		Animal* temp;
+
+		switch(mov){
+			case 0: {
+				temp = cell_[animal_[i]->getLocX()][animal_[i]->getLocY()-1]->getAnimalPtr();
+				cell_[animal_[i]->getLocX()][animal_[i]->getLocY()]->setAnimalPtr(temp);
+				cell_[animal_[i]->getLocX()][animal_[i]->getLocY()-1]->setAnimalPtr(temp);
+				break;
+			}
+			case 1: {
+				temp = cell_[animal_[i]->getLocX()][animal_[i]->getLocY()+1]->getAnimalPtr();
+				cell_[animal_[i]->getLocX()][animal_[i]->getLocY()]->setAnimalPtr(temp);
+				cell_[animal_[i]->getLocX()][animal_[i]->getLocY()+1]->setAnimalPtr(temp);
+				break;
+			}
+			case 2: {
+				temp = cell_[animal_[i]->getLocX()+1][animal_[i]->getLocY()]->getAnimalPtr();
+				cell_[animal_[i]->getLocX()][animal_[i]->getLocY()]->setAnimalPtr(temp);
+				cell_[animal_[i]->getLocX()+1][animal_[i]->getLocY()]->setAnimalPtr(temp);
+				break;
+			}
+			case 3: {
+				temp = cell_[animal_[i]->getLocX()-1][animal_[i]->getLocY()]->getAnimalPtr();
+				cell_[animal_[i]->getLocX()][animal_[i]->getLocY()]->setAnimalPtr(temp);
+				cell_[animal_[i]->getLocX()-1][animal_[i]->getLocY()]->setAnimalPtr(temp);
+				break;
+			}
+		}
 		
 	}
 

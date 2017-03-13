@@ -56,3 +56,7 @@ void Cell::setLocY(int y) {
 void Cell::setType(string s){
     type = s;
 }
+
+void Cell::setAnimalPtr(Animal* A){
+    animalPtr = A;
+}
