@@ -25,3 +25,9 @@ void Piranha::interact()
 {
 	std::cout << "Bitebitebite" << std::endl;
 }
+
+ostream& operator<< (ostream& os, const Piranha& P)
+{
+	os << 'p';
+	return os;
+}

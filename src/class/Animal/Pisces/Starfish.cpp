@@ -25,3 +25,9 @@ void Starfish::interact()
 {
 	std::cout << "blublub" << std::endl;
 }
+
+ostream& operator<< (ostream& os, const Starfish& S)
+{
+	os << 'f';
+	return os;
+}

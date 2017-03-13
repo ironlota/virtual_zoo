@@ -25,3 +25,9 @@ void Seahorse::interact()
 {
 	std::cout << "Swimming" << endl;
 }
+
+ostream& operator<< (ostream& os, const Seahorse& S)
+{
+	os << 'h';
+	return os;
+}

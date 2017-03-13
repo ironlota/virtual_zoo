@@ -25,3 +25,9 @@ void Shark::interact()
 {
 	std::cout << "blublublub" << std::endl;
 }
+
+ostream& operator<< (ostream& os, const Shark& S)
+{
+	os << 's';
+	return os;
+}

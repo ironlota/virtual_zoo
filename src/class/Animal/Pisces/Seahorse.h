@@ -34,7 +34,14 @@ class Seahorse : public Pisces{
         */
 	Seahorse& operator= (const Seahorse& H);
 
-    /** @brief interaksi
-    */
-    void interact();
+        /** @brief interaksi
+        */
+        void interact();
+
+        /** @brief operator<<
+        * @return ostream yang menghasilkan output di layar
+        * @param ostream tampungan yang ingin di output
+        * @param Animal yang ingin dicetak
+        */
+        friend ostream& operator<< (ostream& , const Seahorse&);
 };

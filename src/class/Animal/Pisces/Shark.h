@@ -33,7 +33,13 @@ class Shark : public Pisces{
         * @return Reference to Shark.
         */
 	Shark& operator= (const Shark& H);
-    /** @brief Interaksi
-    */
-    void interact();
+        /** @brief Interaksi
+        */
+        void interact();
+        /** @brief operator<<
+        * @return ostream yang menghasilkan output di layar
+        * @param ostream tampungan yang ingin di output
+        * @param Animal yang ingin dicetak
+        */
+        friend ostream& operator<< (ostream& , const Shark&);
 };

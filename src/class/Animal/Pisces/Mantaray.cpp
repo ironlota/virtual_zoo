@@ -25,3 +25,8 @@ void Mantaray::interact()
 {
 	std::cout << "blubub" << endl;
 }
+
+ostream& operator<< (ostream& os, const Mantaray& M) {
+	os << 'm';
+	return os;
+}
