@@ -635,13 +635,16 @@ Virtual Zoo, 2017, Ensure.
 39,39,15,LandHabitat
 
 [Animal]
-9,14,Bear,70,False,{Land},Carnivore
-10,20,Bear,70,False,{Land},Carnivore
-12,27,Bear,70,False,{Land},Carnivore
-39,39,Deer,45,True,{Land},Herbivore
-35,35,Deer,45,True,{Land},Herbivore
-36,39,Girrafe,1192,True,{Land},Herbivore
-36,34,Girrafe,1192,True,{Land},Herbivore
+9,14,Bear,70,False,Land,Carnivore
+10,20,Bear,70,False,Land,Carnivore
+12,27,Bear,70,False,Land,Carnivore
+39,39,Deer,45,True,Land,Herbivore
+35,35,Deer,45,True,Land,Herbivore
+36,39,Girrafe,1192,True,Land,Herbivore
+36,34,Girrafe,1192,True,Land,Herbivore
+15,35,Elephant,5000,True,Land,Herbivore
+16,37,Elephant,5000,True,Land,Herbivore
+18,39,Elephant,5000,True,Land,Herbivore
 
 
 
