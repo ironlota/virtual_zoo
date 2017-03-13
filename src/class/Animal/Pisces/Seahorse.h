@@ -4,6 +4,7 @@
   * Seahorse merupakan hewan yang berkelas Pisces dan habitatnya di air.
 */
 class Seahorse : public Pisces{
+        public:
 	/** @brief Constructor.
         * Melakukan inisialisasi kelas
         * @param x_ Posisi X.

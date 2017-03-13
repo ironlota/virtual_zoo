@@ -15,7 +15,6 @@ ANIMAL_SRC  :=  $(wildcard src/class/Animal/*.cpp) $(wildcard src/class/Animal/*
 ANIMAL_OBJ  :=  $(ANIMAL_SRC:.cpp=.o)
 
 CELL_SRC  	:=  $(wildcard src/class/Cell/*.cpp) $(wildcard src/class/Cell/*/*.cpp) $(wildcard src/class/Cell/Facility/*/*.cpp)
-
 CELL_OBJ  	:=  $(CELL_SRC:.cpp=.o)
 
 CONF_SRC  	:=  $(wildcard src/class/ConfigStore/*.cpp)
@@ -54,7 +53,6 @@ $(TEST): $(TEST_OBJ) $(ZOO_OBJ) $(ANIMAL_OBJ) $(CELL_OBJ) $(CONF_OBJ) | $(BIN)
 $(BIN):
 	mkdir $@
 
-
 ifeq ($(OS),Windows_NT)
    clean:
 	del /Q /f /s *.o
@@ -62,5 +60,3 @@ else
    clean:
 	$(RM) $(MAIN) $(TEST) $(ZOO_OBJ) $(ANIMAL_OBJ) $(CELL_OBJ)
 endif 
-
-

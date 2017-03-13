@@ -7,6 +7,7 @@
 #include "Animal/Animal.h"
 #include "Cell/Facility/Facility.h"
 #include "Cell/Habitat/Habitat.h"
+#include "Cell/Facility/Road/Road.h"
 
 using namespace std;
 

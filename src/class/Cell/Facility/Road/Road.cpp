@@ -1,8 +1,7 @@
 #include "Road.h"
 
-Road::Road(string s) : Facility (){
-    type = "road";
-    animalPtr = nullptr;
+Road::Road(int x, int y, string type, Animal* animalPtr, int id, string name_) : Facility (x,y,type,animalPtr,id,name_){
+
 }
 
 Road::Road(const Road& R) {

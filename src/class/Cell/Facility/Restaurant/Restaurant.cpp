@@ -1,8 +1,7 @@
 #include "Restaurant.h"
 
-Restaurant::Restaurant(string s) : Facility() {
-    type = "restaurant";
-    animalPtr = nullptr;
+Restaurant::Restaurant(int x, int y, string type, Animal* animalPtr, int id, string name_) : Facility (x,y,type,animalPtr,id,name_) {
+
 }
 
 Restaurant::Restaurant(const Restaurant& R) {

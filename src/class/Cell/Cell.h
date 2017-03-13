@@ -73,10 +73,23 @@ class Cell {
         * Output cell dengan menggunakan operator<<
         */
         friend ostream& operator<<(ostream& os, const Cell& C);
+        /** @brief SetName
+        * Setter variable name
+        */
+        void SetName(string name_) {
+          name = name_;
+        }
+        /** @brief GetName
+        * Setter variable name
+        */
+        string GetName() {
+          return name;
+        }
 
     protected:
         int LocX;
         int LocY;
+        string name="";
         string type; //Road, Restaurant, Park, Land, Water, Flying
         Animal* animalPtr; //Pointer to Animal if cell is a habitat
         int cage_id; // -1 for undefined

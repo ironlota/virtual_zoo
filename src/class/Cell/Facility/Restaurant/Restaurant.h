@@ -14,7 +14,7 @@ class Restaurant : public Facility {
         /** @brief Constructor.
         * Melakukan inisialisasi kelas
         */    
-        Restaurant(string = "");
+        Restaurant(int = 0, int = 0, string = "Restaurant", Animal* = nullptr, int = -1, string = "Restaurant");
         /** @brief Copy Constructor.
         * Melakukan inisialisasi kelas dengan memasukkan kelas lain sebagai parameternya
         */ 

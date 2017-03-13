@@ -4,6 +4,7 @@
   * Piranha merupakan hewan yang berkelas Pisces dan habitatnya di air.
 */
 class Piranha : public Pisces{
+        public:
 	/** @brief Constructor.
         * Melakukan inisialisasi kelas
         * @param x_ Posisi X.

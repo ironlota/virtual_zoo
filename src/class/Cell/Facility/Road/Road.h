@@ -14,7 +14,7 @@ class Road : public Facility {
         /** @brief Constructor.
         * Melakukan inisialisasi kelas
         */    
-        Road(string = "");
+        Road(int = 0, int = 0, string = "Road", Animal* = nullptr, int = -1, string = "Road");
         /** @brief Copy Constructor.
         * Melakukan inisialisasi kelas dengan memasukkan kelas lain sebagai parameternya
         */ 

@@ -19,6 +19,8 @@
 #include "../Animal/Amphibi/Caecilia.h"
 #include "../Animal/Amphibi/Exolotl.h"
 #include "../Animal/Amphibi/Salamander.h"
+#include "../Animal/Amphibi/Ostrich.h"
+#include "../Animal/Amphibi/FlyingFish.h"
 
 #include "../Animal/Aves/Aves.h"
 #include "../Animal/Aves/BirdOfParadise.h"

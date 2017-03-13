@@ -4,6 +4,7 @@
   * Eagle merupakan hewan yang berkelas Aves dan habitatnya di udara.
 */
 class Eagle : public Aves{
+        public:
 	/** @brief Constructor.
         * Melakukan inisialisasi kelas
         * @param x_ Posisi X.

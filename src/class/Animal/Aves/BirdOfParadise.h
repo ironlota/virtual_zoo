@@ -4,6 +4,7 @@
   * BirdOfParadise merupakan hewan yang berkelas Aves dan habitatnya di udara.
 */
 class BirdOfParadise : public Aves{
+        public:
 	/** @brief Constructor.
         * Melakukan inisialisasi kelas
         * @param x_ Posisi X.

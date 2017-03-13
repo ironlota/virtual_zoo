@@ -1,7 +1,7 @@
 #include "Facility.h"
 
-Facility::Facility() : Cell(0,0,"",nullptr,-1) {
-    //TODO define the passing arguments
+Facility::Facility(int x, int y, string type, Animal* animalPtr, int id, string name_) : Cell(x,y,type,nullptr,-1) {
+    name = name_;
 }
 
 Facility::Facility(const Facility& F) : Cell(F) {

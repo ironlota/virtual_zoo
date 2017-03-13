@@ -4,7 +4,7 @@ Zoo::Zoo(int n) : maxCell(n) {
 	cell_ = vector< vector<Cell*> >(maxCell,vector<Cell*>(maxCell));
  	for(int i = 0; i<maxCell; i++) {
 		for(int j = 0; j<maxCell; j++) {
-			cell_[i][j] = new Cell(i,j,"");			
+			cell_[i][j] = new Road(i,j,"Road",nullptr,-1,"Road");			
 		}	
 	 }	
 }

@@ -15,10 +15,7 @@ int main() {
     cin >> n;
     int status = ConfigStore::Get().ParseFile(input,n);
     if(status != -1) {
-        for(int i = 0; i < ConfigStore::Get().animalVec.size(); i++) {
-            cout << ConfigStore::Get().animalVec[i].name << endl;
-        }
+        cout << Zoo::Get(n).getCell(6,2)->GetName() << endl;
     }
-    cout << Zoo::Get(n).getCell(3,15)->getCellType() << endl;
     return 0;
 }

@@ -4,6 +4,7 @@
   * Shark merupakan hewan yang berkelas Pisces dan habitatnya di air.
 */
 class Shark : public Pisces{
+        public:
 	/** @brief Constructor.
         * Melakukan inisialisasi kelas
         * @param x_ Posisi X.

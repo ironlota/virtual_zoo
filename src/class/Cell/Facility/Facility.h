@@ -14,7 +14,7 @@ class Facility : public Cell {
         /** @brief Constructor.
         * Melakukan inisialisasi kelas
         */    
-        Facility();
+        Facility(int = 0, int = 0, string = "", Animal* = nullptr, int = -1, string = "");
         /** @brief Copy Constructor.
         * Melakukan inisialisasi kelas dengan memasukkan kelas lain sebagai parameternya
         */ 
@@ -30,7 +30,7 @@ class Facility : public Cell {
         /** @brief Operator <<
         * Output facility menggunakan operator<<
         */
-        friend ostream& operator<<(ostream& os, const Cell& C);
+        friend ostream& operator<<(ostream&, const Cell&);        
 };
 
 #endif

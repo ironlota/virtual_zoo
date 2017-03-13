@@ -4,6 +4,7 @@
   * Peacock merupakan hewan yang berkelas Aves dan habitatnya di udara.
 */
 class Peacock : public Aves{
+        public:
 	/** @brief Constructor.
         * Melakukan inisialisasi kelas
         * @param x_ Posisi X.

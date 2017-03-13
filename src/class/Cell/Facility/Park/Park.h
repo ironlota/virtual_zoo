@@ -14,7 +14,7 @@ class Park : public Facility {
         /** @brief Constructor.
         * Melakukan inisialisasi kelas
         */    
-        Park(string = "");
+        Park(int = 0, int = 0, string = "Park", Animal* = nullptr, int = -1, string = "Park");
         /** @brief Copy Constructor.
         * Melakukan inisialisasi kelas dengan memasukkan kelas lain sebagai parameternya
         */ 
