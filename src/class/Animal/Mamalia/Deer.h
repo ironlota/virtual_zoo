@@ -43,4 +43,7 @@ class Deer : public Mamalia{
         * @param Animal yang ingin dicetak
         */
         friend ostream& operator<< (ostream& , const Deer&);
+
+        /** @brief Fungsi untuk mengembalikan simbol dari setiap hewan*/
+        char GetSymbol();
 };

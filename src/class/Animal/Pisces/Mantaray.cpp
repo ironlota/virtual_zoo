@@ -30,3 +30,6 @@ ostream& operator<< (ostream& os, const Mantaray& M) {
 	os << 'm';
 	return os;
 }
+char Mantaray :: GetSymbol() {
+	return 'm';
+}

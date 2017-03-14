@@ -30,3 +30,7 @@ ostream& operator<< (ostream& os, const Salamander& S){
 	os << 's';
 	return os;
 }
+
+char Salamander :: GetSymbol() {
+	return 'r';
+}

@@ -30,3 +30,7 @@ ostream& operator<< (ostream& os, const Eagle& E){
 	os << 'e';
 	return os;
 }
+
+char Eagle :: GetSymbol() {
+	return 'e';
+}

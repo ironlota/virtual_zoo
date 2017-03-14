@@ -21,3 +21,7 @@ void Mamalia::interact()
 {
 	
 }
+
+char Mamalia :: GetSymbol() {
+	
+}

@@ -40,6 +40,8 @@ class Aves : public Animal {
         * Prosedure interact yang virtual untuk direalisasikan di turunannya.
         */ 
         virtual void interact();
+        /** @brief Fungsi untuk mengembalikan simbol dari setiap hewan*/
+        virtual char GetSymbol();
 };
 
 #endif

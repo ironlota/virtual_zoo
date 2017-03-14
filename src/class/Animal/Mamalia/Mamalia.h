@@ -39,6 +39,8 @@ class Mamalia : public Animal {
         /** @brief Interaksi
         */
         virtual void interact();
+        /** @brief Fungsi untuk mengembalikan simbol dari setiap hewan*/
+        virtual char GetSymbol();
 };
 
 #endif

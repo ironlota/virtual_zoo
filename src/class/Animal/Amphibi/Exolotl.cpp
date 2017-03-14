@@ -29,3 +29,7 @@ ostream& operator<< (ostream& os, const Exolotl& E) {
 	os << 'e';
 	return os;
 }
+
+char Exolotl :: GetSymbol() {
+	return 'e';
+}

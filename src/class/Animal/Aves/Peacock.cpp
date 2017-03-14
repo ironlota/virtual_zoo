@@ -30,3 +30,7 @@ ostream& operator<< (ostream& os, const Peacock&){
 	os << 'p';
 	return os;
 }
+
+char Pisces :: GetSymbol() {
+	return 'p';
+}

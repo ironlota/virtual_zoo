@@ -30,3 +30,7 @@ ostream& operator<< (ostream& os, const Owl&){
 	os << 'o';
 	return os;
 }
+
+char Owl :: GetSymbol() {
+	return 'o';
+}

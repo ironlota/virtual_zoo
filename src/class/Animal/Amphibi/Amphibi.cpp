@@ -20,3 +20,7 @@ Amphibi& Amphibi::operator=(const Amphibi&) {
 void Amphibi::interact(){
 
 }
+
+char Amphibi :: GetSymbol() {
+	
+}

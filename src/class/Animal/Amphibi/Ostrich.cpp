@@ -30,3 +30,7 @@ ostream& operator<< (ostream& os, const Ostrich& O) {
 	os << 'o';
 	return os;
 }
+
+char Ostrich :: GetSymbol() {
+	return 'i';
+}

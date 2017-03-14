@@ -28,3 +28,7 @@ ostream& operator<< (ostream& os, const Girrafe&){
 	os << 'g';
 	return os;
 }
+
+char Girrafe :: GetSymbol() {
+	return 'g';
+}

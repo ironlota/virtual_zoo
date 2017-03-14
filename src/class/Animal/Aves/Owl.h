@@ -34,13 +34,16 @@ class Owl : public Aves{
         */
 	Owl& operator= (const Owl& H);
 
-    /** @brief Inteaksi
-    */
-    void interact();
-    /** @brief operator<<
-        * @return ostream yang menghasilkan output di layar
-        * @param ostream tampungan yang ingin di output
-        * @param Animal yang ingin dicetak
+        /** @brief Inteaksi
         */
-    friend ostream& operator<< (ostream& , const Owl&);
+        void interact();
+        /** @brief operator<<
+                * @return ostream yang menghasilkan output di layar
+                * @param ostream tampungan yang ingin di output
+                * @param Animal yang ingin dicetak
+                */
+        friend ostream& operator<< (ostream& , const Owl&);
+
+        /** @brief Fungsi untuk mengembalikan simbol dari setiap hewan*/
+        char GetSymbol();
 };

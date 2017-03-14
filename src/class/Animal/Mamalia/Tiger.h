@@ -37,10 +37,14 @@ class Tiger : public Mamalia{
         /** @brief Interaksi 
         */
         void interact();
+        
         /** @brief operator<<
         * @return ostream yang menghasilkan output di layar
         * @param ostream tampungan yang ingin di output
         * @param Animal yang ingin dicetak
         */
         friend ostream& operator<< (ostream& , const Tiger&);
+
+        /** @brief Fungsi untuk mengembalikan simbol dari setiap hewan*/
+        char GetSymbol();
 };

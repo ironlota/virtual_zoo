@@ -44,4 +44,7 @@ class Piranha : public Pisces{
         * @param Animal yang ingin dicetak
         */
         friend ostream& operator<< (ostream& , const Piranha&);
+
+        /** @brief Fungsi untuk mengembalikan simbol dari setiap hewan*/
+        char GetSymbol();
 };

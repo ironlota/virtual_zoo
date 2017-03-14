@@ -44,4 +44,7 @@ class Starfish : public Pisces{
         * @param Animal yang ingin dicetak
         */
         friend ostream& operator<< (ostream& , const Starfish&);
+
+        /** @brief Fungsi untuk mengembalikan simbol dari setiap hewan*/
+        char GetSymbol();
 };

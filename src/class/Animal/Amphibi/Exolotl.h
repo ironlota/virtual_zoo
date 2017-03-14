@@ -42,4 +42,6 @@ class Exolotl : public Amphibi {
         * @param Animal yang ingin dicetak
         */
         friend ostream& operator<< (ostream& , const Exolotl&);
+        /** @brief Fungsi untuk mengembalikan simbol dari setiap hewan*/
+        char GetSymbol();
 };

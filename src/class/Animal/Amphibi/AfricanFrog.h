@@ -37,4 +37,6 @@ class AfricanFrog : public Amphibi {
         * @param Animal yang ingin dicetak
         */
         friend ostream& operator<< (ostream& , const AfricanFrog&);
+        /** @brief Fungsi untuk mengembalikan simbol dari setiap hewan*/
+        char GetSymbol();
 };

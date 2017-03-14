@@ -36,5 +36,6 @@ class Ostrich : public Amphibi {
         * @param Animal yang ingin dicetak
         */
         friend ostream& operator<< (ostream& , const Ostrich&);
-
+        /** @brief Fungsi untuk mengembalikan simbol dari setiap hewan*/
+        char GetSymbol();
 };

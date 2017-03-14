@@ -36,4 +36,6 @@ class Salamander : public Amphibi {
         * @param Animal yang ingin dicetak
         */
         friend ostream& operator<< (ostream& , const Salamander&);
+        /** @brief Fungsi untuk mengembalikan simbol dari setiap hewan*/
+        char GetSymbol();
 };

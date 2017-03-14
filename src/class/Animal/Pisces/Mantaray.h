@@ -44,4 +44,7 @@ class Mantaray : public Pisces{
         * @param Animal yang ingin dicetak
         */
         friend ostream& operator<< (ostream& , const Mantaray&);
+
+        /** @brief Fungsi untuk mengembalikan simbol dari setiap hewan*/
+        char GetSymbol();
 };

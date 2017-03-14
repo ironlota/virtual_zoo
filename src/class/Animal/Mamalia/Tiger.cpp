@@ -28,3 +28,7 @@ ostream& operator<< (ostream& os, const Tiger&){
 	os << 't';
 	return os;
 }
+
+char Tiger :: GetSymbol() {
+	return 't';
+}

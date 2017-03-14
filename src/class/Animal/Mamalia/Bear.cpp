@@ -29,3 +29,7 @@ ostream& operator<< (ostream& os, const Bear& B) {
 	os << 'b';
 	return os;
 }
+
+char Bear :: GetSymbol() {
+	return 'b';
+}

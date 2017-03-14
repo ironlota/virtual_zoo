@@ -21,3 +21,7 @@ Pisces& Pisces::operator=(const Pisces&) {
 void Pisces::interact() {
     
 }
+
+char Pisces :: GetSymbol() {
+	
+}

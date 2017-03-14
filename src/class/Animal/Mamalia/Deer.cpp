@@ -28,3 +28,7 @@ ostream& operator<< (ostream& os, const Deer& D){
 	os << 'd';
 	return os;
 }
+
+char Deer :: GetSymbol() {
+	return 'd';
+}

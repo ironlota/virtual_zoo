@@ -30,3 +30,7 @@ ostream& operator<< (ostream& os, const AfricanFrog& A) {
 	os << 'a';
 	return os;
 }
+
+char AfricanFrog :: GetSymbol() {
+	return 'a';
+}

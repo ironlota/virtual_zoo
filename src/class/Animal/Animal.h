@@ -72,6 +72,8 @@ class Animal {
         string getFoodtype() { return foodtype; }
         /** @brief Fungsi untuk mengembalikan boolean tamed ato tidak*/
         string getHabitat() { return livingHabitat; }
+        /** @brief Fungsi untuk mengembalikan simbol dari setiap hewan*/
+        virtual char GetSymbol();
 
      protected:
         float weight;

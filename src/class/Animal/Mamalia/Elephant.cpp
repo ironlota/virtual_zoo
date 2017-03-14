@@ -28,3 +28,7 @@ ostream& operator<< (ostream& os, const Elephant& E){
 	os << 'e';
 	return os;
 }
+
+char Elephant :: GetSymbol() {
+	return 'e';
+}

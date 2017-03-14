@@ -30,3 +30,7 @@ ostream& operator<< (ostream& os, const FlyingFish& F){
 	os << 'f';
 	return os;
 }
+
+char FlyingFish :: GetSymbol() {
+	return 'y';
+}

@@ -31,3 +31,6 @@ ostream& operator<< (ostream& os, const Shark& S)
 	os << 's';
 	return os;
 }
+char Shark :: GetSymbol() {
+	return 's'
+}

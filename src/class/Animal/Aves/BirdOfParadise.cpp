@@ -30,3 +30,7 @@ ostream& operator<< (ostream& os, const BirdOfParadise& B){
 	os << 'b';
 	return os;
 }
+
+char BirdOfParadise :: GetSymbol() {
+	return 'b';
+}

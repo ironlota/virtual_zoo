@@ -43,4 +43,7 @@ class Girrafe : public Mamalia{
         * @param Animal yang ingin dicetak
         */
         friend ostream& operator<< (ostream& , const Girrafe&);
+
+        /** @brief Fungsi untuk mengembalikan simbol dari setiap hewan*/
+        char GetSymbol();
 };

@@ -31,3 +31,6 @@ ostream& operator<< (ostream& os, const Piranha& P)
 	os << 'p';
 	return os;
 }
+char Piranha :: GetSymbol() {
+	return 'p';
+}

@@ -44,4 +44,6 @@ class Lion : public Mamalia{
         */
         friend ostream& operator<< (ostream& , const Lion&);
 
+        /** @brief Fungsi untuk mengembalikan simbol dari setiap hewan*/
+        char GetSymbol();
 };

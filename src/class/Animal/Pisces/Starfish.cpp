@@ -31,3 +31,7 @@ ostream& operator<< (ostream& os, const Starfish& S)
 	os << 'f';
 	return os;
 }
+
+char Starfish :: GetSymbol() {
+	return 'f';
+}

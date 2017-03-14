@@ -30,3 +30,7 @@ ostream& operator<< (ostream& os, const Caecilia& C){
 	os << 'c';
 	return os;
 }
+
+char Caecilia :: GetSymbol() {
+	return 'c';
+}

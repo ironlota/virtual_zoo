@@ -34,13 +34,15 @@ class BirdOfParadise : public Aves{
         */
 	BirdOfParadise& operator= (const BirdOfParadise& H);
 
-    /** @brief Interaksi
-    */
-    void interact();
-    /** @brief operator<<
-        * @return ostream yang menghasilkan output di layar
-        * @param ostream tampungan yang ingin di output
-        * @param Animal yang ingin dicetak
+        /** @brief Interaksi
         */
-    friend ostream& operator<< (ostream& , const BirdOfParadise&);
+        void interact();
+        /** @brief operator<<
+                * @return ostream yang menghasilkan output di layar
+                * @param ostream tampungan yang ingin di output
+                * @param Animal yang ingin dicetak
+                */
+        friend ostream& operator<< (ostream& , const BirdOfParadise&);
+        /** @brief Fungsi untuk mengembalikan simbol dari setiap hewan*/
+        char GetSymbol();
 };

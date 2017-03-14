@@ -42,4 +42,7 @@ class Shark : public Pisces{
         * @param Animal yang ingin dicetak
         */
         friend ostream& operator<< (ostream& , const Shark&);
+
+        /** @brief Fungsi untuk mengembalikan simbol dari setiap hewan*/
+        char GetSymbol();
 };

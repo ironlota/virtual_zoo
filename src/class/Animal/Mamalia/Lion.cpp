@@ -28,3 +28,7 @@ ostream& operator<< (ostream& os, const Lion&) {
 	os << 'l';
 	return os;
 }
+
+char Lion :: GetSymbol() {
+	return 'l';
+}

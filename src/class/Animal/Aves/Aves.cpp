@@ -22,3 +22,7 @@ void Aves::interact()
 {
 
 }
+
+char Aves :: GetSymbol() {
+	
+}

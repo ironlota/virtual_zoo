@@ -65,3 +65,7 @@ int Animal::move(bool Up, bool Down, bool Right, bool Left) {
 ostream& operator<< (ostream& os, const Animal& A){
 	return os;
 }*/
+
+char Animal :: GetSymbol() {
+	
+}

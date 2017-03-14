@@ -34,13 +34,16 @@ class Peacock : public Aves{
         */
 	Peacock& operator= (const Peacock& H);
 
-    /** @brief Interaksi
-    */
-    void interact();
-    /** @brief operator<<
-        * @return ostream yang menghasilkan output di layar
-        * @param ostream tampungan yang ingin di output
-        * @param Animal yang ingin dicetak
+        /** @brief Interaksi
         */
-    friend ostream& operator<< (ostream& , const Peacock&);
+        void interact();
+        /** @brief operator<<
+                * @return ostream yang menghasilkan output di layar
+                * @param ostream tampungan yang ingin di output
+                * @param Animal yang ingin dicetak
+                */
+        friend ostream& operator<< (ostream& , const Peacock&);
+
+        /** @brief Fungsi untuk mengembalikan simbol dari setiap hewan*/
+        char GetSymbol();
 };
