@@ -132,7 +132,8 @@ int ConfigStore::ParseFile(std::ifstream& inStream, int n) {
             } else if(animalVec[i].name.compare("Starfish") == 0) {
                 animal = new Starfish(animalVec[i].x,animalVec[i].y,animalVec[i].tamed,animalVec[i].weight,animalVec[i].foodtype,animalVec[i].habitat);
             }
-            Zoo::Get(n).getCell(animalVec[i].x,animalVec[i].y)->setAnimalPtr(animal);
+            //Zoo::Get(n).getCell(animalVec[i].x,animalVec[i].y)->setAnimalPtr(animal);
+            Zoo::Get(n).SetAnimal(*animal);
     }
     
     //cout << facility_str.size() << endl;

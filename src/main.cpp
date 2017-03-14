@@ -18,7 +18,7 @@ int main() {
     	cout << "1:" << endl;
         cout << Zoo::Get(n) << endl;
 
-        Zoo::Get(n).update();
+        //Zoo::Get(n).update();
         cout << "2:" << endl;
         cout << Zoo::Get(n) << endl;
 

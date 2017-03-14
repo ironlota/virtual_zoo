@@ -77,13 +77,49 @@ class ConfigStore {
         static ConfigStore instance;
         return instance;
     }
-    /** @brief save
+    /** @brief CopyFileBase
     * Mengembalikan configuration class
     */
-    void Save()
-    {
-        
-    }
+    #ifdef _WIN32
+        //define something for Windows (32-bit and 64-bit, this part is common)
+        void CopyFileBase(char* filePath)
+        {
+            string tempFile(filePath);
+            std::string s = "bin\\virtual_zoo.exe";
+
+            std::string::size_type i = tempFile.find(s);
+
+            if (i != std::string::npos)
+                tempFile.erase(i, s.length());
+
+            ifstream source(tempFile+"src/class/ConfigStore/base.vze", ios::binary);
+            ofstream dest(tempFile+"bin/data/base.vze", ios::binary);
+
+            dest << source.rdbuf();
+
+            source.close();
+            dest.close();
+
+            cout << tempFile << endl;
+            //dst << src.rdbuf();
+        }
+   #elif __linux__
+        void CopyFileBase(char* filePath)
+        {
+            string tempFile(filePath);
+            std::string s = "bin\\virtual_zoo";
+
+            std::string::size_type i = tempFile.find(s);
+
+            if (i != std::string::npos)
+                tempFile.erase(i, s.length());
+            //std::ifstream  src("base.vze", std::ios::binary);
+            //std::ofstream  dst(tempFile + "data/base.vze",   std::ios::binary);
+            cout << tempFile << endl;
+            //dst << src.rdbuf();
+        }
+   #endif
+
     /** @brief parseFile
     * Load dan parsing file konfigurasi eksternal
     */
@@ -99,11 +135,6 @@ class ConfigStore {
     */
     template<typename _T>
     _T GetValue(std::string key);
-
-    vector<cage_temp> cageVec;
-    vector<animal_temp> animalVec;
-    vector<facility_temp> facilityVec;
-
     private:
     /** @brief Constructor.
     * Melakukan inisialisasi kelas
@@ -118,6 +149,9 @@ class ConfigStore {
     */ 
     ConfigStore& operator=(const ConfigStore&) {};
     std::map<std::string,std::string> storedConfig;
+    vector<cage_temp> cageVec;
+    vector<animal_temp> animalVec;
+    vector<facility_temp> facilityVec;
 };
 
 #endif

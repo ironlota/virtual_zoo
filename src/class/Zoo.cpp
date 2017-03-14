@@ -74,6 +74,7 @@ void Zoo::SetAnimal(Animal& A) {
 	int i = A.getLocX();
 	int j = A.getLocY();
 	cell_[i][j]->setAnimalPtr(&A);
+	//cout << A.getName() << endl;
 	animal_.push_back(&A);
 }
 
