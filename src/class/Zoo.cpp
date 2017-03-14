@@ -93,10 +93,10 @@ Animal* Zoo::GetAnimal(int x, int y){
 
 void Zoo::update()
 {
-	bool up = true;
-	bool down = true;
-	bool right = true;
-	bool left = true;
+	bool up = false;
+	bool down = false;
+	bool right = false;
+	bool left = false;
 	for (int i = 0; i < animal_.size(); ++i)
 	{
 		int upper_x = animal_[i]->getLocX();
@@ -109,7 +109,7 @@ void Zoo::update()
 		int left_y = animal_[i]->getLocY();
 		//cout << lower_x << lower_y << endl;
 
-		if(upper_y >= 0){
+		if(upper_y > 0){
 			if(cell_[upper_x][upper_y]->getCellType().find(animal_[i]->getHabitat()) != string::npos 
 				&& cell_[upper_x][upper_y]->getAnimalPtr() == nullptr
 				&& cell_[upper_x][upper_y]->GetCageId() == 
@@ -120,6 +120,9 @@ void Zoo::update()
 			} else {
 				up = false;
 			}
+		} else {
+			upper_y = 0;
+			up = false;
 		}	
 		//cout << cell_[lower_x][lower_y]->getCellType() << ' ' << animal_[i]->getHabitat() << endl;
 		if(lower_y < maxCell-1) {
@@ -133,6 +136,9 @@ void Zoo::update()
 			} else {
 				down = false;
 			}
+		} else {
+			lower_y = maxCell-1;
+			down = false;
 		}
 		//cout << "harusnya true yg down " << down << endl;
 		if(right_x < maxCell-1){
@@ -146,8 +152,11 @@ void Zoo::update()
 			} else {
 				right = false;
 			}
+		} else {
+			right_x = maxCell-1;
+			right = false;
 		}
-		if(left_x >= 0){
+		if(left_x > 0){
 			if(cell_[left_x][left_y]->getCellType().find(animal_[i]->getHabitat()) != string::npos
 				&& cell_[left_x][left_y]->getAnimalPtr() == nullptr
 				&& cell_[left_x][left_y]->GetCageId() == 
@@ -158,10 +167,17 @@ void Zoo::update()
 			} else {
 				left = false;
 			}
+		} else {
+			left_x = 0;
+			left =false;
 		}
+		//if(i = 102) {
+			//cout << left_x << " " << left_y << " " << right_x << " " << right_y << endl;
+			//cout << i << '=' << up << down << right << left << endl;
 		
-		//cout << i << '=' << up << down << right << left << endl;
+		
 		int mov = animal_[i]->move(up,down,right,left);
+		//cout << mov << endl;
 		if(mov == 0) {
 			animal_[i]->SetY(animal_[i]->getLocY() - 1);
 			cell_[upper_x][upper_y]->setAnimalPtr(animal_[i]);
