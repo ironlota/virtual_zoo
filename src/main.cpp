@@ -51,7 +51,6 @@ int main() {
                     system("pause");
                 #else
                     system("read -n1");
-                    cin >> command;
                 #endif
                 ConfigStore::Get().pause = !ConfigStore::Get().pause;
                 loopThread.join();

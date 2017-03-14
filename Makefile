@@ -45,10 +45,10 @@ docs:
 	doxygen ./Doxyfile
 
 $(MAIN): $(MAIN_OBJ) $(ZOO_OBJ) $(ANIMAL_OBJ) $(CELL_OBJ) $(CONF_OBJ) | $(BIN)
-	$(CC) $(CPPFLAGS) $(CFLAGS) $^ $(LDLIBS) -o $@
-
+	$(CC) $(CPPFLAGS) $(CFLAGS) $^ $(LDLIBS) -o $@  $(LDFLAGS)
+ 
 $(TEST): $(TEST_OBJ) $(ZOO_OBJ) $(ANIMAL_OBJ) $(CELL_OBJ) $(CONF_OBJ) | $(BIN)
-	$(CC) $(LDFLAGS) $(CPPFLAGS) $(CFLAGS) $(GTESTFLAGS) $^ $(LDLIBS) -o $@
+	$(CC) $(LDFLAGS) $(CPPFLAGS) $(CFLAGS) $(GTESTFLAGS) $^ $(LDLIBS) -o $@ $(LDFLAGS)
 
 $(BIN):
 	mkdir $@
