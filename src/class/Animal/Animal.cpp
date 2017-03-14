@@ -47,9 +47,8 @@ int Animal::move(bool Up, bool Down, bool Right, bool Left) {
     bool found = false;
     int random;
     while (!found) {
-    	srand (time(NULL));
-    	random = rand() % 4;
-    	cout << random << endl;
+    	random = rand() % 3;
+    	//cout << random << endl;
     	if(random == 0) {
     		if (Up) {
     			found = true;
@@ -66,7 +65,10 @@ int Animal::move(bool Up, bool Down, bool Right, bool Left) {
     		if (Left) {
     			found = true;
     		}
-    	}
+    	} else {
+			found = true;
+			random = -1;
+		}
      }
     return random;
     //TODO harus bikin algoritma random yang lebih baik...

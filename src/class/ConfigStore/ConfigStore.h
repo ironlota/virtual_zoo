@@ -69,6 +69,8 @@ struct animal_temp {
 */
 class ConfigStore {
     public:
+    bool pause = false;
+    bool run = true;
     /** @brief get
     * Mengembalikan configuration class
     */
