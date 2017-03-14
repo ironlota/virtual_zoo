@@ -57,8 +57,8 @@ class Cell {
         * Menginisialisasi lokasi Y bertipe integer
         */
         void setLocY(int);
-        /** @brief setName
-        * Menginisialisasi name bertipe string
+        /** @brief setType
+        * Menginisialisasi Type bertipe string
         */
         void setType(string);
         /** @brief setAnimalPtr
