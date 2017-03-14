@@ -1,5 +1,7 @@
 #include "Animal.h"
 #include <iostream>
+#include <time.h>
+#include <stdlib.h>
 
 using namespace std;
   
@@ -42,18 +44,31 @@ Animal& Animal::operator=(const Animal& A) {
 }
 
 int Animal::move(bool Up, bool Down, bool Right, bool Left) {
-    if(Up) {
-    	return UP;
-    } else if(Down) {
-    	return DOWN;
-    } else if(Right) {
-    	return RIGHT;
-    } else if(Left) {
-    	return LEFT;
-    } else {
-    	return -1; 
-    }
-
+    bool found = false;
+    int random;
+    while (!found) {
+    	srand (time(NULL));
+    	random = rand() % 4;
+    	cout << random << endl;
+    	if(random == 0) {
+    		if (Up) {
+    			found = true;
+    		}
+    	} else if(random == 1) {
+    		if (Down) {
+    			found = true;
+    		}
+    	} else if(random == 2) {
+    		if (Right) {
+    			found = true;
+    		}
+    	} else if(random == 3) {
+    		if (Left) {
+    			found = true;
+    		}
+    	}
+     }
+    return random;
     //TODO harus bikin algoritma random yang lebih baik...
 }
 /*
