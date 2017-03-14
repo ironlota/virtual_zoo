@@ -44,7 +44,7 @@ Animal& Animal::operator=(const Animal& A) {
 }
 
 int Animal::move(bool Up, bool Down, bool Right, bool Left) {
-	    if (!Up && !Down && !Right && Left) {
+	    if (!Up && !Down && !Right && !Left) {
 	    	return -1;
 	    } else {
 	    	bool found = false;
@@ -52,7 +52,6 @@ int Animal::move(bool Up, bool Down, bool Right, bool Left) {
 		    while (!found) {
 	    		random = rand() % 4;
 		    	//cout << random << endl;
-		    	while (!found) {
 		    	if(random == 0) {
 		    		if (Up) {
 		    			found = true;
@@ -70,8 +69,8 @@ int Animal::move(bool Up, bool Down, bool Right, bool Left) {
 		    			found = true;
 		    		}
 		    	}
-			}
-		}
+		   }
+		//found = false;
 	    return random;
 	}
     //TODO harus bikin algoritma random yang lebih baik...

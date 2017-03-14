@@ -156,3 +156,11 @@ int ConfigStore::ParseFile(std::ifstream& inStream, int n) {
              Zoo::Get(n).setCell(facilityVec[i].x,facilityVec[i].y,*facility);
     }
 }
+
+void ConfigStore::SaveFile(std::ofstream& ofStream,int n) {
+    for(int i = 0; i < n; i++) {
+        for(int j = 0; j < n; j++) {
+            //Zoo::Get(n).getCell
+        }
+    }
+}

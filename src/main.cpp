@@ -20,7 +20,7 @@ using namespace std;
 int n;
 
 // The function that has the loop.
-void loopFunction()
+/*void loopFunction()
 {
     while (!ConfigStore::Get().pause) {
             Zoo::Get(n).update();
@@ -33,7 +33,7 @@ void loopFunction()
                     system("clear");
                 #endif
     }
-}
+}*/
 
 int main() {
     srand (time(NULL));
@@ -45,7 +45,7 @@ int main() {
     if(status != -1) {
     	cout << Zoo::Get(n) << endl;
         while(ConfigStore::Get().run){
-            thread loopThread = thread(loopFunction);
+            /*thread loopThread = thread(loopFunction);
             #ifdef _WIN32
                 system("pause");
             #else
@@ -53,7 +53,18 @@ int main() {
                 cin >> command;
             #endif
             ConfigStore::Get().pause = !ConfigStore::Get().pause;
-            loopThread.join();
+            loopThread.join();*/
+                while (!ConfigStore::Get().pause) {
+            Zoo::Get(n).update();
+                cout << Zoo::Get(n) << endl;
+                #ifdef _WIN32
+                    sleep(1);
+                    system("cls");
+                #elif __linux__
+                    usleep(1000000);
+                    system("clear");
+                #endif
+    }
         }
         
     }

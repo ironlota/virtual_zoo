@@ -1185,4 +1185,16 @@ Virtual Zoo, 2017, Ensure.
 30,25,Park,Park
 30,26,Park,Park
 30,27,Park,Park
+0,6,Road,RoadEntrance
+0,7,Road,RoadEntrance
+0,8,Road,RoadEntrance
+0,25,Road,RoadEntrance
+0,26,Road,RoadEntrance
+0,27,Road,RoadEntrance
+39,6,Road,RoadExit
+39,7,Road,RoadExit
+39,8,Road,RoadExit
+39,31,Road,RoadExit
+39,32,Road,RoadExit
+39,33,Road,RoadExit
 [END OF Facility]

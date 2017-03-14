@@ -125,12 +125,12 @@ class ConfigStore {
     /** @brief parseFile
     * Load dan parsing file konfigurasi eksternal
     */
-    int ParseFile(std::ifstream& inStream, int n);
+    int ParseFile(std::ifstream&, int);
 
-    /** @brief parseFile
-    * Load dan parsing file konfigurasi eksternal
+    /** @brief saveFile
+    * Save dan parsing kelas ke konfigurasi eksternal
     */
-    void SaveFile(std::ifstream& inStream);
+    void SaveFile(std::ofstream&, int);
 
     /** @brief getValue
     * Mengembalikan value dari key yang diinput
@@ -146,6 +146,14 @@ class ConfigStore {
     * Melakukan inisialisasi kelas dengan memasukkan kelas lain sebagai parameternya
     */ 
     ConfigStore(const ConfigStore&) {};
+    /** @brief Destructor
+    * Menjalankan destructor untuk menghilangkan isi pointer dan array
+    */ 
+    ~ConfigStore() {
+        cageVec.clear();
+        animalVec.clear();
+        facilityVec.clear();
+    };
     /** @brief Operator =
     * Melakukan inisialisasi kelas dengan operator =
     */ 

@@ -34,7 +34,10 @@ ostream& operator<<(ostream& os, const Cell& C) {
     if(C.type.compare("Restaurant") == 0) {
         os << 'R';
     } else if(C.type.compare("Road") == 0) {
-        os << ' ';
+        if(C.name.compare("RoadEntrance")==0 || C.name.compare("RoadExit")==0)
+            os << '_';
+        else
+            os << ' ';
     } else if(C.type.compare("Park") == 0) {
         os << 'P';
     } else if(C.type.compare("Land") == 0) {
