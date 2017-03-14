@@ -658,8 +658,8 @@ Virtual Zoo, 2017, Ensure.
 36,34,Girrafe,True,1192,Land,Herbivore
 35,37,Bear,True,72,Land,Carnivore
 36,35,Bear,True,56,Land,Carnivore
-30,39,Eagle,False,4,Flying,Carnivore
-29,37,Hawk,False,3,Flying,Carnivore
+39,30,Eagle,False,4,Flying,Carnivore
+37,29,Hawk,False,3,Flying,Carnivore
 37,10,Owl,True,2,Flying,Carnivore
 36,11,Peacock,True,5,Flying,Omnivore
 35,12,Owl,True,3,Flying,Carnivore
