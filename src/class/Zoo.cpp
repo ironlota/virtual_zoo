@@ -342,13 +342,34 @@ void Zoo::Tour(int en_x, int en_y) {
 					if (j == 18) {
 						cout << "\t\t Shark = s\t\t\t\t Starfish = f";
 					}
-					if (j == 19) {
+					if (j == 20) {
 						cout << "\t\t This is You = @";
 					}
 				}
 			}
 			cout << endl;
 		}
+		if(y_orang < maxCell){
+				if(cell_[x_orang][y_orang+1]->getAnimalPtr() != nullptr) {
+				cell_[x_orang][y_orang+1]->getAnimalPtr()->Interact();
+			}
+		}
+		if(x_orang < maxCell){
+				if(cell_[x_orang+1][y_orang]->getAnimalPtr() != nullptr){
+				cell_[x_orang+1][y_orang]->getAnimalPtr()->Interact();
+			}
+		}
+		if(x_orang > 0){
+				if(cell_[x_orang-1][y_orang]->getAnimalPtr() != nullptr){
+				cell_[x_orang-1][y_orang]->getAnimalPtr()->Interact();
+			}
+		}
+		if(y_orang > 0){
+				if(cell_[x_orang][y_orang-1]->getAnimalPtr() != nullptr){
+				cell_[x_orang][y_orang-1]->getAnimalPtr()->Interact();
+			}
+		}
+
 		visited[x_orang][y_orang] = true;
 		if(cell_[x_orang][y_orang+1]->getCellType().compare("Road") == 0 && !visited[x_orang][y_orang+1]) {
 			y_orang++;
@@ -445,7 +466,6 @@ void Zoo::AddAnimal(Animal& A) {
 	bool okay = false;
 	int i = 0;
 	while(!okay && i < animal_.size()) {
-		//cout << (animal_[i]->GetTamed() == A.GetTamed()) << endl;
 		if (animal_[i]->GetTamed() == A.GetTamed() && animal_[i]->GetHabitat().compare(A.GetHabitat()) == 0 ) {
 			int tempcage = cell_[animal_[i]->GetLocX()][animal_[i]->GetLocY()]->GetCageId();
 			int countcage = 0;
@@ -459,7 +479,6 @@ void Zoo::AddAnimal(Animal& A) {
 				}
 			}
 			
-			cout << "ini id cage " << tempcage << " ini count animal = " << countanimal << endl;
 			if(countanimal < countcage*0.3){
 				int j = 0; int k;
 				while(j < maxCell && !okay){
