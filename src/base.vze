@@ -671,7 +671,7 @@ Virtual Zoo, 2017, Ensure.
 32,39,BirdOfParadise,True,2,Flying,Omnivore
 30,35,BirdOfParadise,True,2.2,Flying,Omnivore
 29,2,Owl,False,3,Flying,Carnivore
-30,11,FlyingFish,False,0.8,Water|Flying,Omnivore
+30,5,FlyingFish,False,0.8,Water|Flying,Omnivore
 30,7,BirdOfParadise,False,1.9,Flying,Omnivore
 29,0,Peacock,False,5.5,Flying,Omnivore
 31,1,Shark,False,130,Water,Carnivore
