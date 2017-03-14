@@ -48,6 +48,62 @@ ostream& operator<<(ostream& os, const Zoo& Z) {
 			} else {
 				os << *Z.cell_[i][j]; 
 			}
+			if (j == Z.maxCell - 1) {
+				if (i == 0) {
+					cout << "\t\t\t LEGENDA ";
+				}
+				if (i == 1) {
+					cout << "\t\t Facility :";
+				}
+				if (i == 2) {
+					cout << "\t\t Road = ' '\t\t\t\t Entrance/Exit = _";
+				}
+				if (i == 3) {
+					cout << "\t\t Restaurant = R\t\t\t\t Park = P";
+				}
+				if (i == 4) {
+					cout << "\t\t Land = x\t\t\t\t Water = ~";
+				}
+				if (i == 5) {
+					cout << "\t\t Flying = O";
+				}
+				if (i == 7) {
+					cout << "\t\t Animal :";
+				}
+				if (i == 8) {
+					cout << "\t\t AfricanFrog = a\t\t\t\t Caecilia = C";
+				}
+				if (i == 9) {
+					cout << "\t\t Exolotl = e\t\t\t\t FlyingFish = y";
+				}
+				if (i == 10) {
+					cout << "\t\t Ostrich = i\t\t\t\t Salamander = r";
+				}
+				if (i == 11) {
+					cout << "\t\t BirdOfParadise = b\t\t\t\t Eagle = e";
+				}
+				if (i == 12) {
+					cout << "\t\t Hawk = k\t\t\t\t Owl = o";
+				}
+				if (i == 13) {
+					cout << "\t\t Peacock = p\t\t\t\t Bear = b";
+				}
+				if (i == 14) {
+					cout << "\t\t Deer = d\t\t\t\t Elephant = n";
+				}
+				if (i == 15) {
+					cout << "\t\t Girrafe = g\t\t\t\t Lion = l";
+				}
+				if (i == 16) {
+					cout << "\t\t Tiger = t\t\t\t\t Mantaray = m";
+				}
+				if (i == 17) {
+					cout << "\t\t Piranha = p\t\t\t\t Seahorse = h";
+				}
+				if (i == 18) {
+					cout << "\t\t Shark = s\t\t\t\t Starfish = f";
+				}
+			}
 		}
 		os << endl;
 	}

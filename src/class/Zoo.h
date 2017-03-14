@@ -81,7 +81,6 @@ class Zoo {
             static Zoo zoo(n);
             return zoo;
         }
-        
     private:
         vector< vector< Cell* > >  cell_;
         vector<Animal*> animal_;

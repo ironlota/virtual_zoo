@@ -30,5 +30,5 @@ ostream& operator<< (ostream& os, const Elephant& E){
 }
 
 char Elephant :: GetSymbol() {
-	return 'e';
+	return 'n';
 }
