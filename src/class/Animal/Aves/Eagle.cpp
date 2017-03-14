@@ -21,7 +21,7 @@ Eagle& Eagle::operator= (const Eagle& H)
 	Aves::operator=(H);
 }
 
-void Eagle::interact()
+void Eagle::Interact()
 {
 	std::cout << "Hieeeekkkk" << std::endl;
 }

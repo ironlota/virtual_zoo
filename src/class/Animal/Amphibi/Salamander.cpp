@@ -21,7 +21,7 @@ Salamander& Salamander::operator= (const Salamander& H)
 	Amphibi::operator=(H);
 }
 
-void Salamander::interact()
+void Salamander::Interact()
 {
 	std::cout << "brrrrr" << std::endl;
 }

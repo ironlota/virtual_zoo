@@ -18,7 +18,7 @@ Pisces& Pisces::operator=(const Pisces&) {
 
 }
 
-void Pisces::interact() {
+void Pisces::Interact() {
     
 }
 

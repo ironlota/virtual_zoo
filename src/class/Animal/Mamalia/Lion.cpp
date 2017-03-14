@@ -19,7 +19,7 @@ Lion& Lion::operator= (const Lion& H)
 	Mamalia::operator=(H);
 }
 
-void Lion::interact()
+void Lion::Interact()
 {
 	std::cout << "Hauummmm" << endl;
 }

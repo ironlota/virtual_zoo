@@ -21,7 +21,7 @@ Starfish& Starfish::operator= (const Starfish& H)
 	Pisces::operator=(H);
 }
 
-void Starfish::interact()
+void Starfish::Interact()
 {
 	std::cout << "blublub" << std::endl;
 }

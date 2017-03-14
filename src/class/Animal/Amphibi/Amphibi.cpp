@@ -17,7 +17,7 @@ Amphibi& Amphibi::operator=(const Amphibi&) {
 
 }
 
-void Amphibi::interact(){
+void Amphibi::Interact(){
 
 }
 

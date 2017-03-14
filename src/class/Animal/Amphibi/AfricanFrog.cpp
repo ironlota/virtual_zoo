@@ -21,7 +21,7 @@ AfricanFrog& AfricanFrog::operator= (const AfricanFrog& H)
 	Amphibi::operator=(H);
 }
 
-void AfricanFrog::interact()
+void AfricanFrog::Interact()
 {
 	std::cout << "Krokok" << std::endl;
 }

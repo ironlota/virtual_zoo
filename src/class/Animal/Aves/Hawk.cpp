@@ -21,7 +21,7 @@ Hawk& Hawk::operator= (const Hawk& H)
 	Aves::operator=(H);
 }
 
-void Hawk::interact()
+void Hawk::Interact()
 {
 	std::cout << "Awwwkkkkkkk" << std::endl;
 }

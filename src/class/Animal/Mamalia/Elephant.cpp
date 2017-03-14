@@ -19,7 +19,7 @@ Elephant& Elephant::operator= (const Elephant& H)
 	Mamalia::operator=(H);
 }
 
-void Elephant::interact()
+void Elephant::Interact()
 {
 	std::cout << "Trooooottt" << endl;
 }

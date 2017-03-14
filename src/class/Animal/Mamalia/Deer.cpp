@@ -19,7 +19,7 @@ Deer& Deer::operator= (const Deer& H)
 	Mamalia::operator=(H);
 }
 
-void Deer::interact()
+void Deer::Interact()
 {
 	std::cout << "Ngiiikkk" << endl;
 }

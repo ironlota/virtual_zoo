@@ -19,7 +19,7 @@ Tiger& Tiger::operator= (const Tiger& H)
 	Mamalia::operator=(H);
 }
 
-void Tiger::interact()
+void Tiger::Interact()
 {
 	std::cout << "Raaawwwrr" << endl;
 }

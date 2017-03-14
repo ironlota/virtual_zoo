@@ -17,7 +17,7 @@ Mamalia& Mamalia::operator=(const Mamalia&) {
 
 }
 
-void Mamalia::interact()
+void Mamalia::Interact()
 {
 	
 }

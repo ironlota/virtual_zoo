@@ -21,7 +21,7 @@ Exolotl& Exolotl::operator= (const Exolotl& H)
 	Amphibi::operator=(H);
 }
 
-void Exolotl::interact(){
+void Exolotl::Interact(){
 	std::cout << "shhhhhhhh" << std::endl;
 }
 

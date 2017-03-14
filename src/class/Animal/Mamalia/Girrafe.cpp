@@ -19,7 +19,7 @@ Girrafe& Girrafe::operator= (const Girrafe& H)
 	Mamalia::operator=(H);
 }
 
-void Girrafe::interact()
+void Girrafe::Interact()
 {
 	std::cout << "Aaaakkk" << endl;
 }

@@ -21,7 +21,7 @@ Piranha& Piranha::operator= (const Piranha& H)
 	Pisces::operator=(H);
 }
 
-void Piranha::interact()
+void Piranha::Interact()
 {
 	std::cout << "Bitebitebite" << std::endl;
 }

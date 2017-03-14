@@ -21,7 +21,7 @@ Mantaray& Mantaray::operator= (const Mantaray& H)
 	Pisces::operator=(H);
 }
 
-void Mantaray::interact()
+void Mantaray::Interact()
 {
 	std::cout << "blubub" << endl;
 }

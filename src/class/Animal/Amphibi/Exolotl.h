@@ -4,8 +4,8 @@
   * Hawk merupakan hewan yang berkelas Mamalia dan habitatnya di darat.
 */
 class Exolotl : public Amphibi {
-    public:
-    	/** @brief Constructor.
+  public:
+      /** @brief Constructor.
         * Melakukan inisialisasi kelas
         * @param x_ Posisi X.
         * @param y_ Posisi Y.
@@ -35,7 +35,7 @@ class Exolotl : public Amphibi {
         Exolotl& operator=(const Exolotl&);
         /** @brief Interaksi
         */
-        void interact();
+        void Interact();
         /** @brief operator<<
         * @return ostream yang menghasilkan output di layar
         * @param ostream tampungan yang ingin di output

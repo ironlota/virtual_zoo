@@ -21,7 +21,7 @@ Peacock& Peacock::operator= (const Peacock& H)
 	Aves::operator=(H);
 }
 
-void Peacock::interact()
+void Peacock::Interact()
 {
 	std::cout << "wusshhhhh" << std::endl;
 }

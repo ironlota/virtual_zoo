@@ -21,7 +21,7 @@ Seahorse& Seahorse::operator= (const Seahorse& H)
 	Pisces::operator=(H);
 }
 
-void Seahorse::interact()
+void Seahorse::Interact()
 {
 	std::cout << "Swimming" << endl;
 }

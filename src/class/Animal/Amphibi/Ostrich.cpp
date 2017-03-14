@@ -21,7 +21,7 @@ Ostrich& Ostrich::operator= (const Ostrich& H)
 	Amphibi::operator=(H);
 }
 
-void Ostrich::interact()
+void Ostrich::Interact()
 {
 	std::cout << "Kokokkkkk" << std::endl;
 }

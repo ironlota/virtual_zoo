@@ -21,7 +21,7 @@ Shark& Shark::operator= (const Shark& H)
 	Pisces::operator=(H);
 }
 
-void Shark::interact()
+void Shark::Interact()
 {
 	std::cout << "blublublub" << std::endl;
 }

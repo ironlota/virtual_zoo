@@ -21,7 +21,7 @@ Caecilia& Caecilia::operator= (const Caecilia& H)
 	Amphibi::operator=(H);
 }
 
-void Caecilia::interact()
+void Caecilia::Interact()
 {
 	std::cout << "Caeciliaaaaa" << std::endl;
 }

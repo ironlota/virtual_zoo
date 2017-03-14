@@ -53,41 +53,41 @@ ostream& operator<<(ostream& os, const Cell& C) {
 }
 
 int Cell::getLocX() {
-    return LocX;
+  return LocX;
 }
 
 int Cell::getLocY() {
-    return LocY;
+  return LocY;
 }
 
 string Cell::getCellType(){
-    return type;
+  return type;
 }
 
 Animal* Cell::getAnimalPtr(){
-    return animalPtr;
+  return animalPtr;
 }
 
 int Cell::GetCageId () {
-    return cage_id;
+  return cage_id;
 }
 
 void Cell::setLocX(int x) {
-    LocX = x;
+  LocX = x;
 }
 
 void Cell::setLocY(int y) {
-    LocY = y;
+  LocY = y;
 }
 
-void Cell::setType(string s){
-    type = s;
+void Cell::setType(string s) {
+  type = s;
 }
 
-void Cell::setAnimalPtr(Animal* A){
-    animalPtr = A;
+void Cell::setAnimalPtr(Animal* A) {
+  animalPtr = A;
 }
 
 void Cell::SetCageId (int i) {
-    cage_id = i;
+  cage_id = i;
 }

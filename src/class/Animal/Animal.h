@@ -35,11 +35,11 @@ class Animal {
 				/** @brief Eat
 				* Prosedur eat yang pure virtual untuk direalisasikan di turunannya
 				*/ 
-				float eat() { return 0.1*weight; }
+				float Eat() { return 0.1*weight; }
 				/** @brief Interact
 				* Prosedur Interact yang pure virtual untuk direalisasikan di turunannya
 				*/ 
-				virtual void interact() = 0;
+				virtual void Interact() = 0;
 
 				/** @brief Move
 				* @return int yang melambangkan gerakan hewan
@@ -48,7 +48,7 @@ class Animal {
 				* @param bool true bila boleh ke kanan
 				* @param bool true bila bole ke kiri
 				*/
-				int move(bool, bool, bool, bool);
+				int Move(bool, bool, bool, bool);
 
 				/** @brief operator<<
 				* @return ostream yang menghasilkan output di layar
@@ -59,19 +59,19 @@ class Animal {
 
 				/* ***** Getter and Setter ***** */
 				/** @brief Fungsi untuk mengembalikan berat */
-				float getWeight() { return weight; }
+				float GetWeight() { return weight; }
 				/** @brief Fungsi untuk mengembalikan nama */
-				string getName() { return name; }
+				string GetName() { return name; }
 				/** @brief Fungsi untuk mengembalikan lokasi x */
-				int getLocX() { return x; }
+				int GetLocX() { return x; }
 				/** @brief Fungsi untuk mengembalikan lokasi y */
-				int getLocY() { return y; }
+				int GetLocY() { return y; }
 				/** @brief Fungsi untuk mengembalikan boolean tamed ato tidak*/
-				bool getTamed() { return tamed; }
+				bool GetTamed() { return tamed; }
 				/** @brief Fungsi untuk mengembalikan boolean tamed ato tidak*/
-				string getFoodtype() { return foodtype; }
+				string GetFoodType() { return foodtype; }
 				/** @brief Fungsi untuk mengembalikan boolean tamed ato tidak*/
-				string getHabitat() { return livingHabitat; }
+				string GetHabitat() { return livingHabitat; }
 				/** @brief Fungsi untuk mengembalikan simbol dari setiap hewan*/
 				virtual char GetSymbol();
 				/** @brief Setter X dan Y */
@@ -85,6 +85,6 @@ class Animal {
 				int y;
 				bool tamed;
 				string foodtype;
-				string livingHabitat; //Land, Water, Flying
+				string living_habitat; //Land, Water, Flying
 };
 #endif
