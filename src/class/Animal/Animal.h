@@ -71,12 +71,16 @@ class Animal {
 				/** @brief Fungsi untuk mengembalikan boolean tamed ato tidak*/
 				string GetFoodType() { return foodtype; }
 				/** @brief Fungsi untuk mengembalikan boolean tamed ato tidak*/
-				string GetHabitat() { return livingHabitat; }
+				string GetHabitat() { return living_habitat; }
 				/** @brief Fungsi untuk mengembalikan simbol dari setiap hewan*/
 				virtual char GetSymbol();
 				/** @brief Setter X dan Y */
 				void SetX (int x_) { x = x_; }
 				void SetY (int y_) { y = y_; } 
+				/** @brief Setter Tamed */
+				void SetTamed (bool t) { tamed = t; }
+				/** @brief Setter Habitat */
+				void SetHabitat (string h) { living_habitat = h; }
 
 		 protected:
 				float weight;

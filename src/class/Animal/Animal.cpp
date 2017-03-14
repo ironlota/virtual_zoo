@@ -22,7 +22,7 @@ Animal::Animal(const Animal& A) {
 	tamed = A.tamed;
 	weight = A.weight;
 	foodtype = A.foodtype;
-	livingHabitat = A.livingHabitat;
+	living_habitat = A.living_habitat;
 }
 
 Animal::~Animal() {
@@ -38,7 +38,7 @@ Animal& Animal::operator=(const Animal& A) {
 		tamed = A.tamed;
 		weight = A.weight;
 		foodtype = A.foodtype;
-		living_habitat = A.livingHabitat;
+		living_habitat = A.living_habitat;
 	}
 	return *this;	
 }

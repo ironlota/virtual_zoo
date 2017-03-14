@@ -53,19 +53,17 @@ int ConfigStore::ParseFile(std::ifstream& inStream, int n) {
         }
     }
 
-    //cout << cage_str.size() << endl;
     for(int i = 0; i< cage_str.size(); i++) {
-        //cout << "HI INI CAGE" << endl;
         vector<string> x = splits_(cage_str[i],',');
-        cage_temp * temp = new cage_temp(stoi(x[1]), stoi(x[0]), stoi(x[2]), x[3]);
-        //cout << x[0] << " " << x[1] << " " << x[2] << endl;
-        x.clear();
-        //cout << temp->x << " " << temp->y << " " << temp->id << " " << temp->habitat << endl;
-        cageVec.push_back(*temp);
+        if(stoi(x[0]) < n && stoi(x[1]) < n) {
+            cage_temp * temp = new cage_temp(stoi(x[1]), stoi(x[0]), stoi(x[2]), x[3]);
+            x.clear();
+            cageVec.push_back(*temp);
+        }
     }
 
     for(int i=0; i<cageVec.size(); i++) {
-            Habitat * habitat;
+            Habitat * habitat = nullptr;
             if(cageVec[i].habitat.compare("LandHabitat") == 0) {
                 habitat = new LandHabitat(cageVec[i].x,cageVec[i].y,cageVec[i].habitat,nullptr,cageVec[i].id);
             } else if(cageVec[i].habitat.compare("WaterHabitat") == 0) {
@@ -78,13 +76,15 @@ int ConfigStore::ParseFile(std::ifstream& inStream, int n) {
 
     for(int i = 0; i< animal_str.size(); i++) {
         vector<string> x = splits_(animal_str[i],',');
-        animal_temp * temp = new animal_temp(stoi(x[1]), stoi(x[0]), x[2], stof(x[4]), x[3].compare("True") == 0 ? true : false, x[5], x[6]);
-        x.clear();
-        animalVec.push_back(*temp);
+        if(stoi(x[0]) < n && stoi(x[1]) < n) {
+                animal_temp * temp = new animal_temp(stoi(x[1]), stoi(x[0]), x[2], stof(x[4]), x[3].compare("True") == 0 ? true : false, x[5], x[6]);
+                x.clear();
+                animalVec.push_back(*temp);
+        }
     }
 
     for(int i=0; i<animalVec.size(); i++) {
-           Animal * animal;
+           Animal * animal = nullptr;
             if(animalVec[i].name.compare("AfricanFrog") == 0) {
                 animal = new AfricanFrog(animalVec[i].x,animalVec[i].y,animalVec[i].tamed,animalVec[i].weight,animalVec[i].foodtype,animalVec[i].habitat);
             } else if(animalVec[i].name.compare("Caecilia") == 0) {
@@ -139,28 +139,78 @@ int ConfigStore::ParseFile(std::ifstream& inStream, int n) {
     //cout << facility_str.size() << endl;
     for(int i = 0; i < facility_str.size(); i++) {
          vector<string> x = splits_(facility_str[i],',');
-         facility_temp * temp = new facility_temp(stoi(x[1]), stoi(x[0]), x[2], x[3]);
-         x.clear();
-         facilityVec.push_back(*temp);
+         if(stoi(x[0]) < n && stoi(x[1]) < n) {
+            facility_temp * temp = new facility_temp(stoi(x[1]), stoi(x[0]), x[2], x[3]);
+            x.clear();
+            facilityVec.push_back(*temp);
+         }
     }
 
     for(int i=0; i<facilityVec.size(); i++) {
-            Facility * facility;
-            if(facilityVec[i].type.compare("Road") == 0) {
-                facility = new Road(facilityVec[i].x,facilityVec[i].y,facilityVec[i].type,nullptr,-1,facilityVec[i].name);
-            } else if(facilityVec[i].type.compare("Restaurant") == 0) {
+            Facility * facility = nullptr;
+            if(facilityVec[i].type.compare("Restaurant") == 0) {
                 facility = new Restaurant(facilityVec[i].x,facilityVec[i].y,facilityVec[i].type,nullptr,-1,facilityVec[i].name);
-            } if(facilityVec[i].type.compare("Park") == 0) {
+            } else if(facilityVec[i].type.compare("Park") == 0) {
                 facility = new Park(facilityVec[i].x,facilityVec[i].y,facilityVec[i].type,nullptr,-1,facilityVec[i].name);
-            } 
+            } else {
+                if((facilityVec[i].x==n-1) || (facilityVec[i].y==n-1)) {
+                    facility = new Road(facilityVec[i].x,facilityVec[i].y,"Road",nullptr,-1,"RoadExit");
+                } else {
+                    facility = new Road(facilityVec[i].x,facilityVec[i].y,"Road",nullptr,-1,facilityVec[i].name);
+                }
+            }
              Zoo::Get(n).setCell(facilityVec[i].x,facilityVec[i].y,*facility);
     }
 }
 
-void ConfigStore::SaveFile(std::ofstream& ofStream,int n) {
-    for(int i = 0; i < n; i++) {
-        for(int j = 0; j < n; j++) {
-            //Zoo::Get(n).getCell
+int ConfigStore::SaveFile(std::ofstream& ofStream,int n) {
+    if (!ofStream.is_open())
+    {
+        std::cerr << "Failed to open file!\n";
+        return -1;
+    } else {
+        ofStream << "Virtual Zoo, 2017, Ensure." << endl << endl;
+        ofStream << "[Cage]" << endl;
+        for(int i = 0; i < n; i++) {
+            for(int j = 0; j < n; j++) {
+                if(Zoo::Get(n).getCell(i,j)->GetCageId() != -1) {
+                    ofStream << Zoo::Get(n).getCell(i,j)->getLocY() << "," << Zoo::Get(n).getCell(i,j)->getLocX() << "," << Zoo::Get(n).getCell(i,j)->GetCageId() << "," << Zoo::Get(n).getCell(i,j)->getCellType()+"Habitat" << endl;
+                }
+            }
         }
+        ofStream << "[END OF Cage]" << endl << endl;
+        ofStream << "[Animal]" << endl;
+        for(int i = 0; i < n; i++) {
+            for(int j = 0; j < n; j++) {
+                if(Zoo::Get(n).getCell(i,j)->getAnimalPtr() != nullptr) {
+                    string d;
+                    if(Zoo::Get(n).getCell(i,j)->getAnimalPtr()->GetTamed() == 1) {
+                        d = "True";
+                    } else {
+                        d = "False";
+                    }
+                    ofStream << j << "," << i << "," << Zoo::Get(n).getCell(i,j)->getAnimalPtr()->GetName() << "," << d << "," << Zoo::Get(n).getCell(i,j)->getAnimalPtr()->GetWeight() << "," << Zoo::Get(n).getCell(i,j)->getAnimalPtr()->GetHabitat() << "," << Zoo::Get(n).getCell(i,j)->getAnimalPtr()->GetFoodType()<<  endl;
+                }
+            }
+        }
+        ofStream << "[END OF Animal]" << endl << endl;
+        ofStream << "[Facility]" << endl;
+        for(int i = 0; i < n; i++) {
+            for(int j = 0; j < n; j++) {
+                if(Zoo::Get(n).getCell(i,j)->getCellType().compare("Restaurant")==0 || Zoo::Get(n).getCell(i,j)->getCellType().compare("Park")==0) {
+                    ofStream << j << "," << i << "," << Zoo::Get(n).getCell(i,j)->getCellType() << "," << Zoo::Get(n).getCell(i,j)->GetName() << endl;
+                } else {
+                    if(Zoo::Get(n).getCell(i,j)->GetName().compare("RoadEntrance") == 0 || Zoo::Get(n).getCell(i,j)->GetName().compare("RoadExit") == 0) {
+                        ofStream << j << "," << i << "," << Zoo::Get(n).getCell(i,j)->getCellType() << "," << Zoo::Get(n).getCell(i,j)->GetName() << endl;
+                    } else {
+                        if(i == n-1 && j == n-1) 
+                            ofStream << j << "," << i << "," << Zoo::Get(n).getCell(i,j)->getCellType() << "," << "RoadExit" << endl;
+                    }
+                }
+            }
+        }
+        ofStream << "[END OF Facility]" << endl;
+
+        return 1;
     }
 }

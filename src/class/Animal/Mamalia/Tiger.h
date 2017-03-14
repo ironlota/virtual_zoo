@@ -36,7 +36,7 @@ class Tiger : public Mamalia{
 
       /** @brief Interaksi 
       */
-      void interact();
+      void Interact();
       
       /** @brief operator<<
       * @return ostream yang menghasilkan output di layar

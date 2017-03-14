@@ -4,6 +4,7 @@
 #include <time.h>
 #include <atomic>
 #include "./class/Zoo.h"
+#include "./class/ConfigStore/Util.h"
 #include "./class/ConfigStore/ConfigStore.h"
 
 using namespace std;
@@ -20,53 +21,43 @@ using namespace std;
 int n;
 
 // The function that has the loop.
-/*void loopFunction()
+void loopFunction()
 {
     while (!ConfigStore::Get().pause) {
             Zoo::Get(n).update();
                 cout << Zoo::Get(n) << endl;
-                #ifdef _WIN32
-                    sleep(1);
-                    system("cls");
-                #elif __linux__
-                    usleep(1000000);
-                    system("clear");
-                #endif
+                clearwait(1);
     }
-}*/
+}
 
 int main() {
     srand (time(NULL));
-  //Zoo zoo_(40);
-  ifstream input("./bin/data/base.vze");
+    int pil;
+    ifstream input("./bin/data/base.vze");
+    cin >> pil;
     cin >> n;
-    string s,command;
-    int status = ConfigStore::Get().ParseFile(input,n);
-    if(status != -1) {
-    	cout << Zoo::Get(n) << endl;
-        while(ConfigStore::Get().run){
-            /*thread loopThread = thread(loopFunction);
-            #ifdef _WIN32
-                system("pause");
-            #else
-                system("read -n1");
-                cin >> command;
-            #endif
-            ConfigStore::Get().pause = !ConfigStore::Get().pause;
-            loopThread.join();*/
-                while (!ConfigStore::Get().pause) {
-            Zoo::Get(n).update();
+    if(ConfigStore::Get().ParseFile(input,n) != -1) {
+        if(pil == 1) {
                 cout << Zoo::Get(n) << endl;
+                ofstream output("./bin/data/map.txt");
+                output << Zoo::Get(n);
+                output.close();
+        } else if(pil == 2) {
+            Zoo::Get(n).Tour(6,0);
+        } else {
+            while(ConfigStore::Get().run){
+                thread loopThread = thread(loopFunction);
                 #ifdef _WIN32
-                    sleep(1);
-                    system("cls");
-                #elif __linux__
-                    usleep(1000000);
-                    system("clear");
+                    system("pause");
+                #else
+                    system("read -n1");
+                    cin >> command;
                 #endif
-    }
+                ConfigStore::Get().pause = !ConfigStore::Get().pause;
+                loopThread.join();
+            }
         }
-        
     }
+    input.close();
     return 0;
 }

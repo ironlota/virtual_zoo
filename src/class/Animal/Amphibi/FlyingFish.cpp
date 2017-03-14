@@ -21,7 +21,7 @@ FlyingFish& FlyingFish::operator= (const FlyingFish& H)
 	Amphibi::operator=(H);
 }
 
-void FlyingFish::interact()
+void FlyingFish::Interact()
 {
 	std::cout << "Wushhh" << std::endl;
 }

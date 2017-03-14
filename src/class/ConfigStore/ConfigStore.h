@@ -130,7 +130,7 @@ class ConfigStore {
     /** @brief saveFile
     * Save dan parsing kelas ke konfigurasi eksternal
     */
-    void SaveFile(std::ofstream&, int);
+    int SaveFile(std::ofstream&, int);
 
     /** @brief getValue
     * Mengembalikan value dari key yang diinput

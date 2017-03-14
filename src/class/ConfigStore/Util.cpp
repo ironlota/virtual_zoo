@@ -17,3 +17,13 @@ vector<string> splits_(string& str, char delimiter) {
   
   return internal;
 }
+
+void clearwait(int n) {
+  #ifdef _WIN32
+    sleep(n);
+    system("cls");
+#elif __linux__
+    usleep(n*1000000);
+    system("clear");
+#endif
+}

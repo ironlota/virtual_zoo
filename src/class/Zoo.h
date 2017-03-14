@@ -8,6 +8,7 @@
 #include "Cell/Facility/Facility.h"
 #include "Cell/Habitat/Habitat.h"
 #include "Cell/Facility/Road/Road.h"
+#include "ConfigStore/ConfigStore.h"
 
 using namespace std;
 
@@ -70,12 +71,21 @@ class Zoo {
 
         /* METODE LAIN */
         /** @brief update
-        * Metode untuk update status posisi dari tiap animal */
+        * Metode untuk update status posisi dari tiap animal 
+        */
         void update();
+        /** @brief Tour
+        * Metode untuk melakukan tour dari posisi i dan j 
+        * @param int en_x adalah entrence x
+        * @param int en_y adalah entrence y
+        */
+        void Tour(int en_x, int en_y);
 
+        void AddAnimal(Animal&);
         /** @brief get
         * Mengembalikan configuration class
         */
+
         static Zoo& Get(int n)
         {
             static Zoo zoo(n);

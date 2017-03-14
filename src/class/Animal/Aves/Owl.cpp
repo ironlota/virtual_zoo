@@ -21,7 +21,7 @@ Owl& Owl::operator= (const Owl& H)
 	Aves::operator=(H);
 }
 
-void Owl::interact()
+void Owl::Interact()
 {
 	std::cout << "Huuukkk" << std::endl;
 }
