@@ -1,19 +1,19 @@
 #include "Cell.h"
 
 Cell::Cell(int x, int y, string type_, Animal* A, int id) {
-    LocX = x;
-    LocY = y;
-    type = type_;
-    animalPtr = A;
-    cage_id = id;
+  LocX = x;
+  LocY = y;
+  type = type_;
+  animalPtr = A;
+  cage_id = id;
 }
 
 Cell::Cell(const Cell& C) {
-    LocX = C.LocX;
-    LocY = C.LocY;
-    type = C.type;
-    animalPtr = C.animalPtr;
-    cage_id = C.cage_id;
+  LocX = C.LocX;
+  LocY = C.LocY;
+  type = C.type;
+  animalPtr = C.animalPtr;
+  cage_id = C.cage_id;
 }
 
 Cell::~Cell() {
@@ -22,12 +22,12 @@ Cell::~Cell() {
 }
 
 Cell& Cell::operator=(const Cell& C) {
-    LocX = C.LocX;
-    LocY = C.LocY;
-    type = C.type;
-    animalPtr = C.animalPtr;
-    cage_id = C.cage_id;
-    return *this;
+  LocX = C.LocX;
+  LocY = C.LocY;
+  type = C.type;
+  animalPtr = C.animalPtr;
+  cage_id = C.cage_id;
+  return *this;
 }
 
 ostream& operator<<(ostream& os, const Cell& C) {
@@ -53,11 +53,11 @@ ostream& operator<<(ostream& os, const Cell& C) {
 }
 
 int Cell::getLocX() {
-	return LocX;
+    return LocX;
 }
 
 int Cell::getLocY() {
-	return LocY;
+    return LocY;
 }
 
 string Cell::getCellType(){
@@ -73,11 +73,11 @@ int Cell::GetCageId () {
 }
 
 void Cell::setLocX(int x) {
-	LocX = x;
+    LocX = x;
 }
 
 void Cell::setLocY(int y) {
-	LocY = y;
+    LocY = y;
 }
 
 void Cell::setType(string s){

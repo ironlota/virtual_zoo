@@ -191,7 +191,7 @@ void Zoo::update()
 		} else if (mov == 2) {
 			animal_[i]->SetX(animal_[i]->getLocX() + 1);
 			cell_[right_x][right_y]->setAnimalPtr(animal_[i]);
-			cell_[right_y-1][right_y]->setAnimalPtr(nullptr);
+			cell_[right_x-1][right_y]->setAnimalPtr(nullptr);
 			//cout << "hsl swap = " << cell_[right_x][right_y]->getAnimalPtr() << endl;
 		} else if (mov == 3){
 			animal_[i]->SetX(animal_[i]->getLocX() - 1);
