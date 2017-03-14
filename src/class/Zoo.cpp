@@ -289,7 +289,7 @@ void Zoo::Tour(int en_x, int en_y) {
 				}
 				if (i == maxCell - 1) {
 					if (j == 0) {
-						cout << "\t\t\t\t\tLEGENDA ";
+						cout << "\t\t\t\t\tLEGEND ";
 					}
 					if (j == 1) {
 						cout << "\t\t Facility :";
@@ -351,21 +351,25 @@ void Zoo::Tour(int en_x, int en_y) {
 		}
 		if(y_orang < maxCell){
 				if(cell_[x_orang][y_orang+1]->getAnimalPtr() != nullptr) {
+				cout << "A " << cell_[x_orang][y_orang+1]->getAnimalPtr()->GetName() << " is in the cage! ";
 				cell_[x_orang][y_orang+1]->getAnimalPtr()->Interact();
 			}
 		}
 		if(x_orang < maxCell){
 				if(cell_[x_orang+1][y_orang]->getAnimalPtr() != nullptr){
+				cout << "A " << cell_[x_orang+1][y_orang]->getAnimalPtr()->GetName() << " is in the cage! ";
 				cell_[x_orang+1][y_orang]->getAnimalPtr()->Interact();
 			}
 		}
 		if(x_orang > 0){
 				if(cell_[x_orang-1][y_orang]->getAnimalPtr() != nullptr){
+				cout << "A " << cell_[x_orang-1][y_orang]->getAnimalPtr()->GetName() << " is in the cage! ";
 				cell_[x_orang-1][y_orang]->getAnimalPtr()->Interact();
 			}
 		}
 		if(y_orang > 0){
 				if(cell_[x_orang][y_orang-1]->getAnimalPtr() != nullptr){
+				cout << "A " << cell_[x_orang][y_orang-1]->getAnimalPtr()->GetName() << " is in the cage! ";
 				cell_[x_orang][y_orang-1]->getAnimalPtr()->Interact();
 			}
 		}
@@ -399,7 +403,7 @@ void Zoo::Tour(int en_x, int en_y) {
 			}
 			if (i == maxCell - 1) {
 				if (j == 0) {
-					cout << "\t\t\t\t\tLEGENDA ";
+					cout << "\t\t\t\t\tLEGEND ";
 				}
 				if (j == 1) {
 					cout << "\t\t Facility :";
@@ -452,7 +456,7 @@ void Zoo::Tour(int en_x, int en_y) {
 				if (j == 18) {
 					cout << "\t\t Shark = s\t\t\t\t Starfish = f";
 				}
-				if (j == 19) {
+				if (j == 20) {
 					cout << "\t\t This is You = @";
 				}
 			}
@@ -460,6 +464,25 @@ void Zoo::Tour(int en_x, int en_y) {
 		cout << endl;
 	}
 	cout << "Tour Selesai" << endl;
+}
+
+void Zoo::TotalFood(){
+	float meat = 0;
+	float grass = 0;
+	for(int i = 0; i < animal_.size(); i++){
+		if(animal_[i]->GetFoodType().compare("Carnivore") == 0){
+			meat += animal_[i]->Eat();
+		}
+		if(animal_[i]->GetFoodType().compare("Herbivore") == 0){
+			grass += animal_[i]->Eat();
+		}
+		if(animal_[i]->GetFoodType().compare("Omnivore") == 0){
+			meat += 0.5 * animal_[i]->Eat();
+			grass += 0.5 * animal_[i]->Eat();
+		}
+	}
+	cout << "Total meat for Carnivores and Omnivores = " << meat << endl;
+	cout << "Total grass for Herbivores and Omnivores = " << grass << endl;
 }
 
 void Zoo::AddAnimal(Animal& A) {

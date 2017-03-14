@@ -39,6 +39,7 @@ int main() {
     if(ConfigStore::Get().ParseFile(input,n) != -1) {
         if(pil == 1) {
                 cout << Zoo::Get(n) << endl;
+                Zoo::Get(n).TotalFood();//bikin pilihan user
                 ofstream output("./bin/data/map.txt");
                 output << Zoo::Get(n);
                 output.close();

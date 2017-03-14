@@ -80,12 +80,18 @@ class Zoo {
         * @param int en_y adalah entrence y
         */
         void Tour(int en_x, int en_y);
+        /** @brief TotalFood
+        * Metode untuk mengambil total makanan dari semua binatang 
+        */
+        void TotalFood();
 
+        /** @brief AddAnimal
+        * @param Animal yang berupa masukan 
+        */
         void AddAnimal(Animal&);
         /** @brief get
         * Mengembalikan configuration class
         */
-
         static Zoo& Get(int n)
         {
             static Zoo zoo(n);
