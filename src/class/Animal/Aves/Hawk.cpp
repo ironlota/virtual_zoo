@@ -30,3 +30,7 @@ ostream& operator<< (ostream& os, const Hawk&){
 	os << 'h';
 	return os;
 }
+
+char Hawk::GetSymbol() {
+	return 'k';
+}

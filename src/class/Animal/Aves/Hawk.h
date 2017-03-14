@@ -45,5 +45,5 @@ class Hawk : public Aves {
     friend ostream& operator<< (ostream& , const Hawk&);
 
     /** @brief Fungsi untuk mengembalikan simbol dari setiap hewan*/
-        int GetSymbol();
+    char GetSymbol();
 };

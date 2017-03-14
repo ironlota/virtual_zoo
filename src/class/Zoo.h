@@ -58,6 +58,16 @@ class Zoo {
         * @param Animal memberikan value animal yang ingin dimasukan
         */
         void SetAnimal(Animal&);
+        /** @brief GetAnimal
+        * Berfungsi untuk mengambil animal
+        * Asumsi bahwa vector animal sudah terdefinisi
+        * @return Pointer to Animal
+        * @param int x
+        * @param int y
+        */
+        Animal* GetAnimal(int,int);
+
+
         /* METODE LAIN */
         /** @brief update
         * Metode untuk update status posisi dari tiap animal */

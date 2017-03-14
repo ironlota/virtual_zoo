@@ -32,5 +32,5 @@ ostream& operator<< (ostream& os, const Shark& S)
 	return os;
 }
 char Shark :: GetSymbol() {
-	return 's'
+	return 's';
 }

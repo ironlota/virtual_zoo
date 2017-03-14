@@ -1,7 +1,7 @@
 #include "LandHabitat.h"
 
 LandHabitat::LandHabitat(int x, int y, string name, Animal* animalPtr, int id) : Habitat(x,y,name,animalPtr,id) {
-    type = "LandHabitat";
+    type = "Land";
 }
 
 LandHabitat::LandHabitat(const LandHabitat& L) {

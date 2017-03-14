@@ -42,21 +42,16 @@ Animal& Animal::operator=(const Animal& A) {
 }
 
 int Animal::move(bool Up, bool Down, bool Right, bool Left) {
-    if(Up)
-    {
+    if(Up) {
     	return UP;
-    }
-    if(Down)
-    {
+    } else if(Down) {
     	return DOWN;
-    }
-    if(Right)
-    {
+    } else if(Right) {
     	return RIGHT;
-    }
-    if(Left)
-    {
+    } else if(Left) {
     	return LEFT;
+    } else {
+    	return -1; 
     }
 
     //TODO harus bikin algoritma random yang lebih baik...

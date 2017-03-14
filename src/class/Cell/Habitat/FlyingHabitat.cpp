@@ -1,7 +1,7 @@
 #include "FlyingHabitat.h"
 
 FlyingHabitat::FlyingHabitat(int x, int y, string name, Animal* animalPtr, int id) : Habitat(x,y,name,animalPtr,id) {
-    type = "FlyingHabitat";
+    type = "Flying";
 }
 
 FlyingHabitat::FlyingHabitat(const FlyingHabitat& F) {

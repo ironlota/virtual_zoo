@@ -37,11 +37,11 @@ ostream& operator<<(ostream& os, const Cell& C) {
         os << ' ';
     } else if(C.type.compare("Park") == 0) {
         os << 'P';
-    } else if(C.type.compare("LandHabitat") == 0) {
+    } else if(C.type.compare("Land") == 0) {
         os << 'x';
-    } else if(C.type.compare("WaterHabitat") == 0) {
+    } else if(C.type.compare("Water") == 0) {
         os << '~';
-    } else if(C.type.compare("FlyingHabitat") == 0) {
+    } else if(C.type.compare("Flying") == 0) {
         os << 'O';
     } else {
         os << ' ';

@@ -74,6 +74,9 @@ class Animal {
         string getHabitat() { return livingHabitat; }
         /** @brief Fungsi untuk mengembalikan simbol dari setiap hewan*/
         virtual char GetSymbol();
+        /** @brief Setter X dan Y */
+        void SetX (int x_) { x = x_; }
+        void SetY (int y_) { y = y_; } 
 
      protected:
         float weight;

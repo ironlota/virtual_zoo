@@ -1,7 +1,7 @@
 #include "WaterHabitat.h"
 
 WaterHabitat::WaterHabitat(int x, int y, string name, Animal* animalPtr, int id) : Habitat(x,y,name,animalPtr,id) {
-    type = "WaterHabitat";
+    type = "Water";
 }
 
 WaterHabitat::WaterHabitat(const WaterHabitat& W) {
