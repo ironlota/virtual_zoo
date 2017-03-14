@@ -15,8 +15,13 @@ int main() {
     cin >> n;
     int status = ConfigStore::Get().ParseFile(input,n);
     if(status != -1) {
-    	cout << "ada" << endl;
+    	cout << "1:" << endl;
         cout << Zoo::Get(n) << endl;
+
+        Zoo::Get(n).update();
+        cout << "2:" << endl;
+        cout << Zoo::Get(n) << endl;
+
     }
     return 0;
 }

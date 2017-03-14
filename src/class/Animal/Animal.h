@@ -50,6 +50,13 @@ class Animal {
         */
         int move(bool, bool, bool, bool);
 
+        /** @brief operator<<
+        * @return ostream yang menghasilkan output di layar
+        * @param ostream tampungan yang ingin di output
+        * @param Animal yang ingin dicetak
+        */
+        //friend ostream& operator<< (ostream& , const Animal&);
+
         /* ***** Getter and Setter ***** */
         /** @brief Fungsi untuk mengembalikan berat */
         float getWeight() { return weight; }

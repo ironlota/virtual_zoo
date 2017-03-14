@@ -39,12 +39,12 @@ Zoo& Zoo::operator=(const Zoo& Z) {
 }
 
 ostream& operator<<(ostream& os, const Zoo& Z) {
-	for (int i = 0; i < Z.maxCell; ++i) {
-		for (int j = 0; j < Z.maxCell; ++j) {
+	for (int j = 0; j < Z.maxCell; ++j) {
+		for (int i = 0; i < Z.maxCell; ++i) {
 			if (Z.cell_[i][j]->getAnimalPtr() != nullptr) {
 				Animal *A = Z.cell_[i][j]->getAnimalPtr();
-				//os << "ini nama animal" << A->getName();
-				cout << &A; //print dari * ke os blm tentu bisa
+				char c = A->getName()[0];
+				cout << c; //print dari * ke os blm tentu bisa
 			} else {
 				os << *Z.cell_[i][j]; 
 			}

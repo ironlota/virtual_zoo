@@ -61,3 +61,7 @@ int Animal::move(bool Up, bool Down, bool Right, bool Left) {
 
     //TODO harus bikin algoritma random yang lebih baik...
 }
+/*
+ostream& operator<< (ostream& os, const Animal& A){
+	return os;
+}*/
