@@ -171,7 +171,7 @@ void Zoo::update()
 			left_x = 0;
 			left =false;
 		}
-		//if(i = 102) {
+		
 			//cout << left_x << " " << left_y << " " << right_x << " " << right_y << endl;
 			//cout << i << '=' << up << down << right << left << endl;
 		
