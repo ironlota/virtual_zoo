@@ -25,27 +25,33 @@ void loopFunction()
 int main() {
     srand (time(NULL));
     int pil;
-    ifstream input("./bin/data/base.vze");
-    cin >> pil;
-    cin >> n;
-    if(ConfigStore::Get().ParseFile(input,n) != -1) {
-        if(pil == 1) {
-                cout << Zoo::Get(n) << endl;
-                ofstream output("./bin/data/map.txt");
-                output << Zoo::Get(n);
-                output.close();
-        } else if(pil == 2) {
-            Zoo::Get(n).Tour(6,0);
-        } else {
-            while(ConfigStore::Get().run){
-                thread loopThread = thread(loopFunction);
-                #ifdef _WIN32
-                    system("pause");
-                #else
-                    system("read -n1");
-                #endif
-                ConfigStore::Get().pause = !ConfigStore::Get().pause;
-                loopThread.join();
+    ifstream input("./data/base.vze");
+    int status = ConfigStore::Get().ParseFile(input,n);
+    while(ConfigStore::Get().run) {
+        if(status != -1) {
+            cin >> pil;
+            cin >> n;
+            if(pil == 1) {
+                    cout << Zoo::Get(n) << endl;
+                    ofstream output("./data/map.txt");
+                    output << Zoo::Get(n);
+                    output.close();
+                    ConfigStore::Get().run = false;
+            } else if(pil == 2) {
+                Zoo::Get(n).Tour(6,0);
+                ConfigStore::Get().run = false;
+            } else if(pil == 3) {
+                Zoo::Get(n).TotalFood();
+                ConfigStore::Get().run = false;
+            } else {
+                    thread loopThread = thread(loopFunction);
+                    #ifdef _WIN32
+                        system("pause");
+                    #else
+                        system("read -n1");
+                    #endif
+                    ConfigStore::Get().pause = !ConfigStore::Get().pause;
+                    loopThread.join();
             }
         }
     }

@@ -9,7 +9,6 @@
 #include "Cell/Habitat/Habitat.h"
 #include "Cell/Facility/Road/Road.h"
 #include "ConfigStore/ConfigStore.h"
-
 using namespace std;
 
 /** @class Zoo

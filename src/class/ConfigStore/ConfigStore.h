@@ -158,7 +158,7 @@ class ConfigStore {
     * Melakukan inisialisasi kelas dengan operator =
     */ 
     ConfigStore& operator=(const ConfigStore&) {};
-    std::map<std::string,std::string> storedConfig;
+    //std::map<std::string,std::string> storedConfig;
     vector<cage_temp> cageVec;
     vector<animal_temp> animalVec;
     vector<facility_temp> facilityVec;

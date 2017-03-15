@@ -1,6 +1,5 @@
-BIN         :=  bin
-MAIN        :=  $(BIN)/virtual_zoo
-TEST        :=  $(BIN)/test
+MAIN        :=  main
+TEST        :=  test
 
 MAIN_SRC    :=  $(wildcard src/*.cpp)
 MAIN_OBJ    :=  $(MAIN_SRC:.cpp=.o)
@@ -44,10 +43,10 @@ test: $(TEST)
 docs:
 	doxygen ./Doxyfile
 
-$(MAIN): $(MAIN_OBJ) $(ZOO_OBJ) $(ANIMAL_OBJ) $(CELL_OBJ) $(CONF_OBJ) | $(BIN)
+$(MAIN): $(MAIN_OBJ) $(ZOO_OBJ) $(ANIMAL_OBJ) $(CELL_OBJ) $(CONF_OBJ)
 	$(CC) $(CPPFLAGS) $(CFLAGS) $^ $(LDLIBS) -o $@  $(LDFLAGS)
  
-$(TEST): $(TEST_OBJ) $(ZOO_OBJ) $(ANIMAL_OBJ) $(CELL_OBJ) $(CONF_OBJ) | $(BIN)
+$(TEST): $(TEST_OBJ) $(ZOO_OBJ) $(ANIMAL_OBJ) $(CELL_OBJ) $(CONF_OBJ)
 	$(CC) $(LDFLAGS) $(CPPFLAGS) $(CFLAGS) $(GTESTFLAGS) $^ $(LDLIBS) -o $@ $(LDFLAGS)
 
 $(BIN):
