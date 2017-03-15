@@ -64,13 +64,13 @@ TEST(ParkTest, Park) {
   Park *p1 = new Park(5,5,"park",nullptr,-1,"Puter park");
   f_test = p1;
   EXPECT_EQ( "park", f_test->getCellType());
-  EXPECT_EQ( 0 , f_test->getLocX());
+  EXPECT_EQ( 5 , f_test->getLocX());
 }
 
 TEST(LandHabitatTest, LandHabitat) {
   Habitat *h_test;
-  LandHabitat *l1 = new LandHabitat(1,1,"LandHabitat",nullptr,5); //sebetulnya parameter string ga guna
+  LandHabitat *l1 = new LandHabitat(1,1,"This is Land",nullptr,5);
   h_test = l1;
-  EXPECT_EQ( "LandHabitat", h_test->getCellType());
-  EXPECT_EQ( 0 , h_test->getLocX());
+  EXPECT_EQ( "Land", h_test->getCellType());
+  EXPECT_NE( 0 , h_test->getLocX());
 }
