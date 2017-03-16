@@ -18,7 +18,6 @@ void loopFunction()
     while (!ConfigStore::Get().pause) {
             Zoo::Get(n).update();
                 cout << Zoo::Get(n);
-                clearwait(1);
     }
 }
 
@@ -28,8 +27,13 @@ int main() {
     ifstream input("./data/base.vze");
     cin >> pil;
     cin >> n;
+<<<<<<< HEAD
     while(ConfigStore::Get().run) {
         if(ConfigStore::Get().ParseFile(input,n) != -1) {
+=======
+    int status = ConfigStore::Get().ParseFile(input,n);
+    while(ConfigStore::Get().run) {
+        if(status != -1) {
             if(pil == 1) {
                     cout << Zoo::Get(n) << endl;
                     ofstream output("./data/map.txt");
