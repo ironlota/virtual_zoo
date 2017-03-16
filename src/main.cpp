@@ -40,7 +40,8 @@ int main() {
                 Zoo::Get(n).Tour(6,0);
                 ConfigStore::Get().run = false;
             } else if(pil == 3) {
-		cout << Zoo::Get(n) << endl;
+		cout << Zoo::Get(n);
+		clearwait(2);
                 Zoo::Get(n).TotalFood();
                 ConfigStore::Get().run = false;
             } else {
