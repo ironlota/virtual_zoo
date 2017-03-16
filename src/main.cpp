@@ -26,11 +26,11 @@ int main() {
     srand (time(NULL));
     int pil;
     ifstream input("./data/base.vze");
+    cin >> pil;
+    cin >> n;
     int status = ConfigStore::Get().ParseFile(input,n);
     while(ConfigStore::Get().run) {
         if(status != -1) {
-            cin >> pil;
-            cin >> n;
             if(pil == 1) {
                     cout << Zoo::Get(n) << endl;
                     ofstream output("./data/map.txt");
@@ -50,7 +50,9 @@ int main() {
                     #else
                         system("read -n1");
                     #endif
-                    ConfigStore::Get().pause = !ConfigStore::Get().pause;
+                    ConfigStore::Get().run = false;
+                    ConfigStore::Get().pause = true;
+                    //ConfigStore::Get().pause = !ConfigStore::Get().pause;
                     loopThread.join();
             }
         }
