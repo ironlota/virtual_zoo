@@ -1,0 +1,40 @@
+PPPPPP___PPPPPPPPPPPPPPPP___PPPPPPPPPPPP
+PPPPPP   PPPPPPPPPPPPPPPP   PPPPPPPPPPPP
+PPPPPR                       OOOOOOOOOOO
+PPPPPR   R     ~~~~~~~~~~~~  OOOOOOOOOOO
+PPPPPR   R     ~~~~~~~~~~~~   OOOOOOOOOO
+PPPPPR   R     ~~~~~~~~~~~~   OOOOOOOOOO
+OOOOR   R      ~~~~~~~~~~~~~           P
+OOOOR   R      ~~~~~~~~~~~~~   PPPPPPPPP
+OOOOR   R                       PPPPPPPP
+OOOOR   R  xxxxxxxxxxxxxxxxxx   ~~~~~~~~
+OOOOR   R  xxxxxxxxxxxxxxxxxx   ~~~~~~~~
+OOOR   R  xxxxxxxxxxxxxxxxxxx    ~~~~~~~
+OOOR   R  xxxxxxxxxxxxxxxxxxx    ~~~~~~~
+OOOR   R  xxxxxxxxxxxxxxxxxxx     ~~~~~~
+OOOR                  RR               P
+P  R                  RR  ~~~~~   xxxxxx
+P  R                  RR  ~~~~~   xxxxxx
+P                     RR  ~~~~~~   xxxxx
+PPPPP ~~~~~~xxxxxxx   RR  ~~~~~~   xxxxx
+PPPPP ~~~~~~xxxxxxxx  RR  PPPPP    PPPPP
+PPPPP ~~~~~~xxxxxxxx  RR  OOOOOOOO    RP
+P                     RR  OOOOOOOO    RP
+OOxxxxxxxxxxOOOOOOOO   RR  OOOOOOO   RPP
+OOxxxxxxxxxxOOOOOOOO   RR  OOOOOOO   RPP
+OOxxxxxxxxxxOOOOOOOO   RR  OOOOOOO   RPP
+OOxxxxxxxxxx           RR  OOOOOO   RPPP
+OOxxxxxxxxxx           RR  OOOOOO   RPPP
+OOxxxxxxxxxx                       ~~~~~
+P                                  ~~~~~
+OOOOOOOOOOO     PPPPPPPPPPPP       ~~~~~
+OOOOOOOOOO     PPPPPPPPPPPPP      OOOOOO
+~~~~~~~~~      PPPPPPPPPPPPP      OOOOOO
+~~~~~~~~       PPPPPPPPPPPPP      OOOOOO
+~~~~~~~       PPPPPPPPPPPPPP           P
+PPPPPPR   OOOOPPPPPPPPPPPPPPOO         P
+PPPPPPR   OOOPPPPPPPPPPPPPPPOOO   xxxxxx
+PPPPPR   OOOPPPPPPPPPPPPPPPPPOO   xxxxxx
+PPPPPR   OOOPPPPPPPPPPPPPPPPPOO   xxxxxx
+PPPPPR   OOOPPPPPPPPPPPPPPPPPOO   xxxxxx
+PPPPPR___PPPPPPPPPPPPPPPPPPPPOO___xxxxxx
