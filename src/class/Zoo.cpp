@@ -386,7 +386,7 @@ void Zoo::Tour(int en_x, int en_y) {
 		} else {
 			break;
 		}
-		//clearwait(1);
+		clearwait(1);
 	}
 
 	//untuk cout terakhir

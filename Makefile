@@ -1,5 +1,5 @@
 MAIN        :=  main
-TEST        :=  test
+TEST        :=  test_exec
 
 MAIN_SRC    :=  $(wildcard src/*.cpp)
 MAIN_OBJ    :=  $(MAIN_SRC:.cpp=.o)

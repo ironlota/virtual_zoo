@@ -48,7 +48,7 @@ int main() {
                     #ifdef _WIN32
                         system("pause");
                     #else
-                        system("read -n1");
+                        system("read n1");
                     #endif
                     ConfigStore::Get().run = false;
                     ConfigStore::Get().pause = true;
