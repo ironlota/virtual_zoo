@@ -27,10 +27,6 @@ int main() {
     ifstream input("./data/base.vze");
     cin >> pil;
     cin >> n;
-<<<<<<< HEAD
-    while(ConfigStore::Get().run) {
-        if(ConfigStore::Get().ParseFile(input,n) != -1) {
-=======
     int status = ConfigStore::Get().ParseFile(input,n);
     while(ConfigStore::Get().run) {
         if(status != -1) {
